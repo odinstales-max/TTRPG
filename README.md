@@ -8,7 +8,7 @@ Classless, talent-driven tabletop RPG. All game content is plain data in `data/`
 - Validate content: `python3 scripts/check_dupes.py`
 
 ## Status
-- [ ] Phase 1 — Core Rules v4 (`data/rules/`)
+- [x] Phase 1 — Core Rules v4 (`data/rules/`)
 - [ ] Phase 2 — Talents & Traits (`data/talents.json`, `data/traits.json`)
 - [ ] Phase 3 — Spells (`data/spells.json`)
 - [ ] Phase 4 — Playtest kit (`playtest/`)
