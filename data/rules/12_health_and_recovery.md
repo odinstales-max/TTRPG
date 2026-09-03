@@ -6,6 +6,7 @@ Your Hit Points represent your physical integrity. At character creation you sel
 
 | **Health Tier** | **Starting HP** | **Built For** |
 | --- | --- | --- |
+| Bulwark | 11 + Vigor Die maximum `(tunable)` | Immovable defenders who exist to be hit |
 | Frontline | 9 + Vigor Die maximum `(tunable)` | Holding the line and absorbing punishment |
 | Skirmisher | 7 + Vigor Die maximum `(tunable)` | Mobile fighters who pick their moments |
 | Adept | 5 + Vigor Die maximum `(tunable)` | Those who solve problems before they reach melee |

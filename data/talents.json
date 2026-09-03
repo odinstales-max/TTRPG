@@ -1,1 +1,4369 @@
-[]
+[
+  {
+    "id": "signature-bolt",
+    "name": "Signature Bolt",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack"
+    ],
+    "source_class": "arcanist/harrower/invoker/muse",
+    "text": "You shape a signature bolt of energy. When you take this Talent, choose its damage type: Force (targets Agility Defense), Void (Focus Defense), Radiant (Resolve Defense), or Psychic (Resolve Defense). For 1 AP, hurl the bolt at one target within 60ft: roll your Focus Die against the chosen Defense and deal damage equal to the roll. At Level 6 the bolt rolls two Focus Dice; as a zero-cost attack it is capped at two dice and scales no further. It is a reliable baseline, not a replacement for spending Reserve on higher-Tier spells."
+  },
+  {
+    "id": "fluid-step",
+    "name": "Fluid Step",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Agility Point",
+    "ap_cost": 1,
+    "tags": [
+      "maneuver",
+      "movement"
+    ],
+    "source_class": "arcanist/assassin/muse/stalker",
+    "text": "You slip through the gaps in the fight. For 1 AP and 1 Agility Point, move up to half your Base Speed without provoking Opportunity Attacks."
+  },
+  {
+    "id": "rapid-recovery",
+    "name": "Rapid Recovery",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Vigor Point",
+    "ap_cost": 1,
+    "tags": [
+      "healing"
+    ],
+    "source_class": "charger/shaman",
+    "text": "Your body mends as fast as it moves. For 1 AP and 1 Vigor Point, roll your Vigor Die and regain that many Hit Points."
+  },
+  {
+    "id": "healing-word",
+    "name": "Healing Word",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Focus Point",
+    "ap_cost": 1,
+    "tags": [
+      "healing",
+      "support"
+    ],
+    "source_class": "invoker/shaman/stalker/zealot",
+    "text": "You speak a brief word of restoration to one ally within 30ft. For 1 AP and 1 Focus Point, that ally rolls their Vigor Die and regains that many Hit Points. Healing Word cannot be used on yourself."
+  },
+  {
+    "id": "brace",
+    "name": "Brace",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Vigor Point",
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "defend"
+    ],
+    "source_class": "vanguard/berserker/zealot",
+    "text": "You flex through the pain. As a Reaction when you take damage, spend 1 Vigor Point to roll your Vigor Die and reduce the incoming damage by the result, applied before the damage reaches your Hit Points."
+  },
+  {
+    "id": "bolstering-word",
+    "name": "Bolstering Word",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Resolve Point",
+    "ap_cost": 1,
+    "tags": [
+      "support"
+    ],
+    "source_class": "invoker/vanguard/zealot",
+    "text": "A sharp word steadies a wavering will. For 1 AP and 1 Resolve Point, you or one ally within 30ft Upgrades their next Save made before the start of your next turn."
+  },
+  {
+    "id": "guardian-interjection",
+    "name": "Guardian Interjection",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "defend",
+      "support"
+    ],
+    "source_class": "invoker/muse",
+    "text": "You interpose your will at exactly the wrong moment for the enemy. As a Reaction when an enemy within 60ft makes an Impact Roll against you or an ally, spend 1 Momentum to Downgrade that Impact Die."
+  },
+  {
+    "id": "expanded-momentum",
+    "name": "Expanded Momentum",
+    "level_req": 4,
+    "attr_req": null,
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "cap-increase"
+    ],
+    "source_class": "general",
+    "text": "Your reservoir of battle-tension deepens. Your Momentum cap increases by 1 (to 4 for most characters)."
+  },
+  {
+    "id": "vast-momentum",
+    "name": "Vast Momentum",
+    "level_req": 8,
+    "attr_req": null,
+    "prereq_ids": [
+      "expanded-momentum"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "cap-increase"
+    ],
+    "source_class": "general",
+    "text": "Momentum pools in you like a storm building. Your Momentum cap increases by a further 1 (to 5 for most characters)."
+  },
+  {
+    "id": "relentless-onslaught",
+    "name": "Relentless Onslaught",
+    "level_req": 4,
+    "attr_req": null,
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "attack",
+      "tunable"
+    ],
+    "source_class": "general",
+    "text": "Your follow-through never slows. Once per turn, the second attack-adjacent Talent ability you use that turn costs 1 less Reserve, to a minimum of 0 (tunable). An ability is attack-adjacent if it is tagged as an attack or is a Free-Action rider on one."
+  },
+  {
+    "id": "combined-strike",
+    "name": "Combined Strike",
+    "level_req": 6,
+    "attr_req": null,
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 2,
+    "tags": [
+      "attack"
+    ],
+    "source_class": "general",
+    "text": "You fold two blows into one overwhelming impact. Spend 2 AP to pool two attacks against a single target into one Impact Roll: roll the dice of both attacks together and subtract the target's Defense Rating only once. Pooled dice Explode normally, and the pooled roll remains subject to the Bonus Impact Dice rule. A Combined Strike is a single attack and a single hit: on-hit riders, secondary effects, and Visceral or True Damage declarations apply only once."
+  },
+  {
+    "id": "seize-the-opening",
+    "name": "Seize the Opening",
+    "level_req": 6,
+    "attr_req": null,
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "support"
+    ],
+    "source_class": "muse/invoker/charger",
+    "text": "You see the hit hiding inside the miss. As a Reaction when an ally within 60ft makes an attack that results in a Glancing Blow, spend 2 Momentum: that ally rolls one additional die of the same type and adds it to the Impact Roll. If the new total exceeds the target's Defense Rating, the attack connects as a full hit; otherwise it remains a Glancing Blow."
+  },
+  {
+    "id": "retributive-strike",
+    "name": "Retributive Strike",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "attack"
+    ],
+    "source_class": "vanguard/berserker",
+    "text": "You answer every blow in kind. As a Reaction when an enemy within your melee reach deals damage to you, spend 2 Momentum to immediately make one melee attack against them with your Impact Die Upgraded."
+  },
+  {
+    "id": "evasive-instinct",
+    "name": "Evasive Instinct",
+    "level_req": 6,
+    "attr_req": null,
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "2 Vigor Points or 2 Agility Points",
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "movement"
+    ],
+    "source_class": "berserker/stalker",
+    "text": "You read the blast before it blooms. As a Reaction when you trigger a trap or are caught in an area-of-effect attack, spend 2 Vigor Points or 2 Agility Points to hurl yourself clear: you take zero damage from the triggering effect and immediately move up to 15ft. This movement does not provoke Opportunity Attacks."
+  },
+  {
+    "id": "phase-step",
+    "name": "Phase Step",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "maneuver",
+      "movement"
+    ],
+    "source_class": "charger/shaman",
+    "text": "You step through the space between moments. For 1 AP and 1 Momentum, move up to 20ft to a space you can see, passing through creatures and solid objects along the way. You cannot end this movement inside a solid object, and it does not provoke Opportunity Attacks."
+  },
+  {
+    "id": "fortress-stance",
+    "name": "Fortress Stance",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "2 Vigor Points",
+    "ap_cost": 1,
+    "tags": [
+      "defend"
+    ],
+    "source_class": "vanguard/zealot",
+    "text": "You become an immovable point on the battlefield. For 1 AP and 2 Vigor Points, enter Fortress Stance: your Base Speed becomes 0, you cannot be moved against your will by any means, and all Impact Rolls targeting you are Downgraded. You may exit at the start of any of your turns as a Free effect; the stance ends if you fall Incapacitated."
+  },
+  {
+    "id": "legendary-attribute",
+    "name": "Legendary Attribute",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "any",
+      "die": "d10"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone"
+    ],
+    "source_class": "general",
+    "text": "You push one facet of yourself past the human ceiling. Choose one Attribute you have at d10: it is permanently Upgraded to d12. This is one of only two roads to a Legendary die; the other runs through rare artifacts and story boons."
+  },
+  {
+    "id": "school-of-evocation",
+    "name": "School of Evocation",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "school-access",
+      "spellcasting"
+    ],
+    "source_class": "general",
+    "text": "You gain access to the Evocation School: raw magical energy, direct damage, and elemental shaping. You know its Tier 0 spells and may learn and cast its higher-Tier spells. Tier 2 unlocks at Level 5 and Tier 3 at Level 9 (tunable)."
+  },
+  {
+    "id": "school-of-abjuration",
+    "name": "School of Abjuration",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "school-access",
+      "spellcasting"
+    ],
+    "source_class": "general",
+    "text": "You gain access to the Abjuration School: warding, protection, negation of hostile magic, and defensive barriers. You know its Tier 0 spells and may learn and cast its higher-Tier spells. Tier 2 unlocks at Level 5 and Tier 3 at Level 9 (tunable)."
+  },
+  {
+    "id": "school-of-conjuration",
+    "name": "School of Conjuration",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "school-access",
+      "spellcasting"
+    ],
+    "source_class": "general",
+    "text": "You gain access to the Conjuration School: summoning entities, creating matter from nothing, and teleportation. You know its Tier 0 spells and may learn and cast its higher-Tier spells. Tier 2 unlocks at Level 5 and Tier 3 at Level 9 (tunable)."
+  },
+  {
+    "id": "school-of-transmutation",
+    "name": "School of Transmutation",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "school-access",
+      "spellcasting"
+    ],
+    "source_class": "general",
+    "text": "You gain access to the Transmutation School: altering the physical and chemical properties of matter and living beings. You know its Tier 0 spells and may learn and cast its higher-Tier spells. Tier 2 unlocks at Level 5 and Tier 3 at Level 9 (tunable)."
+  },
+  {
+    "id": "school-of-divination",
+    "name": "School of Divination",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "school-access",
+      "spellcasting"
+    ],
+    "source_class": "general",
+    "text": "You gain access to the Divination School: information gathering, sensing, battlefield awareness, and foresight. You know its Tier 0 spells and may learn and cast its higher-Tier spells. Tier 2 unlocks at Level 5 and Tier 3 at Level 9 (tunable)."
+  },
+  {
+    "id": "school-of-illusion",
+    "name": "School of Illusion",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "school-access",
+      "spellcasting"
+    ],
+    "source_class": "general",
+    "text": "You gain access to the Illusion School: misdirection, manufactured perception, and psychological deception. You know its Tier 0 spells and may learn and cast its higher-Tier spells. Tier 2 unlocks at Level 5 and Tier 3 at Level 9 (tunable)."
+  },
+  {
+    "id": "school-of-entropy",
+    "name": "School of Entropy",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "school-access",
+      "spellcasting"
+    ],
+    "source_class": "general",
+    "text": "You gain access to the Entropy School: void magic, decay, the unraveling of living systems, and soul erosion. You know its Tier 0 spells and may learn and cast its higher-Tier spells. Tier 2 unlocks at Level 5 and Tier 3 at Level 9 (tunable)."
+  },
+  {
+    "id": "school-of-resonance",
+    "name": "School of Resonance",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "school-access",
+      "spellcasting"
+    ],
+    "source_class": "general",
+    "text": "You gain access to the Resonance School: psychic and emotional magic, mind alteration, and force of personality. You know its Tier 0 spells and may learn and cast its higher-Tier spells. Tier 2 unlocks at Level 5 and Tier 3 at Level 9 (tunable)."
+  },
+  {
+    "id": "aetheric-siphon",
+    "name": "Aetheric Siphon",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "arcanist",
+    "text": "You siphon residual magic from the battlefield. Whenever any die in your Impact Pool rolls its maximum value during a spell's damage roll, you gain 1 Momentum in addition to the Explosion's normal bonus damage."
+  },
+  {
+    "id": "spell-weaving",
+    "name": "Spell Weaving",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": "1",
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "spellcasting"
+    ],
+    "source_class": "arcanist",
+    "text": "You alter the fundamental equations of a spell as it forms. When you cast a spell that costs 1 or more Reserve, you may apply one Weave, declared after the spell but before you roll. Reach Weave (1 Momentum): the spell's range is doubled; a touch or melee-range spell gains a range of 30ft. Sunder Weave (1 Momentum): if the spell deals damage, the target's Agility Defense is Sundered by 1 until the end of your next turn. You may apply only one Weave per spell unless a feature explicitly permits more."
+  },
+  {
+    "id": "tactical-geometry",
+    "name": "Tactical Geometry",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "interaction"
+    ],
+    "source_class": "arcanist",
+    "text": "Your mind constantly calculates angles and trajectories. For 1 AP, choose one enemy you can see. Until the end of your turn, your spells and attacks ignore the Impact Die Downgrade that enemy's Cover would normally impose. This does not negate Heavy Cover's targeting protection; it only removes the Downgrade to your Impact Pool."
+  },
+  {
+    "id": "arcane-resilience",
+    "name": "Arcane Resilience",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "defend"
+    ],
+    "source_class": "arcanist",
+    "text": "You reflexively harden the magical field around you. As a Reaction when an enemy declares an attack against you, spend 1 Momentum: the attacker's entire Impact Pool is Downgraded for that single attack."
+  },
+  {
+    "id": "sense-magic",
+    "name": "Sense Magic",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Focus Point",
+    "ap_cost": 1,
+    "tags": [
+      "interaction",
+      "utility"
+    ],
+    "source_class": "arcanist",
+    "text": "You attune your senses to the invisible flow of magic. For 1 AP and 1 Focus Point, become instantly aware of the exact location, approximate power level, and School of any magical effects, enchanted items, or spellcasters within 60ft for one minute. This sense passes through physical barriers and cannot be blocked by mundane concealment."
+  },
+  {
+    "id": "cognitive-loop",
+    "name": "Cognitive Loop",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "arcanist",
+    "text": "You learn as much from failure as from success. Whenever you roll a 1 on any Focus Die during combat, you gain 1 Momentum. This triggers even if the roll results in a Glancing Blow."
+  },
+  {
+    "id": "aetheric-echo",
+    "name": "Aetheric Echo",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "signature-bolt"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "attack"
+    ],
+    "source_class": "arcanist",
+    "text": "Your output expands to match your mastery. Once per turn, when you cast a spell that costs 1 or more Reserve, you may also cast your Signature Bolt at the same or a different target as a Free effect."
+  },
+  {
+    "id": "dispersion-strike",
+    "name": "Dispersion Strike",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "2 Focus Points",
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "control",
+      "tunable"
+    ],
+    "source_class": "arcanist",
+    "text": "You unravel a spell as it forms. As a Reaction when an enemy within 30ft begins casting a spell, spend 2 Focus Points and make an Impact Roll with your Focus Die against the caster's Focus Defense. If the result meets the threshold set by the incoming spell's Tier (Tier 0-1: 2+, Tier 2: 4+, Tier 3: 6+, tunable), the spell collapses: the caster loses the action and any Reserve spent. On a Glancing Blow the spell is not countered but you gain 1 Momentum."
+  },
+  {
+    "id": "advanced-weaving",
+    "name": "Advanced Weaving",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "spell-weaving"
+    ],
+    "momentum_cost": "1-2",
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "spellcasting"
+    ],
+    "source_class": "arcanist",
+    "text": "Your understanding of arcane modification expands. You learn two new Weaves. Vicious Weave (2 Momentum): the spell gains the Vicious property; exploding dice Upgrade one step and can cascade. Impact Weave (1 Momentum): if the spell deals damage, the target is pushed 10ft directly away from you. The one-Weave-per-spell limit still applies."
+  },
+  {
+    "id": "master-of-the-weave",
+    "name": "Master of the Weave",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "advanced-weaving"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone"
+    ],
+    "source_class": "arcanist",
+    "text": "You are a savant of magical manipulation. You may apply up to two Weaves per spell. Additionally, once per turn, you may apply any single Weave that costs 1 Momentum to your spell without spending it; this free application occupies one of the spell's two Weave slots."
+  },
+  {
+    "id": "aegis-weave",
+    "name": "Aegis Weave",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "spell-weaving"
+    ],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "defend",
+      "chain:thesis-of-the-aegis"
+    ],
+    "source_class": "arcanist",
+    "text": "You weave a defensive barrier from raw magical force. For 1 AP and 1 Momentum, erect a 5ft pane of hard-light in an unoccupied space within 30ft. Any creature directly behind the pane benefits from Heavy Cover. The pane has HP equal to your Focus Die maximum and lasts until destroyed or combat ends."
+  },
+  {
+    "id": "sanctuary-weave",
+    "name": "Sanctuary Weave",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "aegis-weave"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "defend",
+      "chain:thesis-of-the-aegis"
+    ],
+    "source_class": "arcanist",
+    "text": "You learn a complex defensive Weave. When you cast a Reserve-costing spell targeting yourself or an ally, spend 2 Momentum: the target projects a 10ft arcane aura until the start of your next turn. Allies within the aura benefit from Light Cover against attacks originating outside it. Sanctuary Weave counts as your one Weave for that spell."
+  },
+  {
+    "id": "efficient-creation",
+    "name": "Efficient Creation",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "sanctuary-weave"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:thesis-of-the-aegis"
+    ],
+    "source_class": "arcanist",
+    "text": "Your defensive architecture flows from your hands as naturally as breathing. You may apply the Reach Weave to any Reserve-costing spell without paying its Momentum cost. This free application counts as your one Weave for that spell and applies once per cast."
+  },
+  {
+    "id": "aetheric-tether",
+    "name": "Aetheric Tether",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "aetheric-siphon"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "control",
+      "chain:thesis-of-control"
+    ],
+    "source_class": "arcanist",
+    "text": "Your magic latches onto the physical forms of your targets. Whenever you gain Momentum from Aetheric Siphon, the enemy you were targeting becomes Tethered until the end of your next turn: their Speed is halved. Multiple Explosions on the same cast do not stack the duration."
+  },
+  {
+    "id": "chain-weave",
+    "name": "Chain Weave",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "aetheric-tether"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "attack",
+      "chain:thesis-of-control"
+    ],
+    "source_class": "arcanist",
+    "text": "You learn a volatile offensive Weave. When you cast a single-target spell costing 1 or more Reserve, spend 2 Momentum: if the spell damages its primary target, the magic arcs to a second target within 15ft of the first. Roll your full Impact Pool a second time against the second target's applicable Defense. The arc can Explode normally. Chain Weave counts as your one Weave for that spell."
+  },
+  {
+    "id": "puppet-master",
+    "name": "Puppet Master",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "chain-weave"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "control",
+      "chain:thesis-of-control"
+    ],
+    "source_class": "arcanist",
+    "text": "Your tethers wrap around the enemy's nervous system. Whenever a Reserve-costing spell you cast deals damage to a Tethered enemy, that enemy is Dazed. This applies once per spell cast against a Tethered target, in addition to whatever else the spell does."
+  },
+  {
+    "id": "material-weave",
+    "name": "Material Weave",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "spell-weaving"
+    ],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "chain:thesis-of-the-transmuter"
+    ],
+    "source_class": "arcanist",
+    "text": "You learn a Transmutation-infused Weave that destabilizes physical structure on contact. When you cast a Reserve-costing spell, spend 1 Momentum: if the spell deals damage, the target's Vigor Defense is Sundered by 1 until the end of your next turn. Material Weave counts as your one Weave for that spell."
+  },
+  {
+    "id": "transposition",
+    "name": "Transposition",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "material-weave"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "maneuver",
+      "chain:thesis-of-the-transmuter"
+    ],
+    "source_class": "arcanist",
+    "text": "You rearrange the battlefield itself. For 1 AP and 2 Momentum, two willing allies within 30ft — or one ally and yourself — instantly exchange positions. Neither movement provokes Opportunity Attacks, and the transposition overrides physical pathing."
+  },
+  {
+    "id": "arcane-transmutation",
+    "name": "Arcane Transmutation",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "transposition"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:thesis-of-the-transmuter"
+    ],
+    "source_class": "arcanist",
+    "text": "Your command of physical transformation becomes definitive. Sunders applied by your Weaves are permanent for the remainder of combat rather than expiring. Additionally, once per round when a Reserve-costing single-target spell of yours deals damage, you may spend 2 Momentum to deal that damage as True Damage."
+  },
+  {
+    "id": "predators-edge",
+    "name": "Predator's Edge",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "assassin",
+    "text": "Assassination is not rage; it is patience made violent. Whenever you hit an enemy while you have Cover, are Hidden, or the enemy has not yet acted this round, you gain 1 Momentum."
+  },
+  {
+    "id": "the-first-strike",
+    "name": "The First Strike",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "attack",
+      "once-per-combat"
+    ],
+    "source_class": "assassin",
+    "text": "The opening blow is not a gamble; the preparation is the guarantee. Once per combat, your first attack from a Hidden position or against a target that has not yet acted automatically triggers an Explosion: treat the initial maximum as given, roll the Impact Die once more, and add it. This bonus die does not explode again, though a Vicious weapon still Upgrades it before it is rolled."
+  },
+  {
+    "id": "slip-away",
+    "name": "Slip Away",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "maneuver",
+      "stealth"
+    ],
+    "source_class": "assassin",
+    "text": "You are trained to not be where the enemy swings. For 1 AP, choose one: Withdraw — move up to 15ft without provoking Opportunity Attacks, gaining 1 Momentum if you leave the melee reach of at least one enemy; Vanish — if adjacent to terrain that could plausibly conceal you, become Hidden until you attack, cast a spell, or move into the open; or Redirect — force one enemy within 5ft currently making an Opportunity Attack against an ally to target you instead, gaining 1 Momentum if it hits you."
+  },
+  {
+    "id": "read-the-wound",
+    "name": "Read the Wound",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "utility"
+    ],
+    "source_class": "assassin",
+    "text": "You have studied anatomy to know exactly where it fails. Whenever you damage an enemy with an Agility-based attack, you immediately know their HP state (full, wounded, or critical) and which of their Defense Ratings is currently lowest. No action or roll required."
+  },
+  {
+    "id": "executioners-strike",
+    "name": "Executioner's Strike",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "predators-edge"
+    ],
+    "momentum_cost": "1-2",
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "attack",
+      "once-per-turn"
+    ],
+    "source_class": "assassin",
+    "text": "You drive your strike through the precise fault line in the target's defenses. Once per turn, when you hit with an Agility-based attack, spend 1 Momentum to forgo rolling the Impact Die: treat it as its maximum face value, which triggers a single Explosion roll (that bonus die does not explode again; Vicious still Upgrades it). Alternatively, spend 2 Momentum to make the strike Visceral instead: roll normally, and on a hit the full roll is dealt as True Damage. Guaranteed maximum and Visceral are mutually exclusive."
+  },
+  {
+    "id": "arterial-precision",
+    "name": "Arterial Precision",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive"
+    ],
+    "source_class": "assassin",
+    "text": "Your strikes are anatomically deliberate. Whenever your Impact Die triggers an Explosion, the target begins Bleeding (2 True Damage at the start of each of their turns until treated). A target already Bleeding instead has the existing Bleed escalated by 2, to the standard maximum of 6. The triggering Explosion also Sunders the target's Vigor Defense by 1 until the end of your next turn."
+  },
+  {
+    "id": "toxicologist",
+    "name": "Toxicologist",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "crafting"
+    ],
+    "source_class": "assassin",
+    "text": "You synthesize industrial-grade toxins from scavenged materials. When you complete a Long Rest, craft toxin vials equal to your Focus Die maximum. Applying one to a weapon or ammunition is a Free effect; it takes hold on your next hit and persists until the target spends 1 AP to clear it. Crippling Oil: Speed halved. Wither-Blood: 3 True Damage at the start of their turns, stacking twice. Mind-Fog: Dazed. Flash-Powder (thrown 30ft): roll Agility vs Agility Defense; on a hit the target is Blinded until the end of their next turn, on a Glancing Blow their next Impact Die is Downgraded."
+  },
+  {
+    "id": "thrill-of-the-kill",
+    "name": "Thrill of the Kill",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "assassin",
+    "text": "Precision under pressure is its own fuel. Whenever your Impact Die triggers a natural Explosion, and whenever you reduce an enemy to 0 Hit Points, you gain 1 Momentum. Explosions manufactured by Executioner's Strike or The First Strike do not count."
+  },
+  {
+    "id": "ghost-step",
+    "name": "Ghost Step",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "3 Agility Points",
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "movement",
+      "stealth"
+    ],
+    "source_class": "assassin",
+    "text": "You are simply not where the blow lands. As a Reaction when you are hit by an attack targeting your Agility Defense or by an area-of-effect, spend 3 Agility Points to negate all damage from it and move up to 10ft without provoking Opportunity Attacks. If this movement ends in Cover or concealment, you immediately become Hidden."
+  },
+  {
+    "id": "perfect-form",
+    "name": "Perfect Form",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive"
+    ],
+    "source_class": "assassin",
+    "text": "Your strikes have become architectural. Whenever your Impact Die triggers an Explosion, roll the Explosion die Upgraded one step; if that die also rolls its maximum, the next die in the chain is Upgraded again. Each die in a chain is Upgraded once. When an Upgraded Explosion die itself Explodes, the target is also knocked Prone."
+  },
+  {
+    "id": "the-final-cut",
+    "name": "The Final Cut",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "executioners-strike"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone",
+      "once-per-combat",
+      "tunable"
+    ],
+    "source_class": "assassin",
+    "text": "Every element of the craft operates in concert. Once per combat when you trigger Executioner's Strike, you may declare The Final Cut: every condition you have applied to the target fires its per-turn effect three times at once (tunable), resolving before the strike's damage, and all Sunders you have applied become permanent for the combat. Conditions remain active afterward and continue their normal timing. Additionally, the first Executioner's Strike you use each combat costs 0 Momentum."
+  },
+  {
+    "id": "compound-formula",
+    "name": "Compound Formula",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "toxicologist"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "crafting",
+      "chain:veil-of-the-nightshade"
+    ],
+    "source_class": "assassin",
+    "text": "Your toxin chemistry deepens. When crafting during a Long Rest, you may permanently combine any two toxin effects into single compound vials that deliver both on one hit, resolving independently. Your output doubles: craft vials equal to twice your Focus Die maximum. Additionally, whenever your Impact Die Explodes against a target suffering one of your toxins, that toxin immediately triggers a second time."
+  },
+  {
+    "id": "noxious-cloud",
+    "name": "Noxious Cloud",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "compound-formula"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "chain:veil-of-the-nightshade"
+    ],
+    "source_class": "assassin",
+    "text": "You throw a volatile chemical charge to a point within 30ft. For 1 AP and 2 Momentum, a 20ft radius cloud erupts until the start of your next turn. Roll your Focus Die against the Agility Defense of all enemies inside: on a hit each takes Poison damage equal to your Focus Die and suffers Wither-Blood; on a Glancing Blow, Poison damage only. Allies are unaffected. If any detonation die Explodes, the cloud lingers until the end of your next turn and enemies entering it suffer Wither-Blood automatically."
+  },
+  {
+    "id": "master-poisoner",
+    "name": "Master Poisoner",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "noxious-cloud"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:veil-of-the-nightshade"
+    ],
+    "source_class": "assassin",
+    "text": "Your toxins attack the nervous system directly. Any enemy suffering at least one of your toxins has their Agility Defense and Focus Defense each Sundered by 1 for the remainder of combat, reapplied if they cleanse and are poisoned again. Clearing your toxins now first requires a successful Focus Save against Difficulty 5; on a failure the AP is spent and the toxin remains."
+  },
+  {
+    "id": "pressure-point",
+    "name": "Pressure Point",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "control",
+      "chain:veil-of-the-razorwire"
+    ],
+    "source_class": "assassin",
+    "text": "You drive the strike into a precise anatomical location. When you hit with a Finesse weapon, spend 1 Momentum to apply one effect in addition to full damage: Joint Strike — the target's next Impact Die is Downgraded; Balance Break — the target is knocked Prone; or Throat Cut — the target cannot take Reactions until the start of their next turn."
+  },
+  {
+    "id": "blade-cage",
+    "name": "Blade Cage",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "pressure-point"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "attack",
+      "chain:veil-of-the-razorwire"
+    ],
+    "source_class": "assassin",
+    "text": "Nothing leaves your reach unbled. As a Reaction when an adjacent enemy attempts to leave your melee reach by any means, spend 2 Momentum to make one immediate Finesse attack with its Impact Die Upgraded. On a hit, their movement is halted. On a Glancing Blow, they take no damage but complete only half their intended movement."
+  },
+  {
+    "id": "anatomical-mastery",
+    "name": "Anatomical Mastery",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "blade-cage"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:veil-of-the-razorwire",
+      "tunable"
+    ],
+    "source_class": "assassin",
+    "text": "Every enemy is a blueprint you have memorized. Pressure Point now applies two effects instead of one for its single Momentum. Additionally, whenever you hit with a Finesse attack, the target's Vigor Defense is treated as Sundered by 2 for that attack's damage calculation, applied before the hit-or-glance comparison (magnitude tunable)."
+  },
+  {
+    "id": "deadeye-priority",
+    "name": "Deadeye Priority",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:veil-of-the-deadeye"
+    ],
+    "source_class": "assassin",
+    "text": "You chose your position before combat began. Upgrade your Agility Die on Initiative rolls, and on your first turn of each combat, enemies that have not yet acted count as unaware of you for Momentum generation. Additionally, whenever your Impact Die Explodes on a ranged attack, the projectile punches through: the enemy directly behind your target in the line of fire takes Piercing damage equal to the Explosion die, no roll required."
+  },
+  {
+    "id": "suppressing-volley",
+    "name": "Suppressing Volley",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "deadeye-priority"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "chain:veil-of-the-deadeye"
+    ],
+    "source_class": "assassin",
+    "text": "You fire a high-velocity spread in a 40ft line from your position. For 1 AP and 2 Momentum, roll your Agility Die against the Vigor Defense of every enemy in the line: on a hit each takes Piercing damage equal to your Agility Die; on a Glancing Blow their Speed drops to 0 until the end of their next turn. If any die Explodes, one target of your choice in the line is knocked Prone."
+  },
+  {
+    "id": "trick-shot",
+    "name": "Trick Shot",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "suppressing-volley"
+    ],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "control",
+      "chain:veil-of-the-deadeye"
+    ],
+    "source_class": "assassin",
+    "text": "You place the shot precisely enough to dictate what happens next. When you hit with a ranged Agility-based attack, spend 1 Momentum to apply one effect: Disarm — the target drops one held item of your choice into their space; Pin — their Speed is 0 until the end of their next turn; or Targeting Shot — until the end of your next turn, the first ally to attack the target Upgrades their Impact Die."
+  },
+  {
+    "id": "primal-fury",
+    "name": "Primal Fury",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "berserker",
+    "text": "You turn pain into power. The first time each round that an enemy targets you with a direct attack — melee, ranged, or spell, landed or not — you gain 1 Momentum. Ongoing damage, hazards, and traps never count. You also learn Bloodied Resilience: for 1 AP and 1 Vigor Point, roll your Vigor Die and gain that many temporary Hit Points."
+  },
+  {
+    "id": "unarmored-bulwark",
+    "name": "Unarmored Bulwark",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "defend"
+    ],
+    "source_class": "berserker",
+    "text": "Your rage hardens flesh where steel would only slow you. While wearing no armor and wielding no shield, your Vigor Defense and Resolve Defense each gain a bonus equal to half your Resolve Die maximum. Wearing any armor suppresses this until removed."
+  },
+  {
+    "id": "furious-strike",
+    "name": "Furious Strike",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": "1-3",
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "attack"
+    ],
+    "source_class": "berserker",
+    "text": "Your rage adds crushing weight to your blows. When you deal damage with a melee attack, spend up to 3 Momentum: add one bonus Vigor Die to that attack's Impact Roll per point spent. This is a sanctioned exception to the one-bonus-die limit and may combine with Combined Strike. If you spend 3, the target must succeed on a Vigor Save (Difficulty 5) or be knocked Prone."
+  },
+  {
+    "id": "reckless-attack",
+    "name": "Reckless Attack",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "attack"
+    ],
+    "source_class": "berserker",
+    "text": "You abandon all pretense of defense. Declare Reckless Attack at the start of your turn as a Free effect. For the rest of your turn, one Impact Die of your choice in each melee Impact Roll you make is Upgraded; until the start of your next turn, enemies attacking you in melee Upgrade their Impact Die as well. A true trade: more dealt, more taken."
+  },
+  {
+    "id": "wrathful-stride",
+    "name": "Wrathful Stride",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "maneuver",
+      "movement"
+    ],
+    "source_class": "berserker",
+    "text": "Your rage carries you across the field like a thrown spear. For 1 AP and 1 Momentum, move up to 15ft in a straight line toward an enemy you can see, ignoring difficult terrain and provoking no Opportunity Attacks."
+  },
+  {
+    "id": "goading-roar",
+    "name": "Goading Roar",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Vigor Point",
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "control"
+    ],
+    "source_class": "berserker",
+    "text": "You unleash a challenging roar. For 1 AP and 1 Vigor Point, roll your Resolve Die against the Resolve Defense of all enemies within 15ft. On a hit, the target is Dazed and Downgrades their Impact Die on attacks against anyone but you until the end of your next turn. On a Glancing Blow, only the Downgrade applies."
+  },
+  {
+    "id": "devastating-leap",
+    "name": "Devastating Leap",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "2 Vigor Points",
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "movement"
+    ],
+    "source_class": "berserker",
+    "text": "You cross the battlefield in a single terrifying bound. For 1 AP and 2 Vigor Points, launch up to 30ft to an unoccupied space and roll your Vigor Die against the Vigor Defense of all enemies within 10ft of your landing. On a hit, each takes Bludgeoning damage equal to two Vigor Dice and is knocked Prone; on a Glancing Blow, their Speed is halved until the end of their next turn."
+  },
+  {
+    "id": "relentless",
+    "name": "Relentless",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "primal-fury"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone",
+      "once-per-combat"
+    ],
+    "source_class": "berserker",
+    "text": "Your fury refuses to let your body die. Once per combat, when you are reduced to 0 Hit Points, you may drop to 1 instead. If you do, your Momentum fills to its cap and your next attack automatically triggers an Explosion: add the die's maximum to the roll, then continue any chain normally. Relentless does not prevent death from effects that bypass the death save system."
+  },
+  {
+    "id": "crimson-tide",
+    "name": "Crimson Tide",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:path-of-bloodfury"
+    ],
+    "source_class": "berserker",
+    "text": "Pain only makes you stronger. While at or below half your maximum Hit Points, whenever you roll damage for a melee attack, roll one additional Vigor Die and add it to the total. This bonus die can Explode normally."
+  },
+  {
+    "id": "crimson-rampage",
+    "name": "Crimson Rampage",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "crimson-tide",
+      "retributive-strike"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:path-of-bloodfury"
+    ],
+    "source_class": "berserker",
+    "text": "You become a whirlwind of violence. Whenever you reduce a creature to 0 Hit Points with a melee attack, you may immediately move up to 15ft and make one additional melee attack against a different target as a Free effect. That attack can itself trigger Crimson Rampage."
+  },
+  {
+    "id": "twin-fury",
+    "name": "Twin Fury",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:path-of-iron-storm"
+    ],
+    "source_class": "berserker",
+    "text": "You wield two Heavy two-handed weapons simultaneously, defying every conventional understanding of what a body can sustain. The Heavy bonus die still applies once per turn, on your first attack. Whenever your primary weapon's Impact Die Explodes, your offhand weapon automatically strikes the same target as a separate roll; both weapons apply their Explosion Riders independently."
+  },
+  {
+    "id": "sharpened-fury",
+    "name": "Sharpened Fury",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "twin-fury"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:path-of-iron-storm"
+    ],
+    "source_class": "berserker",
+    "text": "Your strikes find the breaking point faster than they should. The Explosion threshold for both your weapons lowers by 1: a d10 Explodes on 9 or 10, a d12 on 11 or 12. A threshold result counts as rolling the die's maximum for all Explosion-triggered effects."
+  },
+  {
+    "id": "cascading-wrath",
+    "name": "Cascading Wrath",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "sharpened-fury"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator",
+      "chain:path-of-iron-storm"
+    ],
+    "source_class": "berserker",
+    "text": "Your two weapons become a single engine of devastation. Whenever both your primary and offhand weapons trigger Explosions in the same turn, each Explosion's bonus die is Upgraded one step before rolling, and you gain 1 Momentum (once per turn)."
+  },
+  {
+    "id": "infectious-fury",
+    "name": "Infectious Fury",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "primal-fury"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "support",
+      "chain:path-of-outward-rage"
+    ],
+    "source_class": "berserker",
+    "text": "Your rage is visible and contagious. Whenever you gain Momentum from Primal Fury, the nearest ally within 30ft who can see you also gains 1 Momentum. If multiple allies are equidistant, it goes to the one whose turn comes next."
+  },
+  {
+    "id": "war-cry",
+    "name": "War Cry",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "infectious-fury"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "support",
+      "chain:path-of-outward-rage"
+    ],
+    "source_class": "berserker",
+    "text": "You unleash a roar that electrifies those fighting alongside you. For 1 AP and 2 Momentum, choose up to two allies within 30ft who can hear you: each may immediately make one melee or ranged attack as a Free effect, using their normal Impact Die and none of their own AP."
+  },
+  {
+    "id": "tide-of-rage",
+    "name": "Tide of Rage",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "war-cry"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "control",
+      "chain:path-of-outward-rage"
+    ],
+    "source_class": "berserker",
+    "text": "Your combat presence becomes psychologically destabilizing. Whenever you use Furious Strike, every enemy within 10ft must make a Resolve Save against Difficulty 5; on a failure, their Impact Die is Downgraded until the end of their next turn. The Save resolves before your attack's damage is applied."
+  },
+  {
+    "id": "unstoppable-engine",
+    "name": "Unstoppable Engine",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "charger",
+    "text": "You convert motion into power. Whenever you move at least 20ft on your turn, you gain 1 Momentum at the end of that movement. You also learn Kinetic Strike: when you hit with a melee attack after moving at least 10ft this turn, spend 1 Momentum as a Free effect to add one Impact Die to that attack, following the Bonus Impact Dice rule."
+  },
+  {
+    "id": "quick-charge",
+    "name": "Quick Charge",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Agility Point",
+    "ap_cost": 1,
+    "tags": [
+      "maneuver",
+      "movement"
+    ],
+    "source_class": "charger",
+    "text": "You close the gap in an instant. For 1 AP and 1 Agility Point, move up to your Base Speed in a straight line toward an enemy. If you end adjacent to that enemy, your next attack against them this turn adds one Impact Die to its damage."
+  },
+  {
+    "id": "cutting-slide",
+    "name": "Cutting Slide",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Agility Point",
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "movement"
+    ],
+    "source_class": "charger",
+    "text": "You drop into a low slide and cut as you pass. For 1 AP and 1 Agility Point, slide up to 15ft without provoking Opportunity Attacks and strike one enemy you reach for 1 Impact Die of damage. Choose one: the target is knocked Prone, or the target is Hamstrung — Speed halved and no Reactions until the end of its next turn."
+  },
+  {
+    "id": "afterimage",
+    "name": "Afterimage",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "defend"
+    ],
+    "source_class": "charger",
+    "text": "You move so quickly you leave a ghost of yourself behind. For 1 AP and 2 Momentum: until the start of your next turn, the first attack made against you is treated as a Glancing Blow — no damage, with any stated Glancing Blow effects applying normally."
+  },
+  {
+    "id": "bait",
+    "name": "Bait",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Agility Point",
+    "ap_cost": 1,
+    "tags": [
+      "control"
+    ],
+    "source_class": "charger",
+    "text": "You flicker a strike that never lands. For 1 AP and 1 Agility Point, one enemy within reach becomes Off-Balance: it acts immediately after its next ally in the turn order instead of at its normal place (last in the round if it has no allies). The displacement lasts one round."
+  },
+  {
+    "id": "wall-run",
+    "name": "Wall Run",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Agility Point",
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "movement"
+    ],
+    "source_class": "charger",
+    "text": "Gravity is a suggestion you outrun. Spend 1 Agility Point as a Free effect: until the end of your turn you may move across walls, ceilings, and the surface of water, and your movement provokes no Opportunity Attacks. If you end your turn on a surface that cannot support you, you fall."
+  },
+  {
+    "id": "cyclone-charge",
+    "name": "Cyclone Charge",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "movement"
+    ],
+    "source_class": "charger",
+    "text": "You tear through a line of foes in a single pass. For 1 AP and 2 Momentum, move up to your Base Speed in a straight line without provoking Opportunity Attacks. Choose up to three enemies you pass through or adjacent to and make one attack against each, dealing 2 Impact Dice on a hit."
+  },
+  {
+    "id": "cripple",
+    "name": "Cripple",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack"
+    ],
+    "source_class": "charger",
+    "text": "You blow past a target's guard and leave them open. For 1 AP and 2 Momentum, make a melee attack dealing 2 Impact Dice on a hit; the next attack made against the target before the start of your next turn is Visceral."
+  },
+  {
+    "id": "trip-line",
+    "name": "Trip Line",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "control",
+      "movement"
+    ],
+    "source_class": "charger",
+    "text": "You weave through a crowd, sweeping legs as you pass. For 1 AP and 1 Momentum, move up to your Base Speed without provoking Opportunity Attacks; up to three enemies you move adjacent to are knocked Prone."
+  },
+  {
+    "id": "unhindered",
+    "name": "Unhindered",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive"
+    ],
+    "source_class": "charger",
+    "text": "Nothing can pin you down. You are never a valid target for Opportunity Attacks, and you cannot be flanked."
+  },
+  {
+    "id": "quicksilver-rush",
+    "name": "Quicksilver Rush",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": "1-3",
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "movement"
+    ],
+    "source_class": "charger",
+    "text": "You become a streak of motion, scattering everything in your path. For 1 AP, spend Momentum up to your cap and move up to your Base Speed in a straight line through enemy spaces, provoking nothing. Each enemy in your path takes Impact Dice equal to 1 plus the Momentum spent, to a maximum of 4."
+  },
+  {
+    "id": "thunderclap-step",
+    "name": "Thunderclap Step",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack"
+    ],
+    "source_class": "charger",
+    "text": "You land from speed with force enough to crack the ground. For 1 AP and 3 Momentum, every enemy within 10ft of you takes 3 Impact Dice of damage and is knocked Prone."
+  },
+  {
+    "id": "blur-of-motion",
+    "name": "Blur of Motion",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive"
+    ],
+    "source_class": "charger",
+    "text": "You live at a tempo others cannot match. You gain +1 AP on each of your turns, usable only on non-Attack actions."
+  },
+  {
+    "id": "the-juggernaut",
+    "name": "The Juggernaut",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "unstoppable-engine"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone",
+      "tunable"
+    ],
+    "source_class": "charger",
+    "text": "You have outrun the limits that bind everyone else. You cannot be Slowed, immobilized, knocked Prone, or stopped by difficult terrain. Additionally, whenever you move 40ft or more on your turn, your next attack that turn costs 0 AP (magnitude tunable) — repeated impact from impossible speed."
+  },
+  {
+    "id": "built-momentum",
+    "name": "Built Momentum",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "unstoppable-engine"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:way-of-the-demolisher"
+    ],
+    "source_class": "charger",
+    "text": "Your strikes carry the full weight of your motion. Whenever you have moved at least 20ft on your turn before making an attack, that attack's Impact Roll is Upgraded. Because this is an Upgrade rather than an added die, it stacks with a single bonus die from features like Kinetic Strike."
+  },
+  {
+    "id": "shockwave",
+    "name": "Shockwave",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "built-momentum"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "chain:way-of-the-demolisher"
+    ],
+    "source_class": "charger",
+    "text": "You strike the ground with the force of your stored speed. For 1 AP and 2 Momentum, every enemy within 20ft standing on the same surface as you takes 2 Impact Dice of damage — 3 against any enemy that is Hamstrung, Pinned, or Prone."
+  },
+  {
+    "id": "overrun",
+    "name": "Overrun",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "shockwave"
+    ],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:way-of-the-demolisher"
+    ],
+    "source_class": "charger",
+    "text": "Your momentum cannot be turned aside. Once per turn, when an attack you make would be a Glancing Blow, spend 1 Momentum to roll one additional die of the same type and add it to the Impact Roll; if the new total clears the Defense Rating, the attack connects as a full hit."
+  },
+  {
+    "id": "opening",
+    "name": "Opening",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "support",
+      "chain:way-of-the-line-breaker"
+    ],
+    "source_class": "charger",
+    "text": "Your speed tears holes in the enemy line. Whenever you knock an enemy Prone with one of your Talents, each ally that can see the fallen enemy may immediately move up to 10ft toward it as a Reaction, provoking no Opportunity Attacks."
+  },
+  {
+    "id": "open-the-lane",
+    "name": "Open the Lane",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "opening"
+    ],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "control",
+      "chain:way-of-the-line-breaker"
+    ],
+    "source_class": "charger",
+    "text": "You crash through a cluster of enemies to break their formation. For 1 AP and 1 Momentum, move up to your Base Speed in a straight line without provoking. When you pass through or adjacent to three or more enemies, you may push each 10ft in a direction of your choice; enemies pushed into one another take 1 Impact Die and are knocked Prone, and you gain 1 Momentum per enemy knocked Prone this way."
+  },
+  {
+    "id": "slipstream",
+    "name": "Slipstream",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "open-the-lane"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "support",
+      "chain:way-of-the-line-breaker"
+    ],
+    "source_class": "charger",
+    "text": "Allies who follow your lead move as fast as you do. Whenever you use a movement Talent (Quick Charge, Phase Step, Wrathful Stride, or similar), one ally you can see may immediately move up to 10ft as a Reaction without provoking Opportunity Attacks."
+  },
+  {
+    "id": "second-wind",
+    "name": "Second Wind",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "once-per-combat",
+      "chain:way-of-the-ironclad-runner"
+    ],
+    "source_class": "charger",
+    "text": "You can keep running long after others would fall. Once per combat, when you would be reduced to 0 Hit Points while you have at least 1 Momentum, you may instead drop to 1 Hit Point and lose all your Momentum."
+  },
+  {
+    "id": "gathering-speed",
+    "name": "Gathering Speed",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "second-wind"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:way-of-the-ironclad-runner",
+      "tunable"
+    ],
+    "source_class": "charger",
+    "text": "The longer the chase, the harder you hit. For every full 20ft you move on your turn, your next attack that turn has its Impact Roll Upgraded once, to a maximum of two Upgrades (magnitude tunable). Upgrades, not added dice — they stack with your single bonus die."
+  },
+  {
+    "id": "full-throttle",
+    "name": "Full Throttle",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "gathering-speed"
+    ],
+    "momentum_cost": "1-4",
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "attack",
+      "once-per-combat",
+      "chain:way-of-the-ironclad-runner"
+    ],
+    "source_class": "charger",
+    "text": "You release all your speed in one catastrophic burst. Once per combat, as part of an attack, spend up to 4 Momentum: for each point, add 1 Impact Die to that attack's damage (a sanctioned capped exception to the Bonus Impact Dice rule). The target is flung 20ft away and knocked Prone."
+  },
+  {
+    "id": "harvest-of-decay",
+    "name": "Harvest of Decay",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "harrower",
+    "text": "You draw power from dissolution. The first time each turn you inflict a negative condition (Decay, Bleeding, Dazed, Blinded, Sundered) on an enemy with your own attack or spell, you gain 1 Momentum. Advancing an existing condition's stage does not count, nor do conditions applied by passive auras. You also learn Creeping Rot: after you deal Void damage to a target this turn, spend 1 Momentum as a Free effect to advance that target's Decay by one additional stage."
+  },
+  {
+    "id": "death-sense",
+    "name": "Death Sense",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "utility"
+    ],
+    "source_class": "harrower",
+    "text": "You perceive the proximity of death with instinctive accuracy. You always know the HP state of every creature within 60ft (full, wounded, or critical), and you know the exact location of any creature reduced to 0 HP within the last hour within 1 mile, dead or merely Incapacitated. This sense cannot be blocked by mundane means."
+  },
+  {
+    "id": "life-tap",
+    "name": "Life Tap",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "attack",
+      "healing",
+      "once-per-round"
+    ],
+    "source_class": "harrower",
+    "text": "You reach into the void energy released by pain. As a Reaction when an enemy within 30ft takes damage from any source (once per round), spend 2 Momentum: that enemy takes additional Void damage equal to your Focus Die (reduced by their Focus Defense as normal) and you regain Hit Points equal to your Focus Die. The healing does not apply against undead or constructs."
+  },
+  {
+    "id": "entropic-amplification",
+    "name": "Entropic Amplification",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "school-of-entropy"
+    ],
+    "momentum_cost": "1-3",
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "spellcasting"
+    ],
+    "source_class": "harrower",
+    "text": "You flood an Entropy spell with additional void energy as it forms. When you cast an Entropy spell costing 1 or more Reserve, spend up to 3 Momentum: 1 point adds one bonus Focus Die to the spell's Impact Pool, and each point beyond the first Upgrades that bonus die one step instead of adding another die, per the universal Bonus Impact Dice rule."
+  },
+  {
+    "id": "wither-aura",
+    "name": "Wither Aura",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "school-of-entropy"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "aura"
+    ],
+    "source_class": "harrower",
+    "text": "You radiate accelerated entropy. Any enemy that starts their turn within 10ft of you has their Decay advance by one stage, or enters Decay Stage 1 if not already Decaying — once per enemy per round, and never beyond Stage 2 by this aura alone. Always active while you are conscious; allies are unaffected."
+  },
+  {
+    "id": "void-form",
+    "name": "Void Form",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "defend",
+      "stealth"
+    ],
+    "source_class": "harrower",
+    "text": "You partially dissolve into void energy for one minute. For 1 AP and 3 Momentum: you are Invisible, cannot be Grappled or Restrained by physical means, your Void damage Impact Rolls are Upgraded, and you may pass through solid objects as part of movement (never ending your turn inside one). Attacking or casting suspends the Invisibility until the start of your next turn. You cannot cast spells costing more than 2 Reserve while in Void Form. Revert as a Free effect."
+  },
+  {
+    "id": "soul-leech",
+    "name": "Soul Leech",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "school-of-entropy"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": "2 Focus Points",
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "healing",
+      "spellcasting"
+    ],
+    "source_class": "harrower",
+    "text": "For 1 AP and 2 Focus Points, cast Soul Leech as a Sustained spell on one target within 60ft. While you Sustain it, at the start of each of the target's turns they take True Damage equal to your Focus Die (maximum 6) and you regain that many Hit Points (not against undead or constructs). The drain is invisible and silent: identifying its source requires a Difficulty 7 Focus Save. Ends if the target reaches 0 HP or you fall Incapacitated."
+  },
+  {
+    "id": "veil-of-the-dying",
+    "name": "Veil of the Dying",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "healing"
+    ],
+    "source_class": "harrower",
+    "text": "You harvest the energy released at the moment of collapse. As a Reaction when any creature within 60ft drops to 0 Hit Points, spend 2 Momentum and choose one: regain Hit Points equal to 2 Focus Dice, or refill your Momentum to its cap. Never both from a single trigger."
+  },
+  {
+    "id": "the-void-ascendant",
+    "name": "The Void Ascendant",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "wither-aura"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone"
+    ],
+    "source_class": "harrower",
+    "text": "You have become entropy's master rather than its subject. You are immune to the Decay condition; Wither Aura's range extends to 20ft; whenever a creature dies within 60ft of you, you gain 2 Momentum; and Void Form no longer restricts what spells you may cast."
+  },
+  {
+    "id": "deaths-reprieve",
+    "name": "Death's Reprieve",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "support",
+      "chain:path-of-the-grave-warden"
+    ],
+    "source_class": "harrower",
+    "text": "You intercede at the boundary of death. As a Reaction when an ally within 30ft is reduced to 0 Hit Points, spend 2 Momentum: they drop to 1 Hit Point instead, remain conscious, and act normally on their next turn. Once per combat per ally."
+  },
+  {
+    "id": "grave-mark",
+    "name": "Grave Mark",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "deaths-reprieve"
+    ],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "control",
+      "chain:path-of-the-grave-warden"
+    ],
+    "source_class": "harrower",
+    "text": "You place a void mark on one enemy within 60ft for 1 AP and 1 Momentum. When the marked enemy is reduced to 0 HP, its death releases a pulse: all allies within 15ft of it regain Hit Points equal to your Focus Die, and you gain 2 Momentum. The mark lasts until combat ends or the target dies."
+  },
+  {
+    "id": "undying-purpose",
+    "name": "Undying Purpose",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "grave-mark"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "once-per-combat",
+      "chain:path-of-the-grave-warden"
+    ],
+    "source_class": "harrower",
+    "text": "Your control over the death boundary becomes absolute. Once per combat, when you are reduced to 0 Hit Points, you instead drop to 1 and your Momentum refills to its cap. For the rest of the combat, your Wither Aura advances Decay by two stages instead of one."
+  },
+  {
+    "id": "rift-spawn",
+    "name": "Rift Spawn",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "school-of-conjuration"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": "2 Focus Points",
+    "ap_cost": 1,
+    "tags": [
+      "summon",
+      "chain:path-of-the-void-conjurer"
+    ],
+    "source_class": "harrower",
+    "text": "You tear a jagged rift in the veil and drag something through. For 1 AP and 2 Focus Points, a Void Spawn appears within 30ft: HP 8 plus your Focus Die maximum; Vigor and Agility Defense each half your Focus Die maximum. For 1 AP, command it to move up to 20ft and make one melee attack — your Focus Die against an adjacent target's Focus Defense for Void damage equal to your Focus Die. Creatures damaged by it advance one Decay stage. Summoning it grants you 1 Momentum. Dismissed as a Free effect, at 0 HP, or when combat ends."
+  },
+  {
+    "id": "entropic-horde",
+    "name": "Entropic Horde",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "rift-spawn"
+    ],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "summon",
+      "chain:path-of-the-void-conjurer"
+    ],
+    "source_class": "harrower",
+    "text": "You tear three simultaneous rifts. For 1 AP and 3 Momentum, pull through three Void Spawns at once, using standard Void Spawn stats. For a single 1 AP command, all three may move up to 20ft and attack, targeting different enemies if you wish. Creatures damaged by any of them advance one Decay stage."
+  },
+  {
+    "id": "apex-rift",
+    "name": "Apex Rift",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "entropic-horde"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": "5 Focus Points",
+    "ap_cost": 1,
+    "tags": [
+      "summon",
+      "chain:path-of-the-void-conjurer"
+    ],
+    "source_class": "harrower",
+    "text": "You tear open a major rift and pull through an Apex Void Entity: HP 25 plus your Focus Die maximum; Vigor and Agility Defense each equal to your Focus Die maximum. For 1 AP, command it to move up to 40ft and make one melee attack rolling 3 Focus Dice against an adjacent target's Focus Defense for Void damage. Creatures it hits advance two Decay stages. The entity persists while you Sustain the spell (standard Sustained rules) and grants you 1 Momentum each time it deals damage."
+  },
+  {
+    "id": "resonant-decay",
+    "name": "Resonant Decay",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "school-of-entropy"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:path-of-the-psychic-harrower"
+    ],
+    "source_class": "harrower",
+    "text": "Your Entropy and Resonance magics reinforce each other. Whenever you apply the Decay condition, the target also takes Psychic damage equal to your Resolve Die, no roll required. Whenever you deal Psychic damage, the target's Decay advances one stage. Each half of this feature triggers at most once per spell or attack, and neither half re-triggers the other."
+  },
+  {
+    "id": "trauma-echo",
+    "name": "Trauma Echo",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "resonant-decay"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "attack",
+      "chain:path-of-the-psychic-harrower"
+    ],
+    "source_class": "harrower",
+    "text": "You amplify the psychological impact of failure. As a Reaction when an enemy within 60ft fails any Save, spend 2 Momentum: that enemy immediately takes Psychic damage equal to your Resolve Die and is Dazed until the end of their next turn."
+  },
+  {
+    "id": "psychic-collapse",
+    "name": "Psychic Collapse",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "trauma-echo"
+    ],
+    "momentum_cost": 4,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "chain:path-of-the-psychic-harrower"
+    ],
+    "source_class": "harrower",
+    "text": "You unleash a wave of combined void and psychic energy. For 1 AP and 4 Momentum (a cap-raising Talent is required to hold this much), roll your Focus Die against the Resolve Defense of all enemies within 30ft. On a hit: Void damage equal to your Focus Die, Psychic damage equal to your Resolve Die, Decay advances one stage, and their next Impact Die is Downgraded. On a Glancing Blow: the Decay advance and Downgrade only."
+  },
+  {
+    "id": "divine-accord",
+    "name": "Divine Accord",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "invoker",
+    "text": "You maintain an active covenant that rewards acts of protection. Whenever you cast an Abjuration or Divination spell that protects an ally or removes a condition, you gain 1 Momentum."
+  },
+  {
+    "id": "aura-of-clarity",
+    "name": "Aura of Clarity",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "aura",
+      "support"
+    ],
+    "source_class": "invoker",
+    "text": "Your presence cuts through confusion and sensory interference. Allies within 15ft of you Upgrade their Save Die against any effect that would Blind or Silence them. Always active while you are conscious. At Level 9, the radius extends to 30ft and allies within it become immune to Blinded and Silenced."
+  },
+  {
+    "id": "denounce",
+    "name": "Denounce",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "control"
+    ],
+    "source_class": "invoker",
+    "text": "You level divine judgment at one target within 60ft. For 1 AP and 2 Momentum, roll your Resolve Die against their Resolve Defense. On a hit, the target is Denounced for 1 minute: all Radiant damage they take is increased by a roll of your Focus Die (rolled once, applied as a fixed amount), a visible brand marks them, and they cannot benefit from healing until the end of their next turn. On a Glancing Blow, only the healing denial applies."
+  },
+  {
+    "id": "sacred-overflow",
+    "name": "Sacred Overflow",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "healing",
+      "support"
+    ],
+    "source_class": "invoker",
+    "text": "You open yourself fully as a conduit and release a purifying wave. For 1 AP and 3 Momentum, choose one. Radiant Wave: roll your Focus Die against the Resolve Defense of all enemies within 30ft; on a hit, deal Radiant damage equal to 2 Focus Dice and Daze them until the end of their next turn. Mass Restoration: all allies within 30ft roll their Vigor Die and regain that many Hit Points, and you remove one condition from each (Bleeding, Blinded, Dazed, Silenced, or Prone)."
+  },
+  {
+    "id": "divine-bulwark",
+    "name": "Divine Bulwark",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "aura",
+      "defend"
+    ],
+    "source_class": "invoker",
+    "text": "Your covenant extends physical protection to those near you. Allies within 15ft of you gain +1 Vigor Defense and +1 Agility Defense. Because this is a flat bonus rather than a Downgrade, it stacks normally with Downgrade effects. Standing next to you should feel materially safer than standing anywhere else."
+  },
+  {
+    "id": "word-of-recall",
+    "name": "Word of Recall",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "support",
+      "movement"
+    ],
+    "source_class": "invoker",
+    "text": "You speak a single word that folds distance. For 1 AP and 3 Momentum, one ally anywhere in the combat teleports instantly to an unoccupied space adjacent to you, provoking nothing. It can extract an ally from a Grapple, a hazard zone, or any position regardless of obstacles — but not across planar boundaries."
+  },
+  {
+    "id": "voice-of-the-divine",
+    "name": "Voice of the Divine",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "divine-accord"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone",
+      "once-per-combat"
+    ],
+    "source_class": "invoker",
+    "text": "Your connection reaches its ultimate expression. Your Abjuration spells cost 1 less Reserve (minimum 0). Once per combat, for 1 AP, speak a divine command to one creature within 60ft that automatically succeeds, no roll: a single simple physical action achievable in one round (move, drop a held item, stand). It cannot force self-harm, spellcasting, ability use, or willing participation. The creature executes it on their next turn."
+  },
+  {
+    "id": "layered-ward",
+    "name": "Layered Ward",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "guardian-interjection"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "defend",
+      "chain:order-of-the-aegis"
+    ],
+    "source_class": "invoker",
+    "text": "Your wards grow teeth. When you use Guardian Interjection to protect an ally, the Downgrade applies to the attacker's entire Impact Pool, and it persists for that attacker's next attack against the same ally as well. The attacker must work twice as hard to breach your protection."
+  },
+  {
+    "id": "sacred-sanctuary",
+    "name": "Sacred Sanctuary",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "layered-ward"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "defend",
+      "support",
+      "chain:order-of-the-aegis"
+    ],
+    "source_class": "invoker",
+    "text": "You sanctify the ground itself. For 1 AP and 2 Momentum, designate a 15ft radius area centered within 30ft. Inside it, allies have all incoming Impact Rolls Downgraded, cannot be forcibly moved out against their will, and Healing Word heals an additional Resolve Die. Lasts 1 minute or until you move more than 60ft from its center. Its Downgrade does not stack with Guardian Interjection against the same attack: apply the greater."
+  },
+  {
+    "id": "unassailable",
+    "name": "Unassailable",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "sacred-sanctuary"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "defend",
+      "chain:order-of-the-aegis"
+    ],
+    "source_class": "invoker",
+    "text": "Your wards become nearly impossible to overcome. Whenever an ally protected by your Guardian Interjection or Sacred Sanctuary would be reduced to 0 Hit Points, they instead drop to 1. Automatic, once per combat per ally."
+  },
+  {
+    "id": "true-sight",
+    "name": "True Sight",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "utility",
+      "chain:order-of-the-inquisition"
+    ],
+    "source_class": "invoker",
+    "text": "Your perception pierces all concealment. You always see Invisible creatures, see through Illusions as if you had disbelieved them, and immediately know when a creature within 30ft is under magical mind control — Compulsion and Domination read as a distinct signature visible only to you."
+  },
+  {
+    "id": "brand-of-censure",
+    "name": "Brand of Censure",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "true-sight"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "control",
+      "generator",
+      "chain:order-of-the-inquisition"
+    ],
+    "source_class": "invoker",
+    "text": "You mark one target within 60ft with a brand of judgment. For 1 AP and 2 Momentum: the branded target cannot use teleportation or planar movement, its exact position is revealed to all allies regardless of concealment, and the first time each round an ally hits it, you gain 1 Momentum. The brand persists until the target reaches 0 HP."
+  },
+  {
+    "id": "divine-execution",
+    "name": "Divine Execution",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "brand-of-censure"
+    ],
+    "momentum_cost": 4,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "chain:order-of-the-inquisition"
+    ],
+    "source_class": "invoker",
+    "text": "You channel concentrated judgment into a single obliterating strike. For 1 AP and 4 Momentum (a cap-raising Talent is required to hold this much), make a Visceral strike: roll your Focus Die against the target's Resolve Defense; on a hit, deal 3 Focus Dice of Radiant damage as True Damage — 5 Focus Dice if the target is Denounced. On a Glancing Blow, no damage, but the target is Dazed until the end of their next turn and you gain 1 Momentum."
+  },
+  {
+    "id": "forewarned",
+    "name": "Forewarned",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "utility",
+      "chain:order-of-the-prophet"
+    ],
+    "source_class": "invoker",
+    "text": "You cannot be surprised. At the start of each combat, before Initiative is rolled, you observe the opening positions of all enemies and may share this freely with allies. This costs nothing and does not negate ambush positioning — it only reveals where everyone stands."
+  },
+  {
+    "id": "temporal-decree",
+    "name": "Temporal Decree",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "forewarned",
+      "seize-the-opening"
+    ],
+    "momentum_cost": 4,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "control",
+      "chain:order-of-the-prophet"
+    ],
+    "source_class": "invoker",
+    "text": "You reshape the immediate future of one target within 60ft. For 1 AP and 4 Momentum (a cap-raising Talent is required to hold this much), roll your Resolve Die against their Resolve Defense. On a hit, declare one decree for their next turn. Stillness: they are Dazed and their turn is limited to 2 AP. Confusion: they must attack the nearest creature, regardless of allegiance. Revelation: they become visible, lose all Cover and concealment benefits, and all attacks against them are Upgraded until the start of their following turn. On a Glancing Blow, they are Dazed until the end of their next turn."
+  },
+  {
+    "id": "inspiration-engine",
+    "name": "Inspiration Engine",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "muse",
+    "text": "You feed on the energy of success. Whenever an ally hits their target on a roll that was Upgraded by any of your features, you gain 1 Momentum."
+  },
+  {
+    "id": "rallying-performance",
+    "name": "Rallying Performance",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Focus Point",
+    "ap_cost": 1,
+    "tags": [
+      "support"
+    ],
+    "source_class": "muse",
+    "text": "You deliver a burst of emotional inspiration to one ally within 60ft who can hear you. For 1 AP and 1 Focus Point, that ally Upgrades their next Impact Die or Save Die — their choice, declared before rolling — on one roll made before the start of your next turn."
+  },
+  {
+    "id": "countercharm",
+    "name": "Countercharm",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "support"
+    ],
+    "source_class": "muse",
+    "text": "You deliver a sharp psychic counter-note. As a Reaction when an ally within 30ft is targeted by any Compulsion or Domination effect, magical or not, spend 2 Momentum: the ally Upgrades their Resolve Die for the Save against it."
+  },
+  {
+    "id": "blade-of-the-mind",
+    "name": "Blade of the Mind",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "attack"
+    ],
+    "source_class": "muse",
+    "text": "Your physical and psychic attacks are indistinguishable. Whenever you hit with a melee or ranged weapon attack, you may have the damage dealt as Psychic damage instead of the weapon's normal type. Only the damage type changes: the attack still targets the weapon's normal Defense Rating."
+  },
+  {
+    "id": "phantasmal-misdirection",
+    "name": "Phantasmal Misdirection",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "defend"
+    ],
+    "source_class": "muse",
+    "text": "A duplicate of you steps the wrong way. As a Reaction when a single-target attack is declared against you, spend 2 Momentum: the attacker's entire Impact Pool is Downgraded for that attack, and if it results in a Glancing Blow they cannot target you again until the start of their next turn — they have committed to the wrong position."
+  },
+  {
+    "id": "inspiring-surge",
+    "name": "Inspiring Surge",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "support"
+    ],
+    "source_class": "muse",
+    "text": "You deliver a moment of pure, overwhelming inspiration. For 1 AP and 3 Momentum, every ally within 30ft immediately gains 1 Momentum, Upgrades their next Impact Die this round, and may move up to 10ft as a Free effect without provoking Opportunity Attacks."
+  },
+  {
+    "id": "maestro",
+    "name": "Maestro",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "rallying-performance"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone"
+    ],
+    "source_class": "muse",
+    "text": "You have mastered emotional and tactical orchestration. Your Resonance, Illusion, and Divination spells cost 1 less Reserve (minimum 0), and Rallying Performance no longer costs Focus — use it freely for its 1 AP."
+  },
+  {
+    "id": "resonant-inspiration",
+    "name": "Resonant Inspiration",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "rallying-performance"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "support",
+      "chain:calling-of-the-virtuoso"
+    ],
+    "source_class": "muse",
+    "text": "Your inspiration echoes. Whenever an ally uses the Upgrade from Rallying Performance and hits, they may apply the Upgrade to their next roll of the same type as well. The echo activates once per Rallying Performance use."
+  },
+  {
+    "id": "grand-performance",
+    "name": "Grand Performance",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "resonant-inspiration"
+    ],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "support",
+      "chain:calling-of-the-virtuoso"
+    ],
+    "source_class": "muse",
+    "text": "You deliver a sweeping performance that elevates everyone at once. For 1 AP and 3 Momentum, all allies within 60ft who can perceive you Upgrade their next Impact Die and their next Save Die. Each Upgrade is independent and can be used on different rolls."
+  },
+  {
+    "id": "encore",
+    "name": "Encore",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "grand-performance"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator",
+      "chain:calling-of-the-virtuoso"
+    ],
+    "source_class": "muse",
+    "text": "When inspiration lands perfectly, it demands repeating. Whenever an ally's die that you Upgraded triggers an Explosion, you gain 1 Momentum and may immediately use Rallying Performance on that ally again as a Free effect at no cost. Encore triggers at most once per round and never from its own Rallying Performance."
+  },
+  {
+    "id": "phantom-double",
+    "name": "Phantom Double",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "defend",
+      "chain:calling-of-the-illusionist"
+    ],
+    "source_class": "muse",
+    "text": "You conjure a convincing duplicate of one ally within 30ft. For 1 AP and 2 Momentum, the duplicate mimics them exactly. Enemies targeting that ally must declare which figure they attack before rolling; choosing wrong wastes the action and pops the double. Identifying the real one requires a Focus Save against your Focus Defense. Lasts until struck, replaced, or one minute passes. One double at a time."
+  },
+  {
+    "id": "battlefield-rewrite",
+    "name": "Battlefield Rewrite",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "phantom-double"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": "3 Focus Points",
+    "ap_cost": 1,
+    "tags": [
+      "control",
+      "chain:calling-of-the-illusionist"
+    ],
+    "source_class": "muse",
+    "text": "You overlay the battlefield with a false version of itself — walls where corridors are, allies where they are not. For 1 AP and 3 Focus Points, every enemy must succeed on a Focus Save against your Focus Defense or spend their next turn moving in a direction consistent with the false map. Enemies that succeed see through it but cannot automatically warn the others."
+  },
+  {
+    "id": "perfect-deception",
+    "name": "Perfect Deception",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "battlefield-rewrite"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:calling-of-the-illusionist"
+    ],
+    "source_class": "muse",
+    "text": "Your illusions achieve startling permanence. The duration of all your Illusion spells is doubled, and even enemies who disbelieve must contend with a faint persistent image: their first attack each round through or into the illusion's space is Downgraded."
+  },
+  {
+    "id": "combat-intuition",
+    "name": "Combat Intuition",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "utility",
+      "chain:calling-of-the-seer"
+    ],
+    "source_class": "muse",
+    "text": "You read the battlefield with preternatural accuracy. You always know the exact Defense Rating values of any creature you have observed for at least one round of combat, updated in real time and shared automatically with all allies within 30ft at the start of each of your turns."
+  },
+  {
+    "id": "foreseen-victory",
+    "name": "Foreseen Victory",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "combat-intuition",
+      "seize-the-opening"
+    ],
+    "momentum_cost": 4,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "support",
+      "chain:calling-of-the-seer"
+    ],
+    "source_class": "muse",
+    "text": "You enter a state of perfect tactical precognition. For 1 AP and 4 Momentum (a cap-raising Talent is required to hold this much), until the start of your next turn: all allies Upgrade their Impact Die against any enemy whose action you predicted, and all enemies attacking your allies have their Impact Pool Downgraded. When the effect ends, you gain 2 Momentum."
+  },
+  {
+    "id": "living-conduit",
+    "name": "Living Conduit",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator",
+      "tunable"
+    ],
+    "source_class": "shaman",
+    "text": "You are a channel for elemental and spiritual energy. The first time each turn you deal elemental damage (Fire, Frost, Volt, Thunder, Acid) with an attack or spell, you gain 1 Momentum (frequency tunable)."
+  },
+  {
+    "id": "elemental-strike",
+    "name": "Elemental Strike",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "attack"
+    ],
+    "source_class": "shaman",
+    "text": "You channel an element through your weapon as you strike. When you deal damage with a weapon attack, spend 1 Momentum to add damage equal to your Focus Die of a chosen type, each with a secondary effect on a hit. Fire: Burning (2 Fire damage per turn for two rounds). Frost: Speed halved until the end of their next turn. Volt: their next Impact Die is Downgraded. Thunder: pushed 10ft away. Acid: Vigor Defense Sundered by 1 until the end of your next turn. The bonus damage itself does not trigger Living Conduit."
+  },
+  {
+    "id": "totemic-ward",
+    "name": "Totemic Ward",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Focus Point",
+    "ap_cost": 1,
+    "tags": [
+      "support",
+      "defend"
+    ],
+    "source_class": "shaman",
+    "text": "You plant a carved totem in an unoccupied space within 10ft. For 1 AP and 1 Focus Point, the totem stands as a Conjured Object with HP equal to 5 plus your Focus Die maximum. While it stands, allies within 15ft of it Upgrade their die for any Focus- or Resolve-based Save. It lasts until destroyed, replaced, or combat ends."
+  },
+  {
+    "id": "elemental-attunement",
+    "name": "Elemental Attunement",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "elemental-strike"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive"
+    ],
+    "source_class": "shaman",
+    "text": "You deepen your bond with two elements, chosen permanently when you take this Talent. For those two, Elemental Strike's secondary effect is enhanced. Fire: Burning deals 4 per turn. Frost: Speed drops to 0. Volt: the Downgrade hits their next two attacks. Thunder: push becomes 20ft. Acid: the Sunder is permanent for the combat."
+  },
+  {
+    "id": "wild-shift",
+    "name": "Wild Shift",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "defend"
+    ],
+    "source_class": "shaman",
+    "text": "You shed your form and adopt a beast's. For 1 AP and 2 Momentum, transform for 10 minutes, keeping your HP, Defenses, and Reserves; you cannot cast spells while shifted, and you revert as a Free effect or when Incapacitated. Dire Wolf: Vigor Die Upgraded, bite attack, +20ft Speed, and after moving 20ft in a line your bite forces a Vigor Save (Difficulty 5) or Prone. Cave Bear: Vigor Die Upgraded, claw attack, roll your Vigor Die once and add it to your Vigor Defense for the duration, and you may Grapple as part of a hit. Elemental Serpent: Focus Die Upgraded for Elemental Strike, venomous bite dealing your Focus Die in Poison now and again at the start of the target's next turn, +10ft Speed."
+  },
+  {
+    "id": "ancestral-guidance",
+    "name": "Ancestral Guidance",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "support"
+    ],
+    "source_class": "shaman",
+    "text": "The ancestral spirits guide an ally's hand. As a Reaction when an ally within 60ft makes any die roll, spend 2 Momentum: they may reroll one die in that roll and take the higher result."
+  },
+  {
+    "id": "elemental-fury",
+    "name": "Elemental Fury",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "elemental-strike"
+    ],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack"
+    ],
+    "source_class": "shaman",
+    "text": "You release the elements in a torrent. For 1 AP and 3 Momentum, choose one element and unleash it in a 20ft radius centered on yourself: roll your Focus Die against the Agility Defense of all enemies in range. On a hit, deal 2 Focus Dice of that element and apply its Elemental Strike secondary effect. Living Conduit applies for the first enemy hit."
+  },
+  {
+    "id": "world-speaker",
+    "name": "World-Speaker",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "elemental-strike"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone"
+    ],
+    "source_class": "shaman",
+    "text": "Your connection to the elemental and spirit worlds reaches its apex. Elemental Strike no longer costs Momentum — it applies freely to every melee attack. Additionally, once per round when you cast a Conjuration or Transmutation spell, you may immediately make one weapon attack as a Free effect. The elements and your body act as one."
+  },
+  {
+    "id": "spirit-bond",
+    "name": "Spirit Bond",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Focus Point",
+    "ap_cost": 1,
+    "tags": [
+      "summon",
+      "chain:path-of-the-spirit-caller"
+    ],
+    "source_class": "shaman",
+    "text": "You summon a Spirit Ally to fight beside you. For 1 AP and 1 Focus Point, it appears within 30ft: HP 8 plus your Focus Die maximum; Vigor and Agility Defense each half your Focus Die maximum. For 1 AP, command it to move up to 20ft and make one attack — your Focus Die against an adjacent target's Vigor Defense for elemental damage equal to your Focus Die. Dismissed as a Free effect, at 0 HP, or when combat ends."
+  },
+  {
+    "id": "ancestral-chorus",
+    "name": "Ancestral Chorus",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "spirit-bond"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "summon",
+      "chain:path-of-the-spirit-caller"
+    ],
+    "source_class": "shaman",
+    "text": "The spirit world echoes your summons. Whenever you summon a Spirit Ally, one Lesser Spirit appears adjacent to it: HP equal to your Focus Die maximum, no Defenses, damage equal to half your Focus Die maximum. It cannot be commanded independently — it automatically attacks the same target as your Spirit Ally each turn, no action required."
+  },
+  {
+    "id": "spirit-storm",
+    "name": "Spirit Storm",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "ancestral-chorus"
+    ],
+    "momentum_cost": 4,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "summon",
+      "chain:path-of-the-spirit-caller"
+    ],
+    "source_class": "shaman",
+    "text": "You tear open the veil fully. For 1 AP and 4 Momentum (a cap-raising Talent is required to hold this much), place three Spirit Allies in unoccupied spaces within 60ft. For a single 1 AP command, all three may move and attack, each targeting a different enemy."
+  },
+  {
+    "id": "stone-grasp",
+    "name": "Stone Grasp",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "elemental-strike"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "control",
+      "chain:path-of-the-earthshaker"
+    ],
+    "source_class": "shaman",
+    "text": "The earth responds to your combat instincts. Whenever you use Elemental Strike with Thunder or Acid, the ground shifts and grabs: the target's Speed is additionally reduced by 10ft until the end of their next turn, on top of the element's normal secondary effect."
+  },
+  {
+    "id": "earthen-surge",
+    "name": "Earthen Surge",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "stone-grasp"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "control",
+      "chain:path-of-the-earthshaker"
+    ],
+    "source_class": "shaman",
+    "text": "You slam the ground and send displaced earth surging outward. For 1 AP and 2 Momentum, every enemy within 20ft makes a Vigor Save against Difficulty 5: on a failure they are knocked Prone and pushed 10ft away; on a success their Speed is halved until the end of their next turn. Conjured objects in the area take True Damage equal to 2 Focus Dice."
+  },
+  {
+    "id": "living-terrain",
+    "name": "Living Terrain",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "earthen-surge"
+    ],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "control",
+      "chain:path-of-the-earthshaker"
+    ],
+    "source_class": "shaman",
+    "text": "You permanently reshape a 30ft radius of natural terrain around you. For 1 AP and 3 Momentum, choose one: raise stone walls up to 10ft tall in a configuration of your choice; churn the ground into Difficult Terrain; or sink 5ft trenches that Restrain any enemy entering them (Vigor Save Difficulty 7 to avoid). The reshaping is permanent by mundane means."
+  },
+  {
+    "id": "storm-conduit",
+    "name": "Storm Conduit",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "elemental-strike"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:path-of-the-stormcaller"
+    ],
+    "source_class": "shaman",
+    "text": "Elemental energy cascades through you with unusual volatility. Whenever your Elemental Strike's Impact Die triggers an Explosion, the energy arcs to one additional enemy within 10ft of the primary target, dealing elemental damage equal to the exploded die result, no roll required, carrying the same element."
+  },
+  {
+    "id": "chain-lightning",
+    "name": "Chain Lightning",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "storm-conduit"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "chain:path-of-the-stormcaller"
+    ],
+    "source_class": "shaman",
+    "text": "You release a bolt that leaps between enemies. For 1 AP and 2 Momentum, roll your Focus Die against a primary target's Agility Defense within 60ft. On a hit, deal Volt damage equal to your Focus Die; the lightning chains to one enemy within 15ft, then once more to one within 15ft of that one, each taking the same Volt damage with no additional roll. A creature is hit once per cast. On a Glancing Blow, the chain does not activate."
+  },
+  {
+    "id": "tempest-form",
+    "name": "Tempest Form",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "chain-lightning"
+    ],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "defend",
+      "chain:path-of-the-stormcaller"
+    ],
+    "source_class": "shaman",
+    "text": "You become a living storm for one minute. For 1 AP and 3 Momentum: your Base Speed increases by 20ft; every melee attack applies Elemental Strike's Volt effect at no Momentum cost; enemies starting their turn adjacent to you take Volt damage equal to your Focus Die, no roll required; and you are immune to Prone. You cannot cast spells in Tempest Form — you are the spell. It cannot be active with Wild Shift; activating one ends the other."
+  },
+  {
+    "id": "hunters-instinct",
+    "name": "Hunter's Instinct",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "stalker",
+    "text": "You are always reading the battlefield. Whenever you hit an enemy that is unaware of your presence, in Cover, or suffering from a condition, you gain 1 Momentum. You also learn Hunter's Strike: when you hit your Marked Quarry, spend 1 Momentum as a Free effect to add one Impact Die to that attack, following the Bonus Impact Dice rule."
+  },
+  {
+    "id": "marked-quarry",
+    "name": "Marked Quarry",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "interaction"
+    ],
+    "source_class": "stalker",
+    "text": "For 1 AP, designate one creature you can see as your Quarry. You always know its exact position on the same plane, regardless of concealment or distance, and your Impact Die on all attacks against it is Upgraded. One Quarry at a time; marking a new one releases the old. The mark persists until the Quarry reaches 0 HP, you re-mark, or combat ends."
+  },
+  {
+    "id": "ambush-predator",
+    "name": "Ambush Predator",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive"
+    ],
+    "source_class": "stalker",
+    "text": "You strike from unexpected angles. Whenever you attack a target that has not yet acted this combat, or that cannot see you, your Impact Die is Upgraded — stacking with Marked Quarry's Upgrade if both apply. Open aggressively: on the first round, nearly every attack qualifies."
+  },
+  {
+    "id": "hunting-formation",
+    "name": "Hunting Formation",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive"
+    ],
+    "source_class": "stalker",
+    "text": "You exploit the openings your allies create. Whenever you attack an enemy adjacent to at least one of your allies, your Impact Die is Upgraded. A single Impact Roll can benefit from at most two Upgrades from your Stalker-sourced Talents, no matter how many trigger."
+  },
+  {
+    "id": "sabotage",
+    "name": "Sabotage",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "control"
+    ],
+    "source_class": "stalker",
+    "text": "You exploit a critical weakness. For 1 AP and 2 Momentum, choose one effect against an enemy within 30ft. Armor Breach: their Vigor Defense is Sundered by 2 until the end of their next turn. Weapon Tangle: their Impact Die is Downgraded on their next attack. Sensory Disruption: roll your Focus Die against their Agility Defense — on a hit they are Blinded until the end of their next turn, on a Glancing Blow their next Impact Die is Downgraded."
+  },
+  {
+    "id": "visceral-quarry",
+    "name": "Visceral Quarry",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "marked-quarry"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "attack",
+      "once-per-round"
+    ],
+    "source_class": "stalker",
+    "text": "You know precisely where your prey's body fails. Once per round, one attack against your Marked Quarry may be declared Visceral: roll to connect as normal, and on a hit the full roll is dealt as True Damage. Never on a Combined Strike pooled roll. On a Glancing Blow, no damage, and you gain 1 Momentum as normal."
+  },
+  {
+    "id": "apex-predator",
+    "name": "Apex Predator",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "marked-quarry"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "movement"
+    ],
+    "source_class": "stalker",
+    "text": "Your Quarry cannot escape you. Whenever your Quarry moves away from you, you may immediately move up to your Base Speed toward it as a Free effect, provoking nothing. If your Quarry attempts to hide or turn Invisible, spend 1 Momentum to keep exact awareness of its position for one round, negating its Hidden status against you."
+  },
+  {
+    "id": "death-from-above",
+    "name": "Death From Above",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "movement"
+    ],
+    "source_class": "stalker",
+    "text": "You drop from an elevated position with devastating force. You must be at least 10ft above your target. For 1 AP and 3 Momentum, descend up to 30ft and land adjacent to it, rolling your Agility Die against its Vigor Defense. On a hit: Piercing damage equal to 3 Agility Dice, the target is knocked Prone and Dazed until the end of its next turn. On a Glancing Blow: Piercing damage equal to your Agility Die and Prone only."
+  },
+  {
+    "id": "one-with-the-wastes",
+    "name": "One With the Wastes",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "marked-quarry"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone",
+      "stealth"
+    ],
+    "source_class": "stalker",
+    "text": "You are a ghost in any environment. You move at full speed while Hidden, revealing yourself only when you attack or cast. Your Quarry mark persists across Short Rests until you choose to release it. And whenever you reduce your Quarry to 0 Hit Points, your Momentum refills to its cap and you may mark a new Quarry as a Free effect."
+  },
+  {
+    "id": "shroud-step",
+    "name": "Shroud Step",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Agility Point",
+    "ap_cost": 1,
+    "tags": [
+      "stealth",
+      "chain:paradigm-of-the-ghost-hunter"
+    ],
+    "source_class": "stalker",
+    "text": "You vanish into whatever visual noise the environment provides. For 1 AP and 1 Agility Point, become Hidden regardless of cover or darkness — a trained technique of reading sightlines. The Hidden status ends the moment you attack or cast a spell."
+  },
+  {
+    "id": "phantom-strike",
+    "name": "Phantom Strike",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "shroud-step"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "stealth",
+      "chain:paradigm-of-the-ghost-hunter"
+    ],
+    "source_class": "stalker",
+    "text": "You strike from nowhere and return there. When you attack from Hidden, your Impact Die is Upgraded and you remain Hidden after the attack — unless it results in a Glancing Blow, which reveals you. At most two Hidden attacks per round before your position becomes apparent. Enemies may still attempt to locate you as the Hidden condition describes."
+  },
+  {
+    "id": "unseen-hand",
+    "name": "Unseen Hand",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "phantom-strike"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "stealth",
+      "chain:paradigm-of-the-ghost-hunter"
+    ],
+    "source_class": "stalker",
+    "text": "Your phantom nature becomes absolute. Magical detection and Divination spells of Tier 2 or lower cannot locate or identify you. Enemies that cannot see you Downgrade their Impact Dice against you, even when they know your general location."
+  },
+  {
+    "id": "pack-leader",
+    "name": "Pack Leader",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "marked-quarry"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "support",
+      "chain:paradigm-of-the-pack-bond"
+    ],
+    "source_class": "stalker",
+    "text": "Your allies are more dangerous near your prey. Whenever an ally attacks your Marked Quarry, their Impact Die is Upgraded, in addition to any Upgrade from their own features. The Quarry becomes the focal point of the party's aggression."
+  },
+  {
+    "id": "coordinated-strike",
+    "name": "Coordinated Strike",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "pack-leader"
+    ],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "attack",
+      "once-per-round",
+      "chain:paradigm-of-the-pack-bond"
+    ],
+    "source_class": "stalker",
+    "text": "The pack strikes as one. Once per round, when an ally hits your Quarry, spend 2 Momentum as a Free effect to immediately make one attack against that same Quarry with your Impact Die Upgraded, costing none of your AP."
+  },
+  {
+    "id": "pack-frenzy",
+    "name": "Pack Frenzy",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "agility",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "coordinated-strike"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:paradigm-of-the-pack-bond"
+    ],
+    "source_class": "stalker",
+    "text": "Your pack's coordination reaches fever pitch. Whenever three or more different creatures attack your Marked Quarry in the same round, its Vigor Defense is Sundered by 1 for the remainder of combat. This stacks each round the condition is met, to the standard floor of 0."
+  },
+  {
+    "id": "field-craft",
+    "name": "Field Craft",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Focus Point",
+    "ap_cost": 1,
+    "tags": [
+      "control",
+      "chain:paradigm-of-the-trapper"
+    ],
+    "source_class": "stalker",
+    "text": "You deploy one trap in an unoccupied space within 10ft, for 1 AP and 1 Focus Point. Traps last until triggered or combat ends; three may be active at once, a fourth replacing the oldest. Caltrops: 5ft radius — an enemy entering has Speed 0 until they spend 1 AP clearing them. Tripwire: across a 10ft gap — the first enemy crossing makes an Agility Save (Difficulty 5) or is knocked Prone, and you gain 1 Momentum. Smoke Pellet: thrown within 20ft — a 10ft radius cloud Blinds all creatures inside until the start of your next turn."
+  },
+  {
+    "id": "trap-mastery",
+    "name": "Trap Mastery",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "field-craft"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator",
+      "chain:paradigm-of-the-trapper"
+    ],
+    "source_class": "stalker",
+    "text": "Your traps grow sophisticated and nearly invisible. Spotting one before triggering requires a Difficulty 7 Focus Save. When an enemy triggers one of your traps, you gain 1 Momentum and may make one ranged attack against them as a Free effect — each at most once per turn, no matter how many traps spring."
+  },
+  {
+    "id": "kill-zone",
+    "name": "Kill Zone",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "focus",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "trap-mastery"
+    ],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "control",
+      "chain:paradigm-of-the-trapper"
+    ],
+    "source_class": "stalker",
+    "text": "You deploy every trap type at once in a 20ft radius centered within 30ft, for 1 AP and 3 Momentum. The area becomes Difficult Terrain of caltrops, tripwires force Saves on any creature moving more than 5ft within it, and smoke fills the perimeter. Any enemy entering or starting their turn inside resolves all applicable trap effects. The traps persist as normal."
+  },
+  {
+    "id": "bulwark-focus",
+    "name": "Bulwark Focus",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "vanguard",
+    "text": "You are at your most dangerous when enemies underestimate your defenses. Whenever an enemy attack against you results in a Glancing Blow, you gain 1 Momentum."
+  },
+  {
+    "id": "hold-the-line",
+    "name": "Hold the Line",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "control"
+    ],
+    "source_class": "vanguard",
+    "text": "You define where the line stands. As a Reaction when an enemy attempts to move through your space or leave your melee reach, spend 1 Momentum: they make a Vigor Save against Difficulty 5. On a failure, their movement halts and they cannot move again until the start of their next turn. On a success, they complete the move but their Impact Die is Downgraded until the end of their next turn. Positional denial, not Restraint — it does not prevent attacks or spells, and abilities that explicitly bypass movement denial ignore it."
+  },
+  {
+    "id": "article-of-war",
+    "name": "Article of War",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": "1-2",
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "repeatable"
+    ],
+    "source_class": "vanguard",
+    "text": "You adopt a doctrine of battlefield control. Choose one Article; this Talent may be taken again for another. Defensive: wield a shield without its Speed penalty; as a Reaction for 2 Momentum, Downgrade an attacker's entire Impact Pool for their attack against you and their next one this round. Mobile: moving 20ft+ on your turn grants 1 Momentum; for 1 AP and 1 Momentum, move 15ft without provoking. Aggressive: your Opportunity Attacks add one Vigor Die; as a Reaction for 2 Momentum when an enemy in reach attacks an ally, make an immediate melee attack against it. Guardian: when an enemy makes an Impact Roll against an ally within 10ft of you, spend 1 Momentum (no action) to Downgrade that pool; for 1 AP and 2 Momentum, designate an ally — until your next turn, attacks targeting them must target you instead while you are within 5ft."
+  },
+  {
+    "id": "coordinating-shout",
+    "name": "Coordinating Shout",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": "1 Resolve Point",
+    "ap_cost": 1,
+    "tags": [
+      "support"
+    ],
+    "source_class": "vanguard",
+    "text": "You relay critical tactical information in one sharp call. For 1 AP and 1 Resolve Point, choose an ally within 60ft who can hear you: roll your Resolve Die and add the result to their next Impact Roll this round, and they may immediately move up to 10ft as a Free effect without provoking."
+  },
+  {
+    "id": "threatening-presence",
+    "name": "Threatening Presence",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "control",
+      "generator"
+    ],
+    "source_class": "vanguard",
+    "text": "Your presence dominates the battlefield's geometry. Your melee reach extends 5ft on Opportunity Attacks. Enemies beginning their turn in your reach must spend at least half their movement to leave it. Whenever an enemy in your reach attacks an ally other than you, you gain 1 Momentum (once per turn). Abilities that explicitly bypass movement denial are unaffected."
+  },
+  {
+    "id": "absolute-defense",
+    "name": "Absolute Defense",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "bulwark-focus"
+    ],
+    "momentum_cost": "1-5",
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "capstone",
+      "once-per-round"
+    ],
+    "source_class": "vanguard",
+    "text": "Your defensive mastery reaches its apex. Once per round, when damage would reduce you to 0 Hit Points, spend any amount of Momentum: for each point, roll your Vigor Die and reduce the incoming damage by the result. If the reduced damage would still drop you to 0, you instead fall to 1 Hit Point and remain standing. No Reaction required; decide at the moment the damage would land."
+  },
+  {
+    "id": "advance",
+    "name": "Advance",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "bulwark-focus"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator",
+      "chain:regiment-of-the-breach"
+    ],
+    "source_class": "vanguard",
+    "text": "You build control through pressure, not patience. The first time each turn you deal damage with a melee attack, you gain 1 Momentum, in addition to your other generation."
+  },
+  {
+    "id": "phalanx-formation",
+    "name": "Phalanx Formation",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "advance"
+    ],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "defend",
+      "support",
+      "chain:regiment-of-the-breach"
+    ],
+    "source_class": "vanguard",
+    "text": "You and one ally within 5ft form a coordinated front. For 1 AP and 1 Momentum, until the start of your next turn, any attack targeting either of you has its Impact Dice Downgraded unless the attacker is adjacent to both of you simultaneously. Enemies must split their positioning — and open themselves to Opportunity Attacks doing it."
+  },
+  {
+    "id": "unstoppable-advance",
+    "name": "Unstoppable Advance",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "phalanx-formation",
+      "hold-the-line"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:regiment-of-the-breach"
+    ],
+    "source_class": "vanguard",
+    "text": "You cannot be slowed. You ignore Difficult Terrain's movement penalty. Whenever you use Hold the Line, you may immediately move up to 10ft toward the halted enemy as a Free effect. You press every advantage."
+  },
+  {
+    "id": "wardens-mark",
+    "name": "Warden's Mark",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "defend",
+      "support",
+      "generator",
+      "chain:regiment-of-the-warden"
+    ],
+    "source_class": "vanguard",
+    "text": "You mark one ally within 30ft as your Ward, for 1 AP and 1 Momentum. While you are within 10ft of your Ward, any attack targeting them has its Impact Pool Downgraded; if that Downgrade turns the attack into a Glancing Blow, you gain 1 Momentum. One Ward at a time; the mark persists until re-marked or combat ends, no upkeep."
+  },
+  {
+    "id": "interpose",
+    "name": "Interpose",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "wardens-mark"
+    ],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "defend",
+      "chain:regiment-of-the-warden"
+    ],
+    "source_class": "vanguard",
+    "text": "You step into the attack's path. As a Reaction when an attack is declared against your Ward while you are within 5ft of them, spend 1 Momentum: you become the target instead, and the attack resolves against your Defense Ratings."
+  },
+  {
+    "id": "inviolate-ward",
+    "name": "Inviolate Ward",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "interpose"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "defend",
+      "chain:regiment-of-the-warden"
+    ],
+    "source_class": "vanguard",
+    "text": "Your dedication borders on supernatural. While you are conscious and within 10ft of your Ward, no single attack can reduce them below 1 Hit Point; the excess damage is dealt to you as True Damage instead. Automatic, no action required. It does not protect against ongoing conditions, multiple separate attacks, or effects that explicitly bypass it."
+  },
+  {
+    "id": "gravitational-pull",
+    "name": "Gravitational Pull",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "control",
+      "chain:regiment-of-the-titan"
+    ],
+    "source_class": "vanguard",
+    "text": "Your presence distorts enemy movement. Any enemy starting their turn within 15ft of you (and not adjacent) must succeed on a Vigor Save against Difficulty 5 or spend 10ft of movement moving toward you before taking any other action. Not a condition — a persistent fact of your overwhelming physical authority."
+  },
+  {
+    "id": "iron-hold",
+    "name": "Iron Hold",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "gravitational-pull"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": "2 Vigor Points",
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "control",
+      "chain:regiment-of-the-titan"
+    ],
+    "source_class": "vanguard",
+    "text": "You seize an adjacent enemy with crushing force. For 1 AP and 2 Vigor Points, roll your Vigor Die against their Vigor Defense. On a hit, they are Grappled: both of you have Speed 0, and they cannot make ranged attacks or cast spells requiring movement; breaking free takes 1 AP and a Vigor Save against Difficulty 7. On a Glancing Blow, their Speed is halved until the end of their next turn."
+  },
+  {
+    "id": "titans-resolve",
+    "name": "Titan's Resolve",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "vigor",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "iron-hold"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:regiment-of-the-titan"
+    ],
+    "source_class": "vanguard",
+    "text": "Your will is as immovable as your body. You are immune to the Dazed and Blinded conditions, and completely immune to all involuntary movement. Nothing moves the Titan against their will."
+  },
+  {
+    "id": "zealous-conviction",
+    "name": "Zealous Conviction",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "generator"
+    ],
+    "source_class": "zealot",
+    "text": "Your faith is a physical force. The first time each turn you deal damage with a melee attack, you gain 1 Momentum as your conviction surges with each righteous blow."
+  },
+  {
+    "id": "judgment",
+    "name": "Judgment",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": "1-3",
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "free-rider",
+      "attack",
+      "once-per-turn"
+    ],
+    "source_class": "zealot",
+    "text": "You channel divine energy through your weapon at the moment of impact. Once per turn, when you deal damage with a melee attack, spend up to 3 Momentum: roll one Resolve Die per point spent and resolve that Radiant damage against the target's Resolve Defense as a separate instance. Because it is a distinct magical instance rather than dice pooled into the weapon's roll, it is not limited by the Bonus Impact Dice cap."
+  },
+  {
+    "id": "aura-of-resolve",
+    "name": "Aura of Resolve",
+    "level_req": 2,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "aura",
+      "support"
+    ],
+    "source_class": "zealot",
+    "text": "Your conviction radiates outward. Allies within 10ft of you Upgrade their Resolve Die for any Resolve Defense Save. Always active while you are conscious. At Level 9, the radius extends to 30ft."
+  },
+  {
+    "id": "martyrs-blood",
+    "name": "Martyr's Blood",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "reaction",
+      "defend",
+      "chain:doctrine-of-the-shepherd"
+    ],
+    "source_class": "zealot",
+    "text": "You intercede with your own body. As a Reaction when an ally within 30ft would be reduced to 0 Hit Points by an attack, spend 2 Momentum: the damage is redirected to you in full, resolved against your Defense Ratings, and your ally takes none of it."
+  },
+  {
+    "id": "litanies-of-war",
+    "name": "Litanies of War",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "zealous-conviction"
+    ],
+    "momentum_cost": "1-3",
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "defend",
+      "attack"
+    ],
+    "source_class": "zealot",
+    "text": "You master three concentrated expressions of divine will. For 1 AP, activate one Litany per turn; only one may be active at a time. Litany of Iron (1-2 Momentum): per point (max 2), all Impact Rolls targeting you until your next turn have their Pool Downgraded once. Litany of Wrath (1-3 Momentum): per point, add one Vigor Die to your next melee attack — a sanctioned capped exception to the Bonus Impact Dice rule. Litany of Alacrity (1-3 Momentum): per point, +10ft Base Speed until the start of your next turn."
+  },
+  {
+    "id": "divine-surge",
+    "name": "Divine Surge",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack"
+    ],
+    "source_class": "zealot",
+    "text": "You release a burst of concentrated radiant energy in a 15ft radius centered on yourself. For 1 AP and 3 Momentum, roll your Resolve Die against the Resolve Defense of all enemies in the radius. On a hit, each takes Radiant damage equal to your Resolve Die and is Dazed until the end of their next turn."
+  },
+  {
+    "id": "censure",
+    "name": "Censure",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 2,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "control"
+    ],
+    "source_class": "zealot",
+    "text": "You speak a word of authority that strips the will to act. For 1 AP and 2 Momentum, roll your Resolve Die against the Resolve Defense of one target within 60ft. On a hit, the target is Dazed and cannot move toward you on their next turn — lateral or away only. On a Glancing Blow, only the movement restriction applies."
+  },
+  {
+    "id": "unbreakable",
+    "name": "Unbreakable",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive"
+    ],
+    "source_class": "zealot",
+    "text": "Your faith is immune to assaults on the spirit. You are immune to the Dazed and Blinded conditions, and you cannot be Grappled by any creature whose Vigor Die is equal to or lower than your own."
+  },
+  {
+    "id": "avatar-of-war",
+    "name": "Avatar of War",
+    "level_req": 10,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d10"
+    },
+    "prereq_ids": [
+      "litanies-of-war",
+      "vast-momentum"
+    ],
+    "momentum_cost": 5,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "capstone",
+      "once-per-combat"
+    ],
+    "source_class": "zealot",
+    "text": "You become a manifestation of divine wrath and protection for one minute. Once per combat, for 1 AP and 5 Momentum: all three Litanies are active simultaneously at no cost, Judgment may be used on every hit rather than once per turn, your Aura of Resolve Upgrades allies' Resolve Die twice, and all Impact Rolls targeting you have their entire Pool Downgraded. When it ends, your Momentum refills to its cap."
+  },
+  {
+    "id": "iron-skin",
+    "name": "Iron Skin",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "defend",
+      "chain:doctrine-of-black-iron"
+    ],
+    "source_class": "zealot",
+    "text": "Conviction hardens your flesh beneath the armor. While wearing Heavy Armor, whenever you take Physical damage (Slashing, Piercing, or Bludgeoning), roll your Resolve Die and reduce the final damage by the result, after your Vigor Defense applies."
+  },
+  {
+    "id": "the-inviolate-form",
+    "name": "The Inviolate Form",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "iron-skin",
+      "fortress-stance"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:doctrine-of-black-iron"
+    ],
+    "source_class": "zealot",
+    "text": "Your body becomes a testament to divine durability. You are immune to the Exhausted condition. Whenever you would gain a Decay advance from an Entropy attack, roll your Resolve Die: if the result equals or exceeds your current Decay stage number, the Decay does not advance."
+  },
+  {
+    "id": "burning-conviction",
+    "name": "Burning Conviction",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [
+      "judgment"
+    ],
+    "momentum_cost": 0,
+    "reserve_cost": null,
+    "ap_cost": 0,
+    "tags": [
+      "passive",
+      "chain:doctrine-of-the-eternal-flame"
+    ],
+    "source_class": "zealot",
+    "text": "Your Judgment burns with exceptional intensity. Whenever you use Judgment, the target also begins Bleeding as the radiant energy sears their wounds open: 2 True Damage at the start of each of their turns until treated."
+  },
+  {
+    "id": "inquisitors-mark",
+    "name": "Inquisitor's Mark",
+    "level_req": 6,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "burning-conviction"
+    ],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "control",
+      "chain:doctrine-of-the-eternal-flame"
+    ],
+    "source_class": "zealot",
+    "text": "You brand one target within 60ft with a glowing sigil of judgment, for 1 AP and 1 Momentum. While marked: your attacks against the target are Upgraded, it cannot benefit from Cover against you, and if it moves more than 30ft from you it takes Radiant damage equal to your Resolve Die, no roll required. The mark persists until the target reaches 0 HP or you mark another."
+  },
+  {
+    "id": "flame-of-judgment",
+    "name": "Flame of Judgment",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "inquisitors-mark"
+    ],
+    "momentum_cost": 4,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "attack",
+      "chain:doctrine-of-the-eternal-flame"
+    ],
+    "source_class": "zealot",
+    "text": "You call down a pillar of divine fire on one target within 60ft. For 1 AP and 4 Momentum (a cap-raising Talent is required to hold this much), make a Visceral strike: roll your Resolve Die against the target's Focus Defense; on a hit, deal 3 Resolve Dice of Radiant damage as True Damage and the target begins Bleeding. On a Glancing Blow, no damage and no Bleed, but you gain 1 Momentum."
+  },
+  {
+    "id": "shepherds-grace",
+    "name": "Shepherd's Grace",
+    "level_req": 4,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d6"
+    },
+    "prereq_ids": [],
+    "momentum_cost": 1,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "healing",
+      "chain:doctrine-of-the-shepherd"
+    ],
+    "source_class": "zealot",
+    "text": "Your faith flows outward as healing. For 1 AP and 1 Momentum, one ally within 30ft rolls their Vigor Die and regains that many Hit Points. You may use this more than once per turn, but each use costs its own AP and must target a different ally."
+  },
+  {
+    "id": "divine-restoration",
+    "name": "Divine Restoration",
+    "level_req": 8,
+    "attr_req": {
+      "attr": "resolve",
+      "die": "d8"
+    },
+    "prereq_ids": [
+      "shepherds-grace",
+      "martyrs-blood"
+    ],
+    "momentum_cost": 3,
+    "reserve_cost": null,
+    "ap_cost": 1,
+    "tags": [
+      "healing",
+      "chain:doctrine-of-the-shepherd"
+    ],
+    "source_class": "zealot",
+    "text": "You lay hands on one adjacent ally and repair both body and spirit. For 1 AP and 3 Momentum, the ally rolls their Vigor Die and regains that many Hit Points, and you remove up to two conditions from them (Bleeding, Blinded, Dazed, or Prone). If they are suffering Decay, it retreats one stage."
+  }
+]
