@@ -5,6 +5,10 @@ Outputs: character_sheet.pdf, quick_reference.pdf, prebuilt_paths.pdf.
 Rerun after tuning numbers in data/ or docs/ — the kit is derived, not hand-edited.
 """
 import os
+from reportlab import rl_config
+# Invariant output: no embedded timestamps or random ids, so regenerating an
+# unchanged kit produces byte-identical files instead of churning git history.
+rl_config.invariant = 1
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.lib import colors
