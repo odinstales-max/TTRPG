@@ -2917,8 +2917,8 @@
     "text": "When inspiration lands perfectly, it demands repeating. Whenever an ally's die that you Upgraded triggers an Explosion, you gain 1 Momentum and may immediately use Rallying Performance on that ally again as a Free effect at no cost. Encore triggers at most once per round and never from its own Rallying Performance."
   },
   {
-    "id": "phantom-double",
-    "name": "Phantom Double",
+    "id": "phantom-ally",
+    "name": "Phantom Ally",
     "level_req": 4,
     "attr_req": {
       "attr": "focus",
@@ -2944,7 +2944,7 @@
       "die": "d8"
     },
     "prereq_ids": [
-      "phantom-double"
+      "phantom-ally"
     ],
     "momentum_cost": 0,
     "reserve_cost": "3 Focus Points",

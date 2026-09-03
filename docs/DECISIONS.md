@@ -94,3 +94,29 @@ Anything here can be revisited by the owner; nothing here reopens a locked decis
     creation (tunable) — the incentive that makes paired weaknesses worth choosing.
 21. **Trait count**: 22 Traits shipped (11 good/bad in mirrored pairs, 11 social). The list is a
     starter set; expansion is content work, not design work.
+
+## 2026-09-03 (overnight) — Phase 3 (Spells)
+
+22. **Source count discrepancy**: the seven v3.2 lists actually contain **149** spells, not the
+    148 the Design Lock states (Evocation 21, Abjuration 22, Divination 21, Transmutation 23,
+    Illusion 21, Entropy 20, Resonance 21). All 149 were converted; with 21 new Conjuration
+    spells, data/spells.json holds 170.
+23. **v4 translations applied to spell text**: "Standard Action"/"Quick Action" → 1 AP (Venom
+    Strike's purge, Void Mantle's rejoin, Mirror Storm's scrutinize, etc.); "Unconscious" →
+    "Incapacitated" (the core rules' term); "Focus is spent" → "Reserve is spent" where it names
+    the cost being wasted. **Burning Clock** now grants +1 AP restricted to non-Attack actions,
+    exactly as lock §2.7 prescribes. Everything else is word-for-word from source.
+24. **Domination spells re-expressed in AP**: Seized Action commands 1 AP of the target's turn;
+    Stolen Will consumes 1 AP per command; Absolute Command consumes 2 AP; The Hive consumes 1 AP
+    per target. This preserves v3.2's rule that no Resonance effect removes a whole turn — under
+    3 AP, the target always keeps movement-capable AP and survival instinct.
+25. **Name collision resolved**: the Illusion spell Phantom Double keeps its canonical name; the
+    Muse chain Talent mined from the same concept was renamed **Phantom Ally** (`phantom-ally`),
+    with its chain prereq updated.
+26. **Conjuration draft (Open Item 5)**: 21 spells across the school's three locked identities —
+    creating matter, summoning entities, teleportation. Tier shape mirrors the other schools
+    (T0×5 / T1×6 / T2×6 / T3×4). Summons reuse the Servitor statline convention from the mined
+    summon Talents (HP = base + Focus max, Defenses keyed to half Focus max) so all summons in
+    the game speak one language. Damage is Bludgeoning/Piercing ("varies by conjured form" per
+    the lock's school table). Momentum conventions (Glancing Blow / resisted Save → 1 Momentum)
+    match the other lists.

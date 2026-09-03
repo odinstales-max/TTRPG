@@ -1,1 +1,2572 @@
-[]
+[
+  {
+    "id": "ember-shot",
+    "name": "Ember Shot",
+    "school": "evocation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Agility Defense",
+    "range": "60ft",
+    "tags": [
+      "fire"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Hurl a mote of flame at one target. Roll your Focus Die against their Agility Defense and deal Fire damage equal to the remainder. The target is Burning, taking 1 Fire damage at the start of its next turn."
+  },
+  {
+    "id": "rime-dart",
+    "name": "Rime Dart",
+    "school": "evocation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Agility Defense",
+    "range": "60ft",
+    "tags": [
+      "frost"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Launch a sliver of ice at one target. Roll your Focus Die against their Agility Defense and deal Frost damage equal to the remainder. The target is Slowed, its Speed reduced by 10ft until the start of your next turn."
+  },
+  {
+    "id": "spark",
+    "name": "Spark",
+    "school": "evocation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Agility Defense",
+    "range": "30ft",
+    "tags": [
+      "volt"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Snap an arc of electricity at one target. Roll your Focus Die against their Agility Defense and deal Volt damage equal to the remainder, then the arc leaps to one other creature within 10ft and deals Volt damage equal to your Focus Die."
+  },
+  {
+    "id": "force-bolt",
+    "name": "Force Bolt",
+    "school": "evocation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Agility Defense",
+    "range": "60ft",
+    "tags": [
+      "force"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Project a bolt of pure force at one target, ignoring any Cover it has. Roll your Focus Die against their Agility Defense and deal Force damage equal to the remainder, then push the target 5ft directly away from you."
+  },
+  {
+    "id": "sonic-dart",
+    "name": "Sonic Dart",
+    "school": "evocation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Agility Defense",
+    "range": "60ft",
+    "tags": [
+      "thunder"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Launch a compressed column of air at one target. Roll your Focus Die against their Agility Defense and deal Thunder damage equal to the remainder, then Sunder its Vigor Defense by 1 until the end of your next turn."
+  },
+  {
+    "id": "flame-lash",
+    "name": "Flame Lash",
+    "school": "evocation",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Agility Defense",
+    "range": "30ft",
+    "tags": [
+      "fire"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Crack a whip of solid flame at one target. Roll your Focus Die against their Agility Defense and deal Fire damage equal to the remainder, pull the target 10ft directly toward you, and leave it Burning for 1 Fire damage at the start of its next turn."
+  },
+  {
+    "id": "glacial-spike",
+    "name": "Glacial Spike",
+    "school": "evocation",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Agility Defense",
+    "range": "60ft",
+    "tags": [
+      "frost"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Drive a spike of ice up beneath one target. Roll your Focus Die against their Agility Defense and deal Frost damage equal to the remainder, knock the target Prone, and reduce its Speed to 0 until the end of its next turn."
+  },
+  {
+    "id": "conductors-path",
+    "name": "Conductor's Path",
+    "school": "evocation",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Agility Defense",
+    "range": "Self (60ft line)",
+    "tags": [
+      "volt"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Release a line of lightning up to 60ft. Roll your Focus Die against the Agility Defense of every creature in the line and deal Volt damage equal to the remainder to each, then Downgrade each damaged creature's next Impact Die."
+  },
+  {
+    "id": "concussive-wave",
+    "name": "Concussive Wave",
+    "school": "evocation",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Agility Defense",
+    "range": "Self (30ft radius)",
+    "tags": [
+      "force"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Release a wave of force in all directions, ignoring Cover. Roll your Focus Die against the Agility Defense of every creature within 30ft, deal Force damage equal to the remainder, and push each 10ft away from you; willing allies may choose to take no damage and resist the push."
+  },
+  {
+    "id": "detonation",
+    "name": "Detonation",
+    "school": "evocation",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Agility Defense",
+    "range": "60ft (15ft radius)",
+    "tags": [
+      "thunder"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Hurl an orb of compressed sound that bursts on impact. Roll your Focus Die against the Agility Defense of every creature within 15ft, deal Thunder damage equal to the remainder, and Sunder each damaged creature's Vigor Defense by 1 until the end of your next turn."
+  },
+  {
+    "id": "elemental-field",
+    "name": "Elemental Field",
+    "school": "evocation",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Agility Defense",
+    "range": "60ft (20ft radius)",
+    "tags": [
+      "any-element"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Fill a 20ft area with the element of your choice while you Channel it, taking on that element's rider. At the start of each enemy's turn inside the field, roll your Focus Die against their Agility Defense and deal damage of the chosen element equal to the remainder, applying that element's signature effect. The area is Difficult Terrain."
+  },
+  {
+    "id": "pillar-of-flame",
+    "name": "Pillar of Flame",
+    "school": "evocation",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Agility Defense",
+    "range": "60ft (10ft radius)",
+    "tags": [
+      "fire"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Call down a column of fire on a point within range. Roll 2 Focus Dice against the Agility Defense of every creature in the area and deal Fire damage equal to the combined roll. The ground burns until the start of your next turn, dealing Fire damage equal to your Focus Die to any creature that enters it or starts its turn there."
+  },
+  {
+    "id": "glacial-prison",
+    "name": "Glacial Prison",
+    "school": "evocation",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Agility Defense",
+    "range": "60ft",
+    "tags": [
+      "frost"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Encase one target in growing ice. Roll 2 Focus Dice against their Agility Defense, deal Frost damage equal to the combined roll, and apply Restrained. At the start of each of its turns the target may make a Vigor Save against Difficulty 7 to shatter the ice and end the Restrained condition."
+  },
+  {
+    "id": "arc-storm",
+    "name": "Arc Storm",
+    "school": "evocation",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Agility Defense",
+    "range": "60ft",
+    "tags": [
+      "volt"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Loose a storm of arcs at up to four targets within range. Roll 2 Focus Dice once and apply the result against each target's Agility Defense, dealing Volt damage equal to the combined roll to each and Downgrading each damaged target's next Impact Die."
+  },
+  {
+    "id": "battering-ram",
+    "name": "Battering Ram",
+    "school": "evocation",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Vigor Defense",
+    "range": "60ft",
+    "tags": [
+      "force"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Drive a massive invisible force into one target, ignoring Cover. Roll 2 Focus Dice against their Vigor Defense, deal Force damage equal to the combined roll, and push the target up to 20ft away from you; if it collides with a surface or creature it is knocked Prone."
+  },
+  {
+    "id": "sonic-boom",
+    "name": "Sonic Boom",
+    "school": "evocation",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Agility Defense",
+    "range": "Self (40ft radius)",
+    "tags": [
+      "thunder"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Unleash a concussive shockwave in all directions. Roll 2 Focus Dice against the Agility Defense of every creature within 40ft, deal Thunder damage equal to the combined roll, push each 15ft away from you, and Sunder each damaged creature's Vigor Defense by 1 until the end of your next turn."
+  },
+  {
+    "id": "force-wall",
+    "name": "Force Wall",
+    "school": "evocation",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "force",
+      "barrier"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Raise an impassable wall of pure force up to 40ft long and 10ft tall, or shape it into a sealed 10ft cube around one point. Nothing physical passes through it in either direction while you Channel it. A creature caught inside a sealed cube may make a Vigor Save against Difficulty 7 to be pushed to the nearest open space outside."
+  },
+  {
+    "id": "cataclysm",
+    "name": "Cataclysm",
+    "school": "evocation",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Agility Defense",
+    "range": "300ft (45ft radius)",
+    "tags": [
+      "fire",
+      "frost"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Choose Fire or Frost and bring an apocalypse down on a point within range. Roll 3 Focus Dice against the Agility Defense of every creature within 45ft and deal damage of the chosen element equal to the combined roll. The area is transformed until the end of combat: Fire leaves burning ground dealing your Focus Die to anyone within it each turn, while Frost leaves Difficult Terrain that reduces Speed by 10ft."
+  },
+  {
+    "id": "storm-of-annihilation",
+    "name": "Storm of Annihilation",
+    "school": "evocation",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Agility Defense",
+    "range": "150ft (50ft radius)",
+    "tags": [
+      "volt"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Tear open the sky over a massive area. Roll 3 Focus Dice against the Agility Defense of every creature within 50ft, deal Volt damage equal to the combined roll, and Downgrade each damaged creature's Impact Dice until the start of your next turn."
+  },
+  {
+    "id": "singularity",
+    "name": "Singularity",
+    "school": "evocation",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Agility Defense",
+    "range": "120ft (60ft radius)",
+    "tags": [
+      "force"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Open a gravitational singularity that pulls every creature within 60ft 20ft toward it at the start of each round, ignoring Cover. Roll 3 Focus Dice against the Agility Defense of every creature within 10ft of the center at the start of its turn and deal Force damage equal to the combined roll. The singularity lasts 3 rounds, then collapses."
+  },
+  {
+    "id": "voice-of-the-abyss",
+    "name": "Voice of the Abyss",
+    "school": "evocation",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Agility Defense",
+    "range": "Self (80ft radius)",
+    "tags": [
+      "thunder"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Release a roar that tears across the battlefield like a physical wave. Roll 3 Focus Dice against the Agility Defense of every creature within 80ft, deal Thunder damage equal to the combined roll, and Sunder each damaged creature's Vigor Defense and Agility Defense by 1 for the remainder of combat."
+  },
+  {
+    "id": "veilward",
+    "name": "Veilward",
+    "school": "abjuration",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "barrier"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Weave a thin ward around yourself or a willing ally. The next attack that connects with the target has the attacker's Impact Die Downgraded, and the ward then dissipates."
+  },
+  {
+    "id": "wardstrike",
+    "name": "Wardstrike",
+    "school": "abjuration",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Vigor Defense",
+    "range": "Touch",
+    "tags": [
+      "denial"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Drive a pulse of warding force into an adjacent enemy. Roll your Focus Die against their Vigor Defense, deal Force damage equal to the remainder, and push the target 10ft directly away from you."
+  },
+  {
+    "id": "purgation",
+    "name": "Purgation",
+    "school": "abjuration",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "purification"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Draw one negative condition free from yourself or a willing ally, removing one of Bleeding, Dazed, Slowed, or Sundered immediately. At higher Tiers this reaches further and cleanses more, eventually washing a chosen condition from every ally within 30ft at once."
+  },
+  {
+    "id": "null-touch",
+    "name": "Null Touch",
+    "school": "abjuration",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Focus Defense",
+    "range": "Touch",
+    "tags": [
+      "negation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Flood a target's magical pathways with white noise. The target makes a Focus Save against Difficulty 5; on a failure it cannot cast spells until the start of your next turn, though it may still use non-spell abilities. On a success you gain 1 Momentum."
+  },
+  {
+    "id": "threshold",
+    "name": "Threshold",
+    "school": "abjuration",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "Self (10ft)",
+    "tags": [
+      "denial"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Inscribe warding runes on the ground within 10ft. The first enemy to enter makes a Vigor Save against Difficulty 5; on a failure its movement halts at the edge and the rest of its movement is lost. On a success you gain 1 Momentum. At higher Tiers this becomes a placed threshold or a sealed sphere that lasts while you Channel it."
+  },
+  {
+    "id": "warding-catch",
+    "name": "Warding Catch",
+    "school": "abjuration",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "Self",
+    "tags": [
+      "barrier"
+    ],
+    "action": "reaction",
+    "channeled": false,
+    "text": "As a Reaction when you take damage from an attack against your Agility Defense or Focus Defense, reduce that damage by your Focus Die. If this reduces the damage to 0, the attacker's next Impact Roll against you is Downgraded."
+  },
+  {
+    "id": "mantled-guard",
+    "name": "Mantled Guard",
+    "school": "abjuration",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "barrier"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Weave a shell around one ally within range. Until the start of your next turn they benefit from Heavy Cover against all attacks, regardless of their actual position, with no physical obstruction required."
+  },
+  {
+    "id": "blood-covenant",
+    "name": "Blood Covenant",
+    "school": "abjuration",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "barrier"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Bond yourself to one willing ally within range. While you Channel this spell, whenever the ally takes damage you roll your Focus Die and take that much True Damage, reducing their damage by the same amount but never below 1. The bond breaks if you move more than 60ft apart or you fall Incapacitated."
+  },
+  {
+    "id": "counterspell",
+    "name": "Counterspell",
+    "school": "abjuration",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "negation"
+    ],
+    "action": "reaction",
+    "channeled": false,
+    "text": "As a Reaction when an enemy within range casts a spell, unravel it as it forms. The caster makes a Focus Save against a Difficulty set by your Tier; on a failure the spell collapses with no effect and its Reserve is spent. On a success the spell resolves and you gain 1 Momentum. The Tier you cast this at sets the highest spell Tier you can counter."
+  },
+  {
+    "id": "vital-touch",
+    "name": "Vital Touch",
+    "school": "abjuration",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "purification",
+      "healing"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Channel healing into yourself or a willing ally, who immediately rolls their Vigor Die and regains that many Hit Points. The healing scales with the Tier you cast it at."
+  },
+  {
+    "id": "retributive-ward",
+    "name": "Retributive Ward",
+    "school": "abjuration",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "denial"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Mark one ally within range with a ward of retribution. While you Channel this spell, whenever an enemy hits the warded ally, that enemy automatically takes Radiant damage equal to your Focus Die with no roll required."
+  },
+  {
+    "id": "ironclad",
+    "name": "Ironclad",
+    "school": "abjuration",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "barrier"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Encase one ally in dense warding force. Until the start of your next turn they are immune to all Physical damage; Slashing, Piercing, and Bludgeoning cannot harm them, though other damage types still apply. At higher Tiers the immunity covers further damage categories."
+  },
+  {
+    "id": "fortress-ward",
+    "name": "Fortress Ward",
+    "school": "abjuration",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Special",
+    "range": "Self (20ft radius)",
+    "tags": [
+      "barrier"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Establish a fortified zone centered on yourself. While you Channel this spell, all allies within 20ft have every Impact Die rolled against them Downgraded, regardless of damage type. Enemies in the area gain nothing."
+  },
+  {
+    "id": "spell-mirror",
+    "name": "Spell Mirror",
+    "school": "abjuration",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Special",
+    "range": "Self",
+    "tags": [
+      "reflection"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Weave a reflective ward around yourself. While you Channel this spell, when a single-target spell against your Focus Defense or Resolve Defense hits you, the caster makes a Focus Save; on a failure the spell's effect is reflected onto them using the original result, and on a success you take it as normal and gain 1 Momentum."
+  },
+  {
+    "id": "dissolution",
+    "name": "Dissolution",
+    "school": "abjuration",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "negation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Target one active magical effect within range, whether maintained by a caster or standing on its own such as a zone or trap. Roll 2 Focus Dice against the maintaining caster's Focus Defense, or against a Difficulty set by the effect's Tier if it has no caster; on a hit the effect ends. On a Glancing Blow you gain 1 Momentum."
+  },
+  {
+    "id": "suppression-field",
+    "name": "Suppression Field",
+    "school": "abjuration",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Special",
+    "range": "60ft (15ft radius)",
+    "tags": [
+      "negation"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Designate a 15ft zone of magical interference while you Channel it. An enemy that attempts to cast within the zone first makes a Focus Save against a Difficulty set by your Tier; on a failure the spell is suppressed and its Reserve spent for nothing, and on a success it resolves and you gain 1 Momentum. Allied casting is unaffected."
+  },
+  {
+    "id": "restore",
+    "name": "Restore",
+    "school": "abjuration",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "purification",
+      "healing"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Channel deep restorative magic into one willing ally. Remove up to two conditions from among Bleeding, Dazed, Slowed, Sundered, Blinded, and Exhausted, then the ally regains Hit Points equal to two rolls of your Focus Die. At higher Tiers the healing rolls scale and the spell may be cast at range."
+  },
+  {
+    "id": "exile",
+    "name": "Exile",
+    "school": "abjuration",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "denial"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Target one creature not native to this plane, such as a summoned or conjured entity. It makes a Resolve Save against Difficulty 7; on a failure it is exiled from the battlefield and cannot return for the rest of combat. On a success it remains and you gain 1 Momentum."
+  },
+  {
+    "id": "aegis-absolute",
+    "name": "Aegis Absolute",
+    "school": "abjuration",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "barrier"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Grant one willing ally a moment of absolute protection. Until the start of your next turn they are immune to all damage, cannot be moved against their will, cannot have conditions applied, and cannot be targeted by hostile spells or abilities. The aegis then shatters."
+  },
+  {
+    "id": "unweave",
+    "name": "Unweave",
+    "school": "abjuration",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Focus Defense",
+    "range": "120ft",
+    "tags": [
+      "negation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Target one creature within range. Roll 3 Focus Dice against its Focus Defense; on a hit, every active magical effect on it unravels at once, including buffs, Channels it maintains, enchantments, and magical conditions. On a Glancing Blow you gain 1 Momentum."
+  },
+  {
+    "id": "shattering-word",
+    "name": "Shattering Word",
+    "school": "abjuration",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "reflection",
+      "negation"
+    ],
+    "action": "reaction",
+    "channeled": false,
+    "text": "As a Reaction when an enemy within range casts a spell of any Tier, collapse it back into the caster. Roll 3 Focus Dice against their Focus Defense; on a hit the spell is countered entirely and the caster takes True Damage equal to your Focus Die. On a Glancing Blow the spell resolves and you gain 1 Momentum."
+  },
+  {
+    "id": "sanctified-ground",
+    "name": "Sanctified Ground",
+    "school": "abjuration",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Special",
+    "range": "Self (40ft radius)",
+    "tags": [
+      "denial",
+      "purification"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Sanctify all terrain within 40ft while you Channel it. Allies within regain Hit Points equal to your Focus Die at the start of each of their turns and cannot have conditions applied to them. Enemies within treat the whole area as Difficult Terrain and have all four Defense Ratings Sundered by 1 for as long as they remain."
+  },
+  {
+    "id": "read-aura",
+    "name": "Read Aura",
+    "school": "divination",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "reveal"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Focus on one creature or object within range. You learn whether it is magical and, if so, which school the effect belongs to, and whether it is hostile, neutral, or friendly toward you by current intent."
+  },
+  {
+    "id": "sixth-sense",
+    "name": "Sixth Sense",
+    "school": "divination",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Self (radius)",
+    "range": "Self (30ft, scales)",
+    "tags": [
+      "reveal"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Extend your awareness outward. Until the start of your next turn you know the exact location of every creature within the radius, including hidden, invisible, or obscured ones, and you cannot be surprised. Awareness is not sight; you know where they are, not what they look like."
+  },
+  {
+    "id": "glimpse",
+    "name": "Glimpse",
+    "school": "divination",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "foresight"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Peer one beat into one target's future. You learn the action they intend to take on their next turn and its intended target, if any. The target may change their plan once the turn arrives, but you have read their intent as it stands now. The knowledge persists until that target's next turn."
+  },
+  {
+    "id": "mark",
+    "name": "Mark",
+    "school": "divination",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "marked"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Designate one enemy as your Marked Target. A shimmer only you and your allies perceive surrounds it. Allies who can see it Upgrade their Impact Die on the first attack they make against it each turn. One mark at a time, a new mark removes the old, and it persists until the target drops, you re-mark, or combat ends."
+  },
+  {
+    "id": "mind-spike",
+    "name": "Mind Spike",
+    "school": "divination",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "psychic"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Drive a needle of psychic feedback into one target. Roll your Focus Die against their Resolve Defense and deal Psychic damage equal to the remainder. Reduced to 0 is a Glancing Blow and you gain 1 Momentum."
+  },
+  {
+    "id": "signal",
+    "name": "Signal",
+    "school": "divination",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "120ft",
+    "tags": [
+      "reveal",
+      "utility"
+    ],
+    "action": "free",
+    "channeled": false,
+    "text": "Transmit the exact position of one creature or location to all allies at once, regardless of line of sight. They know its precise coordinates for one minute, enough to target it with area effects, move toward it blind, or relay it onward."
+  },
+  {
+    "id": "locate-being",
+    "name": "Locate Being",
+    "school": "divination",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "1 mile (scales)",
+    "tags": [
+      "reveal"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Fix on a creature you have seen or touched. You learn its exact direction and approximate distance, accurate to 100ft; beyond range, you know only that it is beyond range. Out of combat this runs as a 10-minute sustained sense that updates as the target moves. If the target is warded against scrying, it rolls a Focus Save and grants you 1 Momentum if it succeeds."
+  },
+  {
+    "id": "vulnerability-read",
+    "name": "Vulnerability Read",
+    "school": "divination",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "reveal"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Analyze one target's defensive structure. You learn the exact values of all four Defense Ratings and which is currently lowest, broadcast to every ally at once."
+  },
+  {
+    "id": "lend-foresight",
+    "name": "Lend Foresight",
+    "school": "divination",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "foresight"
+    ],
+    "action": "reaction",
+    "channeled": false,
+    "text": "As a Reaction, Upgrade one die roll made by yourself or an ally you can see: an Impact Roll, a Save, or a Task. You must spend the Reaction before the die is rolled."
+  },
+  {
+    "id": "scry",
+    "name": "Scry",
+    "school": "divination",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Special",
+    "range": "Scales (1 mile to continental)",
+    "tags": [
+      "scry"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Project your awareness to a place you have visited or a creature you have touched, perceiving it as if present. Range and clarity scale with the Tier you cast it at: 1 mile and 10 minutes at Tier 1, 10 miles and an hour at Tier 2, anywhere on the plane for hours at Tier 3, where you may also relay a brief spoken message. You cannot interact with the location. A subject with Focus Defense 5 or higher may roll a Focus Save to sense the observation; success lets it locate you but does not break the scry."
+  },
+  {
+    "id": "pinpoint",
+    "name": "Pinpoint",
+    "school": "divination",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "marked"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Mark one target and call out a single weak point. Choose one of its four Defense Ratings; until the start of your next turn, all attacks against the Marked Target that strike that rating are Upgraded. This replaces the standard Mark benefit while active and obeys the one-mark rule."
+  },
+  {
+    "id": "disrupt-casting",
+    "name": "Disrupt Casting",
+    "school": "divination",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "deny-action"
+    ],
+    "action": "reaction",
+    "channeled": false,
+    "text": "As a Reaction when an enemy within range begins casting, drive interference into the rhythm of their spell. The caster rolls a Focus Save against Difficulty 7. On a failure, the spell is denied: its Reserve is spent and it produces no effect. On a success, the spell resolves and you gain 1 Momentum."
+  },
+  {
+    "id": "revelation-field",
+    "name": "Revelation Field",
+    "school": "divination",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Self (radius)",
+    "range": "Self (60ft)",
+    "tags": [
+      "reveal"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "For 10 minutes you know the exact position of every creature within 60ft regardless of concealment, invisibility, or barriers, and you identify all active magical effects, traps, hidden objects, and secret doors in the area, updating in real time."
+  },
+  {
+    "id": "foresee",
+    "name": "Foresee",
+    "school": "divination",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "Self",
+    "tags": [
+      "foresight"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Project three rounds ahead: the GM privately tells you the most likely actions of up to three enemies over the next three rounds, given current intent. The future is probabilistic and the GM may revise it if the situation changes sharply. The knowledge is yours; sharing it takes normal communication. The cost is your full perception this turn."
+  },
+  {
+    "id": "tactical-vision",
+    "name": "Tactical Vision",
+    "school": "divination",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Self (radius)",
+    "range": "Self (30ft)",
+    "tags": [
+      "foresight"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "While Channeled, every ally within 30ft may Upgrade one Impact Die or Save Die per turn, chosen after the roll is declared but before it is made. While Channeling this you cannot attack or cast offensive spells. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "doom-mark",
+    "name": "Doom Mark",
+    "school": "divination",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "marked"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Mark a target for compounding ruin. While Channeled, whenever any ally strikes the Marked Target you gain 1 Momentum and the target's lowest current Defense Rating is Sundered by 1 for the rest of combat, stacking with no cap but the floor of 0. The Channel breaks if the target drops, you re-mark, or you fall Incapacitated."
+  },
+  {
+    "id": "mind-cascade",
+    "name": "Mind Cascade",
+    "school": "divination",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Resolve Defense",
+    "range": "Self (30ft radius)",
+    "tags": [
+      "psychic"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Loose a wave of psychic interference across all enemies within 30ft. Roll 2 Focus Dice against each enemy's Resolve Defense and deal Psychic damage equal to the remainder. Any enemy struck for damage rolls a Resolve Save against Difficulty 7; on a failure it is also Dazed, losing its Reaction and the benefit of Cover until the end of its next turn. Each enemy reduced to 0 damage is a Glancing Blow and you gain 1 Momentum from it."
+  },
+  {
+    "id": "overwatch",
+    "name": "Overwatch",
+    "school": "divination",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Self (radius)",
+    "range": "Self (120ft)",
+    "tags": [
+      "reveal"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Battlefield omniscience. While Channeled you know the exact position, HP, conditions, and Defense Ratings of every creature within 120ft regardless of concealment or protection; you cannot be surprised or flanked; and attempts to hide or turn invisible automatically fail against you. You gain 1 Momentum at the start of each of your turns. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "omniscient-state",
+    "name": "Omniscient State",
+    "school": "divination",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Self",
+    "range": "Self",
+    "tags": [
+      "foresight"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Enter perfect predictive clarity. While Channeled you cannot be surprised, your Reactions cannot be denied, and you may Upgrade one die roll per round, yours or an ally's, as a Free effect. All of your own Impact Rolls are Upgraded. The trade is total: you may cast no spells while in this state and fight only through physical means and non-spell abilities. The Channel breaks if you fall Incapacitated or attempt to cast."
+  },
+  {
+    "id": "death-mark",
+    "name": "Death Mark",
+    "school": "divination",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Special",
+    "range": "120ft",
+    "tags": [
+      "marked",
+      "deny-action"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Mark one target for annihilation. While Channeled, all damage dealt to it from any source rises by your Focus Die maximum before Defense Ratings apply, every Impact Roll against it is Upgraded, and it cannot benefit from healing of any kind. The Channel breaks if the target drops, you re-mark, or you fall Incapacitated."
+  },
+  {
+    "id": "shatter-perception",
+    "name": "Shatter Perception",
+    "school": "divination",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "psychic"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Tear apart one target's grasp of the battlefield. Roll 3 Focus Dice against its Resolve Defense and deal Psychic damage equal to the remainder. The target then rolls a Resolve Save against Difficulty 9; on a failure it is Blinded for the rest of combat. Reduced to 0 damage is a Glancing Blow and you gain 1 Momentum."
+  },
+  {
+    "id": "iron-hide",
+    "name": "Iron Hide",
+    "school": "transmutation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "enhancement"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Transmute the body of yourself or a willing ally for the moment. Choose one: the next attack against the target has its Impact Die Downgraded as their skin hardens, or the target's Base Speed increases by 10ft until the start of your next turn."
+  },
+  {
+    "id": "acid-seam",
+    "name": "Acid Seam",
+    "school": "transmutation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Agility Defense",
+    "range": "30ft",
+    "tags": [
+      "catalysis"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Trigger a corrosive reaction across a target's surface. Roll your Focus Die against their Agility Defense, deal Acid damage equal to the remainder, and Sunder their Vigor Defense by 1 until the end of your next turn."
+  },
+  {
+    "id": "serpent-coat",
+    "name": "Serpent Coat",
+    "school": "transmutation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "catalysis"
+    ],
+    "action": "free",
+    "channeled": false,
+    "text": "Coat a weapon held by yourself or a willing ally in synthesized toxin as a Free effect. The next successful attack with that weapon deals additional Poison damage equal to your Focus Die. The toxin fades after one hit or at the end of your next turn."
+  },
+  {
+    "id": "frail-sinew",
+    "name": "Frail Sinew",
+    "school": "transmutation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Vigor Defense",
+    "range": "30ft",
+    "tags": [
+      "degradation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Degrade one target's physical strength. The target makes a Vigor Save against Difficulty 5; on a failure, choose one: its Impact Die is Downgraded for its next attack, or its Base Speed drops by 10ft until the end of its next turn. On a success you gain 1 Momentum."
+  },
+  {
+    "id": "glass-earth",
+    "name": "Glass Earth",
+    "school": "transmutation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "alteration"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Transmute a 10ft by 10ft area into a near-frictionless surface, making it Difficult Terrain. Any enemy that enters or starts its turn there makes a Vigor Save against Difficulty 5 or is knocked Prone. The surface lasts until the end of combat."
+  },
+  {
+    "id": "matter-shift",
+    "name": "Matter Shift",
+    "school": "transmutation",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "alteration"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Transmute an unattended, nonmagical object up to a 1ft cube into a different material or shape of similar mass: water to ice, wood to stone, a lock to slag. The change is permanent until reversed. At higher Tiers it reshapes larger volumes and can dissolve objects or form functional shapes like steps or a crude lock."
+  },
+  {
+    "id": "vital-forge",
+    "name": "Vital Forge",
+    "school": "transmutation",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "enhancement"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Sharpen the physical structure of yourself or a willing ally. For the next minute, Upgrade one of the target's Attribute Dice by one step for all rolls. At higher Tiers this reaches two dice, then all four, becoming a total physical apotheosis."
+  },
+  {
+    "id": "venom-strike",
+    "name": "Venom Strike",
+    "school": "transmutation",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Focus Defense",
+    "range": "Touch",
+    "tags": [
+      "catalysis"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Synthesize a neurotoxin and deliver it by contact. Roll your Focus Die against the target's Focus Defense and deal Poison damage equal to the remainder. The toxin takes hold: at the start of each of its turns it takes Poison damage equal to your Focus Die until it spends 1 AP to purge it or receives magical healing."
+  },
+  {
+    "id": "hollow-marrow",
+    "name": "Hollow Marrow",
+    "school": "transmutation",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Vigor Defense",
+    "range": "60ft",
+    "tags": [
+      "degradation"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Transmit a degradation field into one target. Roll your Focus Die against their Vigor Defense; on a hit, their Impact Die is Downgraded for as long as you Channel this spell. At higher Tiers this also Downgrades their Saves and can be broadcast across an area of enemies. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "gravity-chain",
+    "name": "Gravity Chain",
+    "school": "transmutation",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Vigor Defense",
+    "range": "60ft",
+    "tags": [
+      "alteration"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Transmute the gravity binding one target to the ground. Roll your Focus Die against their Vigor Defense; on a hit, for 1 minute the target cannot leave the ground by any means, grounding flight and making leaps impossible. At higher Tiers this inverts into a zone that flings enemies upward to fall for damage."
+  },
+  {
+    "id": "flesh-warden",
+    "name": "Flesh Warden",
+    "school": "transmutation",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "Self",
+    "tags": [
+      "shapeshifting"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Transmute one part of your body for 10 minutes while still able to cast. Choose one: Blade Arms (melee attacks deal Slashing and Upgrade your Impact Die), Adhesive Feet (climb any surface and cannot be knocked Prone), Hardened Plates (the next attacker to strike you is Downgraded), or Heightened Senses (ignore Blinded and detect Invisible creatures within 30ft)."
+  },
+  {
+    "id": "granite-skin",
+    "name": "Granite Skin",
+    "school": "transmutation",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "shapeshifting"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Transmute the skin of yourself or a willing ally into layered stone for 10 minutes. The next three attacks against the target are Downgraded and the target is immune to Bleeding, but its Focus Defense and Resolve Defense are each Sundered by 1 and its Base Speed drops by 10ft as the stone weighs it down. Dismissing the form is a Free effect."
+  },
+  {
+    "id": "burning-clock",
+    "name": "Burning Clock",
+    "school": "transmutation",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "enhancement"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Push the metabolism of yourself or a willing ally to an unsustainable peak. For the next minute, the target gains +1 AP on each of their turns, usable only on non-Attack actions."
+  },
+  {
+    "id": "catalytic-burst",
+    "name": "Catalytic Burst",
+    "school": "transmutation",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Agility Defense",
+    "range": "60ft (15ft radius)",
+    "tags": [
+      "catalysis"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Trigger a corrosive reaction that bursts across an area, in a radius, a line, or a chain to adjacent enemies as you choose. Roll 2 Focus Dice against the Agility Defense of each affected enemy, deal Acid damage equal to the combined roll, and Sunder each damaged enemy's Vigor Defense by 1 until the end of your next turn. The shape and reach scale with the Tier you cast it at."
+  },
+  {
+    "id": "fracture-lattice",
+    "name": "Fracture Lattice",
+    "school": "transmutation",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Vigor Defense",
+    "range": "60ft",
+    "tags": [
+      "degradation"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Transmute one target's bones into a brittle lattice. Roll 2 Focus Dice against their Vigor Defense; on a hit, for as long as you Channel this spell, the first time each turn the target takes Physical damage it takes additional True Damage equal to your Focus Die as the structure fractures further. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "stone-curse",
+    "name": "Stone Curse",
+    "school": "transmutation",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Vigor Defense",
+    "range": "60ft",
+    "tags": [
+      "degradation",
+      "petrification"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Begin transmuting one target into inert stone. Roll 2 Focus Dice against their Vigor Defense; on a hit, the target enters Petrification Stage 1 and follows the standard progression, making a Vigor Save each turn to resist advancing. At higher Tiers this becomes a wide broadcast that petrifies every enemy in an area at once."
+  },
+  {
+    "id": "earth-mire",
+    "name": "Earth Mire",
+    "school": "transmutation",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "60ft (20ft radius)",
+    "tags": [
+      "alteration"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Transmute a 20ft radius of solid ground into churning liquid for 1 minute. Any enemy that enters or starts its turn there makes a Vigor Save against Difficulty 7 or is Restrained, sinking until it succeeds on the same Save at the start of a later turn. Allies may cross by succeeding on the same Save."
+  },
+  {
+    "id": "beast-crown",
+    "name": "Beast Crown",
+    "school": "transmutation",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Special",
+    "range": "Self",
+    "tags": [
+      "shapeshifting"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Fully transmute into a beast form for 10 minutes, keeping your HP, Defense Ratings, Daily Reserves, and Focus and Resolve, but unable to cast. Choose Predator (Agility Upgraded, a natural attack using Vigor, plus 20ft Speed, and Impact Upgraded after moving 20ft straight) or Titan (Vigor Upgraded, a slam that pushes 10ft, the next three attacks against you Downgraded, and immunity to Prone). At higher Tiers this becomes a sustained apex form with two attacks per action."
+  },
+  {
+    "id": "sovereign-forge",
+    "name": "Sovereign Forge",
+    "school": "transmutation",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "enhancement"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Trigger a total biological transmutation of yourself or a willing ally. For the next hour all four of the target's Attribute Dice are Upgraded by one step and they are immune to Exhausted; when it ends they are Exhausted for an hour as the body recovers."
+  },
+  {
+    "id": "void-fracture",
+    "name": "Void Fracture",
+    "school": "transmutation",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Vigor Defense",
+    "range": "60ft",
+    "tags": [
+      "catalysis",
+      "visceral"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Collapse one target's structural integrity. This is Visceral: roll 3 Focus Dice against their Vigor Defense to connect, dealing the combined roll as True Damage. On a hit, their Vigor Defense and Agility Defense are each Sundered by 2 for the remainder of combat. On a Glancing Blow you gain 1 Momentum. This cannot affect non-physical creatures."
+  },
+  {
+    "id": "world-acid",
+    "name": "World Acid",
+    "school": "transmutation",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Agility Defense",
+    "range": "120ft",
+    "tags": [
+      "catalysis"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Trigger an uncontrolled chemical cascade. Choose a starting enemy and roll 3 Focus Dice against their Agility Defense, dealing Acid damage equal to the combined roll. The cascade then propagates to every enemy within 30ft of each hit target, dealing 2 Focus Dice of Acid with no roll, continuing until it can find no new target. Each enemy is hit only once."
+  },
+  {
+    "id": "iron-dissolution",
+    "name": "Iron Dissolution",
+    "school": "transmutation",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Vigor Defense",
+    "range": "60ft",
+    "tags": [
+      "degradation"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Focus the whole of your art on dissolving one target. Roll 3 Focus Dice against their Vigor Defense; on a hit, while you Channel this spell their Vigor Defense and Agility Defense are each Sundered by 1 at the start of each of your turns, permanently, and their Vigor Die is Downgraded for all rolls. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "world-ruin",
+    "name": "World Ruin",
+    "school": "transmutation",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Vigor Defense",
+    "range": "120ft (60ft radius)",
+    "tags": [
+      "alteration"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Trigger a massive permanent transmutation of all natural terrain within range: raise ground up to 30ft, wall off with stone, collapse structures, or open chasms. Any enemy caught in dramatic change has 3 Focus Dice rolled against its Vigor Defense, taking Bludgeoning damage equal to the combined roll and being knocked Prone on a hit. This cannot reshape magical or manufactured terrain."
+  },
+  {
+    "id": "phantom-image",
+    "name": "Phantom Image",
+    "school": "illusion",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "fabrication"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Fabricate a false sensory event at a point within range: a static visual no larger than a 1ft cube, a sound of any character, or a concealing shadow over a small object. It has no substance and persists for 10 minutes or until you dismiss it as a Free effect. At higher Tiers it grows in size and gains additional senses, becoming far harder to disbelieve."
+  },
+  {
+    "id": "distortion",
+    "name": "Distortion",
+    "school": "illusion",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "Self",
+    "tags": [
+      "concealment"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Wreathe yourself in a visual distortion that hides your precise position. Until the start of your next turn, all Impact Rolls targeting you are Downgraded. A creature that cannot see you gains nothing further to track."
+  },
+  {
+    "id": "flicker",
+    "name": "Flicker",
+    "school": "illusion",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "Self",
+    "tags": [
+      "misdirection"
+    ],
+    "action": "reaction",
+    "channeled": false,
+    "text": "As a Reaction when you are targeted by an attack, fabricate an afterimage of yourself stepping aside, Downgrading the attacker's Impact Roll against you. The flicker then dissipates."
+  },
+  {
+    "id": "dazzle",
+    "name": "Dazzle",
+    "school": "illusion",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Resolve Defense",
+    "range": "30ft",
+    "tags": [
+      "disorientation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Fabricate a sudden flash of blinding light in one target's vision. The target makes a Resolve Save against Difficulty 5; on a failure it is Dazed, and on a success you gain 1 Momentum."
+  },
+  {
+    "id": "unnerve",
+    "name": "Unnerve",
+    "school": "illusion",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "phantasm"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Project a fragment of a terrifying false image into one target's perception that only they can see. Roll your Focus Die against their Resolve Defense and deal Psychic damage equal to the remainder as the horror becomes real shock."
+  },
+  {
+    "id": "phantom-construct",
+    "name": "Phantom Construct",
+    "school": "illusion",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "fabrication"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Fabricate a convincing illusory structure or terrain feature up to 20ft across: a wall, a patch of false ground, a chasm, or a barricade. Creatures treat it as real until they have cause to disbelieve, and a creature that physically tests it discovers the truth at once. It persists for 10 minutes."
+  },
+  {
+    "id": "mirror-storm",
+    "name": "Mirror Storm",
+    "school": "illusion",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "Self",
+    "tags": [
+      "misdirection"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Fabricate two illusory duplicates that orbit your position. While they last, single-target attacks against you are Downgraded as the attacker cannot tell which figure is real. Choosing wrong destroys a duplicate and you take no damage; an attacker may Scrutinize (1 AP) to find you first. The duplicates last 1 minute."
+  },
+  {
+    "id": "phantom-double",
+    "name": "Phantom Double",
+    "school": "illusion",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Special",
+    "range": "120ft",
+    "tags": [
+      "misdirection"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Project an illusory duplicate of yourself at a point within range, moving it as a Free effect. Enemies aware only of the duplicate must target it instead of you. It has no substance and cannot attack; anything that touches it or strikes it for no damage disbelieves it. The Channel breaks if you fall Incapacitated or move more than 120ft from it."
+  },
+  {
+    "id": "vanish",
+    "name": "Vanish",
+    "school": "illusion",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Special",
+    "range": "Self",
+    "tags": [
+      "concealment"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Render yourself invisible to sight for 10 minutes. While invisible, all Impact Rolls against you are Downgraded and your first attack each turn is Upgraded. The invisibility ends when you make an attack or cast an offensive spell. At higher Tiers it covers all senses and persists through attacks."
+  },
+  {
+    "id": "sensory-scramble",
+    "name": "Sensory Scramble",
+    "school": "illusion",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "disorientation"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Feed one target contradictory false inputs. The target makes a Resolve Save against Difficulty 7; on a failure, while you Channel this spell, it cannot navigate intentionally and each turn its movement carries it in a direction you choose. On a success you gain 1 Momentum. The Channel breaks if the target disbelieves or you fall Incapacitated."
+  },
+  {
+    "id": "phantom-wound",
+    "name": "Phantom Wound",
+    "school": "illusion",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "phantasm"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Project the precise sensation of a grievous wound into one target's perception. Roll your Focus Die against their Resolve Defense and deal Psychic damage equal to the remainder. The target then makes a Vigor Save against Difficulty 5; on a failure it recoils, dropping one held item or being driven 10ft directly away from you, your choice."
+  },
+  {
+    "id": "shattered-horizon",
+    "name": "Shattered Horizon",
+    "school": "illusion",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Special",
+    "range": "120ft (60ft radius)",
+    "tags": [
+      "fabrication"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Replace the apparent environment within 60ft with an entirely different scene, including false obstacles such as walls and crowds of figures that creatures treat as solid. Any enemy that tries to move through a fabricated obstacle makes a Focus Save against your Focus Defense or stops against it. Physical contact reveals the whole illusion to that creature. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "doppelganger",
+    "name": "Doppelganger",
+    "school": "illusion",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "misdirection"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Fabricate a perfect visual and auditory duplicate of one creature within range. Enemies that interact with it make a Focus Save against your Focus Defense or treat it as the real creature for targeting and for believing its stated intentions. Physical contact ends the deception for that creature. The Channel breaks if you fall Incapacitated or the original moves more than 30ft from the duplicate."
+  },
+  {
+    "id": "disguise",
+    "name": "Disguise",
+    "school": "illusion",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "misdirection"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Make one willing ally appear to be a different creature entirely. Enemies that have not yet interacted with the disguised ally make a Focus Save against your Focus Defense before targeting them; on a failure they cannot target the ally this turn. The disguise breaks the instant the ally attacks or casts. It lasts 10 minutes."
+  },
+  {
+    "id": "perfect-veil",
+    "name": "Perfect Veil",
+    "school": "illusion",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "concealment"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Render yourself or one willing ally invisible to all ordinary senses: sight, hearing, smell, and touch. Impact Rolls against the veiled target are Downgraded and its first attack each turn is Upgraded. The veil does not end when the target attacks. At higher Tiers it extends over all allies within 30ft. It lasts 10 minutes."
+  },
+  {
+    "id": "false-reality",
+    "name": "False Reality",
+    "school": "illusion",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "disorientation"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Convince one target it is somewhere else entirely, divorced from the battle. The target makes a Resolve Save against Difficulty 7; on a failure, while you Channel this spell, it perceives a different environment, does not perceive the combat, and cannot willingly target creatures it does not believe are present. Any hit against it deals normal damage and grants a disbelief chance. On a success you gain 1 Momentum. The Channel breaks if the target disbelieves or you fall Incapacitated."
+  },
+  {
+    "id": "living-nightmare",
+    "name": "Living Nightmare",
+    "school": "illusion",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "phantasm"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Immerse one target in a sustained personal nightmare only they perceive. Roll 2 Focus Dice against their Resolve Defense; on a hit, while you Channel this spell, the target takes Psychic damage equal to your Focus Die at the start of each of its turns and its Impact Dice are Downgraded. The Channel breaks if the target disbelieves, falls to 0 HP, or you fall Incapacitated."
+  },
+  {
+    "id": "sundered-world",
+    "name": "Sundered World",
+    "school": "illusion",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Special",
+    "range": "Self (120ft radius)",
+    "tags": [
+      "misdirection"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Rewrite the apparent battlefield within 120ft: walls where corridors are, allies appearing as enemies and enemies as allies. Every creature in the area makes a Focus Save against your Focus Defense at the start of its turn or acts on the false layout. Those who succeed see through it but cannot automatically warn others. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "void-mantle",
+    "name": "Void Mantle",
+    "school": "illusion",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Special",
+    "range": "Self (30ft radius)",
+    "tags": [
+      "concealment"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Render yourself and all allies within range invisible to all senses, mundane and magical, for 10 minutes. Impact Rolls against them are Downgraded and each one's first attack per turn is Upgraded. Invisibility ends for an ally when they attack, but they may rejoin it for 1 AP while within 30ft of you."
+  },
+  {
+    "id": "mindscape",
+    "name": "Mindscape",
+    "school": "illusion",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "phantasm"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Trap one target's mind in a vivid nightmare built from its fears. Roll 3 Focus Dice against its Resolve Defense; on a hit, while you Channel this spell, the target perceives a complete false reality and can take no actions, though it can still be attacked. It makes a Resolve Save against Difficulty 9 at the start of each of its turns to break free. The Channel breaks if it succeeds, falls to 0 HP, or you fall Incapacitated."
+  },
+  {
+    "id": "dreaming-horror",
+    "name": "Dreaming Horror",
+    "school": "illusion",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Resolve Defense",
+    "range": "Self (60ft radius)",
+    "tags": [
+      "phantasm"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Project a collective nightmare into every enemy within 60ft. Roll 3 Focus Dice against the Resolve Defense of each and deal Psychic damage equal to the combined roll. Each damaged target is Dazed, must use its next movement to flee directly away from you, and takes Psychic damage equal to your Focus Die at the start of each of its turns for the remainder of combat as fragments replay."
+  },
+  {
+    "id": "void-grasp",
+    "name": "Void Grasp",
+    "school": "entropy",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Focus Defense",
+    "range": "Touch",
+    "tags": [
+      "decay"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Channel void energy into a target's body. Roll your Focus Die against their Focus Defense and deal Void damage equal to the remainder. If the target is not yet Decaying, it enters Decay Stage 1; if it already is, its Decay advances one stage."
+  },
+  {
+    "id": "entropy-mark",
+    "name": "Entropy Mark",
+    "school": "entropy",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "decay"
+    ],
+    "action": "free",
+    "channeled": false,
+    "text": "Designate one target as your Entropy-Marked target, visible only to you and your allies. Whenever the Marked target takes Void damage from any Entropy spell, its Decay advances one additional stage. You may have one Marked target at a time, a new mark removes the old, and it persists until the target falls, you re-mark, or combat ends."
+  },
+  {
+    "id": "void-bolt",
+    "name": "Void Bolt",
+    "school": "entropy",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "void-drain"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Project a lance of void energy that siphons what it disrupts back into you. Roll your Focus Die against the target's Focus Defense, deal Void damage equal to the remainder, and regain Hit Points equal to your Focus Die. This healing does nothing against undead or constructs."
+  },
+  {
+    "id": "null-burst",
+    "name": "Null Burst",
+    "school": "entropy",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Focus Defense",
+    "range": "Self (10ft radius)",
+    "tags": [
+      "entropic-field"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Release a pulse of void energy in all directions. Roll your Focus Die against the Focus Defense of every enemy within 10ft and deal Void damage equal to the remainder to each."
+  },
+  {
+    "id": "void-static",
+    "name": "Void Static",
+    "school": "entropy",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Focus Defense",
+    "range": "30ft",
+    "tags": [
+      "unraveling"
+    ],
+    "action": "reaction",
+    "channeled": false,
+    "text": "As a Reaction when a creature within range casts a spell or activates a magical ability, flood their pathways with void noise. The caster makes a Focus Save against Difficulty 7; on a failure, their Impact Die for that effect is Downgraded and any condition it would apply has its duration cut by one turn. On a success, you gain 1 Momentum."
+  },
+  {
+    "id": "wasting-touch",
+    "name": "Wasting Touch",
+    "school": "entropy",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Focus Defense",
+    "range": "Touch",
+    "tags": [
+      "decay"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Drive sustained void energy into a target through contact. Roll your Focus Die against their Focus Defense, deal Void damage equal to the remainder, and apply or advance Decay one stage. Your next Impact Die against this target is Upgraded as its defenses open."
+  },
+  {
+    "id": "doom-brand",
+    "name": "Doom Brand",
+    "school": "entropy",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "decay"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Brand a target with an accelerating doom. Roll your Focus Die against their Focus Defense and deal Void damage equal to the remainder. While you Channel this spell, the target's Decay advances one stage at the start of each of your turns even if no attack strikes it. The Channel breaks if the target falls or you fall Incapacitated."
+  },
+  {
+    "id": "life-siphon",
+    "name": "Life Siphon",
+    "school": "entropy",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "void-drain"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Draw a thread of life force from one target into yourself or an ally. Roll your Focus Die against their Focus Defense, deal Void damage equal to the remainder, and you or one ally within 30ft regains Hit Points equal to your Focus Die. This healing does nothing against undead or constructs."
+  },
+  {
+    "id": "void-field",
+    "name": "Void Field",
+    "school": "entropy",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Focus Defense",
+    "range": "60ft (15ft radius)",
+    "tags": [
+      "entropic-field"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Establish a zone of accelerated entropy while you Channel it. Any enemy that starts its turn inside is struck: roll your Focus Die against their Focus Defense and deal Void damage equal to the remainder. Conjured objects inside take Void damage equal to your Focus Die each round automatically. At higher Tiers the radius widens and damaged enemies also advance one stage of Decay."
+  },
+  {
+    "id": "unweaving",
+    "name": "Unweaving",
+    "school": "entropy",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "unraveling"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Target one active magical effect within range, including effects with no maintaining caster such as zones or traps. Roll your Focus Die against a Difficulty set by the effect's Tier (5 for Tier 0, 7 for Tier 1, rising with Tier). On a hit, void energy dissolves the effect entirely. On a Glancing Blow you gain 1 Momentum."
+  },
+  {
+    "id": "spreading-rot",
+    "name": "Spreading Rot",
+    "school": "entropy",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "decay"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Infect one target with a Decay that jumps to those near it. Roll 2 Focus Dice against the target's Focus Defense, deal Void damage equal to the combined roll, and apply or advance Decay one stage. Each time this target's Decay advances by any means, one adjacent enemy also enters or advances Decay one stage."
+  },
+  {
+    "id": "wasting-field",
+    "name": "Wasting Field",
+    "school": "entropy",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Focus Defense",
+    "range": "90ft (30ft radius)",
+    "tags": [
+      "decay"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Saturate a wide area with Decay-accelerating void energy. Roll 2 Focus Dice against the Focus Defense of every enemy within 30ft, deal Void damage equal to the combined roll, and apply or advance Decay one stage on each. Any enemy that starts its turn in the area next round advances Decay one stage automatically."
+  },
+  {
+    "id": "soul-harvest",
+    "name": "Soul Harvest",
+    "school": "entropy",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "void-drain"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Tear a heavy thread of life force from one target into yourself or a wounded ally. Roll 2 Focus Dice against the target's Focus Defense, deal Void damage equal to the combined roll, and you or one ally within 30ft regains Hit Points equal to 2 Focus Dice. This healing does nothing against undead or constructs."
+  },
+  {
+    "id": "entropic-aura",
+    "name": "Entropic Aura",
+    "school": "entropy",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Focus Defense",
+    "range": "Self (15ft radius)",
+    "tags": [
+      "entropic-field"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Emanate a continuous field of decay from your own body that moves with you. Any enemy that starts its turn within 15ft or moves within 15ft is struck: roll your Focus Die against their Focus Defense, deal Void damage equal to the remainder, and advance their Decay one stage. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "dispel-existence",
+    "name": "Dispel Existence",
+    "school": "entropy",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "unraveling"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Void-erode every magical enhancement one target carries. Roll 2 Focus Dice against the target's Focus Defense. On a hit, every active magical buff, enhancement, and self-spell on the target ends, and its temporary Hit Points are removed. For the remainder of combat, any new buff applied to the target has its dice Downgraded. On a Glancing Blow you gain 1 Momentum."
+  },
+  {
+    "id": "soul-shatter",
+    "name": "Soul Shatter",
+    "school": "entropy",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "soul-erosion",
+      "visceral"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Strike directly at a target's animating essence. This is Visceral: roll 2 Focus Dice against their Focus Defense to connect, dealing the combined roll as True Damage. The crack lingers, Downgrading the target's Focus Die for all Focus Defense contests for the remainder of combat. On a Glancing Blow you gain 1 Momentum."
+  },
+  {
+    "id": "void-feast",
+    "name": "Void Feast",
+    "school": "entropy",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Focus Defense",
+    "range": "Self (40ft radius)",
+    "tags": [
+      "void-drain"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Draw life force from every living enemy around you at once. Roll 3 Focus Dice against the Focus Defense of every enemy within 40ft and deal Void damage equal to the combined roll to each. You regain Hit Points equal to 2 Focus Dice for each enemy that takes damage. This healing does nothing against undead or constructs."
+  },
+  {
+    "id": "the-great-dissolution",
+    "name": "The Great Dissolution",
+    "school": "entropy",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "unraveling"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Direct the full force of unraveling at one target. Roll 3 Focus Dice against their Focus Defense. On a hit, every active magical effect on the target ends: buffs, Channels they maintain, magical conditions, temporary Hit Points, and equipment bonuses. For the remainder of combat, any new buff applied to the target has its dice Downgraded. On a Glancing Blow you gain 1 Momentum."
+  },
+  {
+    "id": "void-annihilation",
+    "name": "Void Annihilation",
+    "school": "entropy",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Focus Defense",
+    "range": "Self (60ft radius)",
+    "tags": [
+      "soul-erosion",
+      "visceral"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Project void energy outward at the essence of every creature nearby. Roll 3 Focus Dice against the Focus Defense of every enemy within 60ft. Against any target already Decaying this strike is Visceral, dealing the combined roll as True Damage; against all others it deals the remainder after their Focus Defense as Void damage. Every damaged target has its Focus Die Downgraded for all Focus Defense contests for the remainder of combat."
+  },
+  {
+    "id": "soul-severance",
+    "name": "Soul Severance",
+    "school": "entropy",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Focus Defense",
+    "range": "60ft",
+    "tags": [
+      "soul-erosion",
+      "visceral"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Focus the totality of void into one point of absolute erosion. This is Visceral: roll 3 Focus Dice against the target's Focus Defense, dealing the combined roll as True Damage. If this reduces the target to 0 HP, it makes a Resolve Save against Difficulty 9; on a failure its essence is severed, and it cannot be stabilized, roll death saves, or be raised by any magic short of the greatest divine intervention. On a success it falls and rolls death saves as normal."
+  },
+  {
+    "id": "emotional-read",
+    "name": "Emotional Read",
+    "school": "resonance",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "empathy"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Attune to the emotional frequency of one target, learning their dominant emotion and whether it leaves them exposed. You may amplify it: their next Impact Roll is Upgraded as their aggression turns reckless, but their next Resolve Defense Save is Downgraded as their volatility works in your favor."
+  },
+  {
+    "id": "unease",
+    "name": "Unease",
+    "school": "resonance",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Resolve Defense",
+    "range": "30ft",
+    "tags": [
+      "empathy"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Plant a seed of self-doubt in one target. Roll your Focus Die against their Resolve Defense, deal Psychic damage equal to the remainder, and Downgrade their next Impact Roll or Save. At higher Tiers this becomes a wave of dread across an area."
+  },
+  {
+    "id": "void-pulse",
+    "name": "Void Pulse",
+    "school": "resonance",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Resolve Defense",
+    "range": "30ft",
+    "tags": [
+      "resonant-frequency"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Send Psychic energy through one target and let it arc to the nearest mind. Roll your Focus Die against their Resolve Defense and deal Psychic damage equal to the remainder; one enemy adjacent to the target takes Psychic damage equal to your Focus Die with no roll. Both are now Resonant Linked."
+  },
+  {
+    "id": "null-signal",
+    "name": "Null Signal",
+    "school": "resonance",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "ego-assault"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Flood one target's cognition with interference. Roll your Focus Die against their Resolve Defense, deal Psychic damage equal to the remainder, and Downgrade their next Focus-based roll."
+  },
+  {
+    "id": "suggestion",
+    "name": "Suggestion",
+    "school": "resonance",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Resolve Defense",
+    "range": "30ft",
+    "tags": [
+      "compulsion"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Press a light compulsion into one target. The target makes a Resolve Save against Difficulty 5; on a failure, their first movement next turn must carry them at least 10ft toward or away from a point you choose, after which they act freely. On a success you gain 1 Momentum."
+  },
+  {
+    "id": "beguile",
+    "name": "Beguile",
+    "school": "resonance",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "compulsion"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Project a psychic warmth that makes one target unable to see you as a threat. The target makes a Resolve Save against Difficulty 7; on a failure, for the next minute it will not target you with single-target attacks or spells unless you or an ally damages it first. On a success you gain 1 Momentum."
+  },
+  {
+    "id": "dictate",
+    "name": "Dictate",
+    "school": "resonance",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "compulsion"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Insert a single command with the weight of necessity. The target makes a Resolve Save against Difficulty 7; on a failure, name one simple action that it performs at the start of its next turn before acting freely. On a success you gain 1 Momentum. At higher Tiers the same command can be broadcast to every enemy in an area."
+  },
+  {
+    "id": "compelled-march",
+    "name": "Compelled March",
+    "school": "resonance",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "compulsion"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Seize a target's sense of direction. The target makes a Resolve Save against Difficulty 7; on a failure, on its next turn you direct its movement up to its full Speed in any direction, though it keeps control of all other actions. On a success you gain 1 Momentum. At higher Tiers you may instead bind it from moving far from a point while it Saves each turn to break free."
+  },
+  {
+    "id": "resonant-chain",
+    "name": "Resonant Chain",
+    "school": "resonance",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "resonant-frequency"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Pull on existing Links to chain damage through connected minds. Roll your Focus Die against one target's Resolve Defense and deal Psychic damage equal to the remainder; each creature Linked to it also takes Psychic damage equal to your Focus Die with no roll. At higher Tiers this surges through every Link on the battlefield at once."
+  },
+  {
+    "id": "sympathetic-bond",
+    "name": "Sympathetic Bond",
+    "school": "resonance",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "resonant-frequency"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Forge a Link between yourself and one willing ally. While you Channel this spell, whenever you take Psychic damage the bonded ally regains that many Hit Points, and whenever either of you rolls a die's maximum value the other gains 1 Momentum. The Channel breaks if either of you reaches 0 HP or you fall Incapacitated."
+  },
+  {
+    "id": "ego-breach",
+    "name": "Ego Breach",
+    "school": "resonance",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "ego-assault"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Drive a crack through one target's psychological defenses. Roll your Focus Die against their Resolve Defense, deal Psychic damage equal to the remainder, and Sunder their Resolve Defense by 1 for the remainder of combat. The Sunder deepens at higher Tiers."
+  },
+  {
+    "id": "mass-directive",
+    "name": "Mass Directive",
+    "school": "resonance",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Resolve Defense",
+    "range": "60ft (30ft radius)",
+    "tags": [
+      "compulsion"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Insert the same command into every enemy in an area. Each makes a Resolve Save against your listed Difficulty; on a failure, name one simple action they each perform on their next turn before acting freely. Each enemy that succeeds grants you 1 Momentum."
+  },
+  {
+    "id": "seized-action",
+    "name": "Seized Action",
+    "school": "resonance",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "domination"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Reach into one target's mind and replace their intended action. The target makes a Resolve Save against your listed Difficulty; on a failure, name one action they perform with 1 AP on their next turn, though they keep their movement, remaining AP, and survival instinct. On a success their Impact Dice are Downgraded until the end of their next turn and you gain 1 Momentum."
+  },
+  {
+    "id": "stolen-will",
+    "name": "Stolen Will",
+    "school": "resonance",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "domination"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Open a continuous channel of command into one target. The target makes a Resolve Save against your listed Difficulty; on a failure, while you Channel this spell you may insert one command each turn as a Free effect that consumes 1 of their AP, while they keep their movement and remaining actions. On a success you gain 1 Momentum. The Channel breaks if the target reaches 0 HP or you fall Incapacitated."
+  },
+  {
+    "id": "pain-mirror",
+    "name": "Pain Mirror",
+    "school": "resonance",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "resonant-frequency"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Wrap one target in a feedback loop. Roll 2 Focus Dice against their Resolve Defense; on a hit, while you Channel this spell any creature that hits the target takes Psychic damage equal to your Focus Die with no roll. The Channel breaks if the target reaches 0 HP or you fall Incapacitated."
+  },
+  {
+    "id": "mind-erase",
+    "name": "Mind Erase",
+    "school": "resonance",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Resolve Defense",
+    "range": "Touch",
+    "tags": [
+      "ego-assault"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Reach into one target's recent memory. Roll 2 Focus Dice against their Resolve Defense; on a hit, you may alter, add, or remove memories from their last 10 minutes, and they believe the new version completely, though their HP, conditions, active spells, and stat block are untouched. On a Glancing Blow you gain 1 Momentum."
+  },
+  {
+    "id": "empathic-surge",
+    "name": "Empathic Surge",
+    "school": "resonance",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "Self (40ft radius)",
+    "tags": [
+      "empathy"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Flood the field with one emotional current. Choose Rage (allies Upgrade their next Impact Die, enemies Downgrade theirs), Despair (enemies Downgrade their next Save, allies each gain 1 Momentum), or Calm (all Compulsion and Domination effects on allies end). At higher Tiers this becomes a sustained battlefield-wide emotion you maintain."
+  },
+  {
+    "id": "absolute-command",
+    "name": "Absolute Command",
+    "school": "resonance",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "domination"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Seize comprehensive command of one target. Roll 3 Focus Dice against their Resolve Defense; on a hit, while you Channel this spell you may insert one command each turn as a Free effect that consumes 2 of their AP, while they keep free movement and survival instinct. The Channel breaks if the target reaches 0 HP or you fall Incapacitated."
+  },
+  {
+    "id": "the-hive",
+    "name": "The Hive",
+    "school": "resonance",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "domination"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Extend command across up to three targets. Roll 3 Focus Dice once against each target's Resolve Defense; on a hit against each, while you Channel this spell you may insert one command per target each turn as a Free effect that consumes 1 of that target's AP, issued individually. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "resonant-catastrophe",
+    "name": "Resonant Catastrophe",
+    "school": "resonance",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Resolve Defense",
+    "range": "Self (60ft radius)",
+    "tags": [
+      "resonant-frequency"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Collapse every Resonant Link at once. Roll 3 Focus Dice against the Resolve Defense of every Linked creature within 60ft and deal Psychic damage equal to the combined roll to each. All existing Links are then destroyed, and new Links form between every creature that took damage."
+  },
+  {
+    "id": "collective-ruin",
+    "name": "Collective Ruin",
+    "school": "resonance",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Resolve Defense",
+    "range": "Self (60ft radius)",
+    "tags": [
+      "ego-assault"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Collapse the psychological coherence of every enemy near you. Roll 3 Focus Dice against the Resolve Defense of all enemies within 60ft, deal Psychic damage equal to the combined roll, Sunder each damaged target's Resolve Defense by 2 for the remainder of combat, and Daze each until the end of its next turn. Each damaged target must then Save against your Difficulty at the start of its turns or have its Impact Dice Downgraded that turn."
+  },
+  {
+    "id": "conjured-blade",
+    "name": "Conjured Blade",
+    "school": "conjuration",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "Self",
+    "tags": [
+      "creation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure a simple weapon of solidified matter into your hand: any Light weapon form you have seen. It is real while it lasts, vanishes if it leaves your grip for more than a moment, and dissolves after 10 minutes or when you dismiss it as a Free effect."
+  },
+  {
+    "id": "reaching-hand",
+    "name": "Reaching Hand",
+    "school": "conjuration",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "creation",
+      "utility"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure a floating hand of translucent matter that fetches for you. It retrieves one unattended object of up to 10 pounds within range and delivers it to your grasp, or carries one such object from your hand to a point within range, then dissolves."
+  },
+  {
+    "id": "blink-step",
+    "name": "Blink Step",
+    "school": "conjuration",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Self",
+    "range": "Self (10ft)",
+    "tags": [
+      "teleportation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Fold the space between two points you can see. Teleport up to 10ft to an unoccupied space in your line of sight. This movement does not provoke Opportunity Attacks. At higher Tiers the distance grows and you may carry a willing adjacent ally with you."
+  },
+  {
+    "id": "shardfall",
+    "name": "Shardfall",
+    "school": "conjuration",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Agility Defense",
+    "range": "60ft",
+    "tags": [
+      "creation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure a mass of jagged stone above one target and let it fall. Roll your Focus Die against their Agility Defense and deal Bludgeoning damage equal to the remainder. The debris litters the target's space, making it Difficult Terrain until the end of your next turn."
+  },
+  {
+    "id": "skitterling",
+    "name": "Skitterling",
+    "school": "conjuration",
+    "tier": 0,
+    "focus_cost": 0,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "summoning"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Pull a tiny chittering conjured creature into an unoccupied space within range. For 1 AP, command it to harry one adjacent enemy: that enemy's next Impact Die is Downgraded as the thing bites at ankles and eyes. It has 1 HP, no Defenses, and dissolves at 0 HP, when combat ends, or when you dismiss it as a Free effect."
+  },
+  {
+    "id": "lesser-servitor",
+    "name": "Lesser Servitor",
+    "school": "conjuration",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "summoning"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure a Servitor of animate matter in an unoccupied space within range. It has HP equal to 5 plus your Focus Die maximum; its Vigor and Agility Defense each equal half your Focus Die maximum. For 1 AP, command it to move up to 20ft and make one melee attack: roll your Focus Die against an adjacent target's Vigor Defense for Bludgeoning damage equal to the remainder. It is dismissed as a Free effect, at 0 HP, or when combat ends. One Servitor at a time; conjuring another dissolves the first."
+  },
+  {
+    "id": "sidestep-rift",
+    "name": "Sidestep Rift",
+    "school": "conjuration",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Self",
+    "range": "Self (30ft)",
+    "tags": [
+      "teleportation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Tear a brief seam in space and step through it. Teleport up to 30ft to an unoccupied space you can see. This movement does not provoke Opportunity Attacks, and you may make your next attack this turn before the seam's distortion fades: that attack's Impact Die is Upgraded."
+  },
+  {
+    "id": "conjured-barricade",
+    "name": "Conjured Barricade",
+    "school": "conjuration",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "creation",
+      "barrier"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure a wall of dense matter up to 10ft long and 5ft high in an unoccupied line within range. It is a Conjured Object with HP equal to 5 plus your Focus Die maximum, blocks movement and line of sight, and grants Heavy Cover to creatures behind it. It stands until destroyed or combat ends."
+  },
+  {
+    "id": "rain-of-knives",
+    "name": "Rain of Knives",
+    "school": "conjuration",
+    "tier": 1,
+    "focus_cost": 2,
+    "target": "Agility Defense",
+    "range": "60ft (10ft radius)",
+    "tags": [
+      "creation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure a cloud of blades above an area and release it. Roll your Focus Die against the Agility Defense of every creature in a 10ft radius and deal Piercing damage equal to the remainder to each. Blades stud the ground: the area is Difficult Terrain until the start of your next turn."
+  },
+  {
+    "id": "conjured-shackles",
+    "name": "Conjured Shackles",
+    "school": "conjuration",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Vigor Defense",
+    "range": "60ft",
+    "tags": [
+      "creation",
+      "binding"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Conjure chains of solid matter around one target. The target makes a Vigor Save against Difficulty 7; on a failure it is Restrained while you Channel this spell, and it may repeat the Save at the start of each of its turns to tear free. On a success you gain 1 Momentum. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "provision",
+    "name": "Provision",
+    "school": "conjuration",
+    "tier": 1,
+    "focus_cost": 1,
+    "target": "Special",
+    "range": "Touch",
+    "tags": [
+      "creation",
+      "utility"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure mundane, nonmagical equipment out of raw creation: up to a backpack's worth of gear such as rope, a ladder, planks, a shovel, or torches. The objects are real and functional but dissolve after one hour or when you dismiss them as a Free effect. Nothing conjured this way holds value once it fades."
+  },
+  {
+    "id": "greater-servitor",
+    "name": "Greater Servitor",
+    "school": "conjuration",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "summoning"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure a hulking Servitor of dense matter. It has HP equal to 15 plus your Focus Die maximum; its Vigor and Agility Defense each equal half your Focus Die maximum plus 1. For 1 AP, command it to move up to 30ft and make one melee attack: roll 2 Focus Dice against an adjacent target's Vigor Defense for Bludgeoning damage equal to the combined roll; on a hit the target is pushed 10ft. It is dismissed as a Free effect, at 0 HP, or when combat ends. One Servitor at a time."
+  },
+  {
+    "id": "rift-exchange",
+    "name": "Rift Exchange",
+    "school": "conjuration",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "teleportation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Open paired rifts beneath two willing creatures. You and one ally within range — or two allies you can see — instantly exchange positions. Neither movement provokes Opportunity Attacks, and the rift overrides physical pathing. Alternatively, teleport one willing ally within range up to 30ft to an unoccupied space you can see."
+  },
+  {
+    "id": "wrenching-rift",
+    "name": "Wrenching Rift",
+    "school": "conjuration",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Resolve Defense",
+    "range": "60ft",
+    "tags": [
+      "teleportation",
+      "binding"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Tear open a rift beneath one enemy and drag them through it. The target makes a Resolve Save against Difficulty 7; on a failure it is teleported up to 20ft to an unoccupied space of your choice within range and its Reaction is lost until the start of its next turn. On a success it holds its ground and you gain 1 Momentum."
+  },
+  {
+    "id": "conjured-rampart",
+    "name": "Conjured Rampart",
+    "school": "conjuration",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Special",
+    "range": "60ft",
+    "tags": [
+      "creation",
+      "barrier"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure a rampart of stone up to 30ft long and 10ft tall in a configuration of your choice within range. Each 10ft panel is a Conjured Object with HP equal to 5 plus your Focus Die maximum. It blocks movement and line of sight and grants Heavy Cover. It stands until destroyed or combat ends."
+  },
+  {
+    "id": "storm-of-blades",
+    "name": "Storm of Blades",
+    "school": "conjuration",
+    "tier": 2,
+    "focus_cost": 4,
+    "target": "Agility Defense",
+    "range": "60ft (15ft radius)",
+    "tags": [
+      "creation"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Conjure a whirling storm of blades that fills a 15ft radius while you Channel it. Any enemy that starts its turn inside or enters the storm for the first time on its turn is struck: roll 2 Focus Dice against its Agility Defense and deal Piercing damage equal to the combined roll. The storm is Difficult Terrain. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "rift-march",
+    "name": "Rift March",
+    "school": "conjuration",
+    "tier": 2,
+    "focus_cost": 3,
+    "target": "Special",
+    "range": "Self (30ft)",
+    "tags": [
+      "teleportation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Fold space around your whole formation. You and up to two allies within 30ft each teleport up to 20ft to unoccupied spaces you can see. None of this movement provokes Opportunity Attacks. At higher Tiers the count of allies and the distance grow."
+  },
+  {
+    "id": "colossus-servitor",
+    "name": "Colossus Servitor",
+    "school": "conjuration",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Special",
+    "range": "30ft",
+    "tags": [
+      "summoning"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure a towering Servitor of living stone and force. It has HP equal to 30 plus your Focus Die maximum; its Vigor and Agility Defense each equal your Focus Die maximum. For 1 AP, command it to move up to 30ft and make one melee attack: roll 3 Focus Dice against an adjacent target's Vigor Defense for Bludgeoning damage equal to the combined roll; on a hit the target is knocked Prone. The Servitor persists while you Sustain this spell (standard Sustained rules apply). One Servitor at a time."
+  },
+  {
+    "id": "worldgate",
+    "name": "Worldgate",
+    "school": "conjuration",
+    "tier": 3,
+    "focus_cost": 5,
+    "target": "Special",
+    "range": "120ft",
+    "tags": [
+      "teleportation"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Conjure a pair of linked gates in unoccupied spaces you can see within range. While you Channel this spell, any willing creature may step into one gate and emerge from the other as 5ft of movement; you choose at casting whether enemies may use the gates. Objects and attacks do not pass through. The Channel breaks if you fall Incapacitated."
+  },
+  {
+    "id": "rain-of-creation",
+    "name": "Rain of Creation",
+    "school": "conjuration",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Agility Defense",
+    "range": "120ft (30ft radius)",
+    "tags": [
+      "creation"
+    ],
+    "action": "1AP",
+    "channeled": false,
+    "text": "Conjure tons of raw matter above an area and let it fall. Roll 3 Focus Dice against the Agility Defense of every enemy within a 30ft radius and deal Bludgeoning damage equal to the combined roll; each damaged enemy is knocked Prone. The wreckage remains: the entire area is Difficult Terrain for the rest of combat, and creatures behind the larger heaps have Light Cover."
+  },
+  {
+    "id": "prison-of-making",
+    "name": "Prison of Making",
+    "school": "conjuration",
+    "tier": 3,
+    "focus_cost": 6,
+    "target": "Vigor Defense",
+    "range": "60ft",
+    "tags": [
+      "creation",
+      "binding"
+    ],
+    "action": "1AP",
+    "channeled": true,
+    "text": "Conjure a sealed cell of stone around one enemy. The target makes a Vigor Save against Difficulty 9; on a failure it is encased while you Channel this spell: it is Restrained, cannot see or be seen, cannot target or be targeted by anything outside, and no attack or effect crosses the walls in either direction. The cell is a Conjured Object with HP equal to 20 plus your Focus Die maximum; destroying it frees the prisoner. On a success the cell forms crooked and shatters, and you gain 1 Momentum. The Channel breaks if you fall Incapacitated."
+  }
+]
