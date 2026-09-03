@@ -134,3 +134,29 @@ Anything here can be revisited by the owner; nothing here reopens a locked decis
 30. **Path picks verified against the data**: each pre-built sequence satisfies every level gate,
     attribute-die gate, and prerequisite chain in data/talents.json at the level it is taken
     (die increases were scheduled to open the gates in time). Paths remain guidance only.
+
+## 2026-09-03 — Phase 5 (Web app)
+
+31. **Mechanics live in one module**: `app/src/rules.js` holds the dice ladder, gates,
+    slot counts, HP, Momentum cap, and tier unlocks. The builder and the browsers both read
+    it, so they cannot drift from each other. When a locked rule changes, that file and
+    `data/rules/` are the two places to touch.
+32. **Data is imported, never fetched**: the app pulls `../../data/*.json` and
+    `data/rules/*.md` through Vite's glob imports, so content is inlined at build time and
+    the production bundle is a single static folder with no runtime data directory. Bundle
+    is ~453 kB (127 kB gzipped) with all 217 Talents, 22 Traits, 170 spells, and 14 rules
+    files inside.
+33. **Admin write-back is dev-only by design**: `POST /__api/save` exists only under
+    `npm run dev` (`apply: 'serve'`), accepts only the three data files, and rejects
+    duplicate ids — mirroring `scripts/check_dupes.py`. In a production build the endpoint
+    404s and the editor falls back to downloading the edited file. A static host must never
+    carry a write endpoint.
+34. **HP is shown as an average with an override**: per-level HP is a Vigor Die roll, so the
+    builder displays the expected value and offers a manual field for what was actually
+    rolled at the table.
+35. **The d12 capstone is an explicit choice**: taking Legendary Attribute reveals a picker
+    listing only Attributes already at d10, matching the Talent's text rather than silently
+    upgrading one.
+36. **Trailing newlines normalized** in `data/*.json`. The Phase 2/3 merge scripts wrote
+    files without one; the admin editor's writer adds it, so the first save produced a
+    one-byte diff. All three files now end with a newline.
