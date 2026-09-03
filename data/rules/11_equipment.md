@@ -63,7 +63,7 @@ Every character has two categories of inventory: Readied and Stowed. Readied ite
 
 - **Readied Slots:** A number of slots equal to the maximum face value of your Agility Die. Items in Readied slots are holstered, strapped, or otherwise immediately accessible. Retrieving or stowing a Readied item is one Interaction (1 AP).
 
-- **Stowed Inventory:** Everything else a character carries that is not Readied. Retrieving a Stowed item takes two Interactions (2 AP total) `(tunable)`. There is no hard cap on Stowed inventory, but the GM should apply common sense to what a character can reasonably carry. Size affects Stowed capacity as defined in the Size Categories section.
+- **Stowed Inventory:** Everything else a character carries that is not Readied. Retrieving a Stowed item is one Interaction (1 AP) — every action costs 1 AP, no exceptions. The Readied/Stowed distinction governs slot limits, what is on your person for Talents and Reactions that reference Readied items, and out-of-combat logistics. There is no hard cap on Stowed inventory, but the GM should apply common sense to what a character can reasonably carry. Size affects Stowed capacity as defined in the Size Categories section.
 
 ## Size Categories
 

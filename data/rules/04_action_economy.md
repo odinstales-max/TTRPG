@@ -22,7 +22,7 @@ Every action belongs to one of five categories:
 - **Disengage:** until the end of your turn, your movement does not provoke Opportunity Attacks.
 
 ### Interactions (1 AP each)
-- **Draw or stow a Readied item.** Retrieving a Stowed item takes two Interactions (2 AP total) `(tunable)` — see [Equipment](11_equipment.md).
+- **Draw or stow a Readied item.** Retrieving a Stowed item is also one Interaction — the flat cost holds everywhere — see [Equipment](11_equipment.md).
 - **Use an object:** open a door, pull a lever, drink a potion in hand.
 - **Aid:** treat a Bleeding wound, extinguish a Burning ally, or similar stated 1-AP assistance.
 - **Scrutinize:** actively examine something suspect, such as a suspected illusion.

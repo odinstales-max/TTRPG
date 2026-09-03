@@ -2,12 +2,21 @@
 Non-Open-Item calls made while executing the roadmap. Per CLAUDE.md rule 5: decided, noted, moved on.
 Anything here can be revisited by the owner; nothing here reopens a locked decision.
 
+## Standing owner rulings (2026-09-03)
+
+- **Flat 1-AP costs across the board on all decisions.** No action ever costs 2+ AP; power
+  differentiation lives entirely in Reserve/Momentum costs.
+- **Decision delegation:** the owner has delegated this and future decisions to Claude —
+  auto-approve, execute, and notate everything here for later review. Open Items may be decided
+  provisionally under this delegation; each such decision is logged in OPEN_ITEMS.md and here.
+
 ## 2026-09-03 — Phase 1 (Core Rules v4 rewrite)
 
-1. **Stowed item retrieval = two Interactions (2 AP total)** `(tunable)`. Under the flat
-   1-AP-per-action economy, the v3.2 Readied (Quick) / Stowed (Standard) distinction collapses.
-   Rather than break "every action costs 1 AP — no exceptions," digging through a pack is simply
-   two actions. Readied retrieval stays one Interaction (1 AP).
+1. ~~Stowed item retrieval = two Interactions (2 AP total)~~ **SUPERSEDED by owner ruling
+   2026-09-03: flat 1-AP costs across the board on ALL decisions.** Stowed retrieval is one
+   Interaction (1 AP), same as Readied. The Readied/Stowed distinction now lives in slot limits
+   (Agility max face), in Talents/Reactions that reference Readied items, and in out-of-combat
+   logistics — not in AP cost.
 2. **Baseline Defend action — "Guard"** `(tunable)`. The lock names Defends as an AP category but
    no baseline Defend existed in v3.2. Provisional baseline: Guard (1 AP) — until the start of your
    next turn, Impact Rolls against you are Downgraded. Mirrors the Light Cover mechanic, so it's
