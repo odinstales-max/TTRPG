@@ -1,0 +1,17 @@
+# Netlify deploy, as an alternative to the GitHub Pages workflow in
+# .github/workflows/deploy.yml. Point Netlify at this repo and it needs no
+# further configuration.
+
+[build]
+  base = "app"
+  command = "npm run build"
+  publish = "app/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# The app routes on the hash (#/talents), so every path serves index.html.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
