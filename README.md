@@ -11,6 +11,6 @@ Classless, talent-driven tabletop RPG. All game content is plain data in `data/`
 - [x] Phase 1 — Core Rules v4 (`data/rules/`)
 - [x] Phase 2 — Talents & Traits (`data/talents.json`, `data/traits.json`)
 - [x] Phase 3 — Spells (`data/spells.json`)
-- [ ] Phase 4 — Playtest kit (`playtest/`)
+- [x] Phase 4 — Playtest kit (`playtest/`) — regenerate via `python scripts/build_playtest_kit.py`
 - [ ] Phase 5 — Web app (`app/`)
 - [ ] Phase 6 — Deploy (GitHub Pages / Netlify)

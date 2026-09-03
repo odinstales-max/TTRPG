@@ -120,3 +120,17 @@ Anything here can be revisited by the owner; nothing here reopens a locked decis
     the game speak one language. Damage is Bludgeoning/Piercing ("varies by conjured form" per
     the lock's school table). Momentum conventions (Glancing Blow / resisted Save → 1 Momentum)
     match the other lists.
+
+## 2026-09-03 — Phase 4 (Paper playtest kit)
+
+27. **Starting attribute array**: two Attributes at d6, two at d4, assigned by the player
+    `(tunable)` — the v3.2 per-class convention generalized. Used by the pre-built paths; the
+    real home for this rule is the future creation chapter (lock §5 input still needed).
+28. **Level 1 is the pre-Talent baseline**: per the lock, Talents start at Level 2, so a Level 1
+    character runs on dice, Health Tier, and Traits alone. Stated plainly on the paths sheet
+    rather than papered over.
+29. **The kit is generated, not authored**: `scripts/build_playtest_kit.py` produces all three
+    PDFs. After tuning any number, rerun the script — never hand-edit the PDFs.
+30. **Path picks verified against the data**: each pre-built sequence satisfies every level gate,
+    attribute-die gate, and prerequisite chain in data/talents.json at the level it is taken
+    (die increases were scheduled to open the gates in time). Paths remain guidance only.
