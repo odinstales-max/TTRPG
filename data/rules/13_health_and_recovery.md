@@ -2,14 +2,19 @@
 
 ## Health Tiers
 
-Your Hit Points represent your physical integrity. At character creation you select a Health Tier, which sets your starting HP — the mechanism of selection is still an open design question `(Open Item 7; defaulting to a creation choice until decided)`:
+Your Health Tier sets your starting Hit Points and is bought at character creation, where a
+tougher floor costs Creation Points you cannot then spend on dice, access, or Specialties.
+The full cost table lives in [Character Creation](02_character_creation.md).
 
-| **Health Tier** | **Starting HP** | **Built For** |
-| --- | --- | --- |
-| Bulwark | 11 + Vigor Die maximum `(tunable)` | Immovable defenders who exist to be hit |
-| Frontline | 9 + Vigor Die maximum `(tunable)` | Holding the line and absorbing punishment |
-| Skirmisher | 7 + Vigor Die maximum `(tunable)` | Mobile fighters who pick their moments |
-| Adept | 5 + Vigor Die maximum `(tunable)` | Those who solve problems before they reach melee |
+| **Health Tier** | **Starting HP** | **Creation cost** | **Built For** |
+| --- | --- | --- | --- |
+| Bulwark | 11 + Vigor Die maximum | 10 CP | Immovable defenders who exist to be hit |
+| Frontline | 9 + Vigor Die maximum | 6 CP | Holding the line and absorbing punishment |
+| Skirmisher | 7 + Vigor Die maximum | 3 CP | Mobile fighters who pick their moments |
+| Adept | 5 + Vigor Die maximum | 0 CP | Those who solve problems before they reach melee |
+
+Everything after level 1 is identical for every tier: you buy your floor, not your rate of
+growth.
 
 ## Gaining Hit Points
 

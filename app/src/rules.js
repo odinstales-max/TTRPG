@@ -22,15 +22,52 @@ export const NATURAL_DIE_CAP = 'd10'
 export const BASE_MOMENTUM_CAP = 3
 
 export const HEALTH_TIERS = [
-  { id: 'bulwark', name: 'Bulwark', base: 11, blurb: 'Immovable defenders who exist to be hit' },
-  { id: 'frontline', name: 'Frontline', base: 9, blurb: 'Holding the line and absorbing punishment' },
-  { id: 'skirmisher', name: 'Skirmisher', base: 7, blurb: 'Mobile fighters who pick their moments' },
-  { id: 'adept', name: 'Adept', base: 5, blurb: 'Those who solve problems before they reach melee' },
+  { id: 'bulwark', name: 'Bulwark', base: 11, cost: 10, blurb: 'Immovable defenders who exist to be hit' },
+  { id: 'frontline', name: 'Frontline', base: 9, cost: 6, blurb: 'Holding the line and absorbing punishment' },
+  { id: 'skirmisher', name: 'Skirmisher', base: 7, cost: 3, blurb: 'Mobile fighters who pick their moments' },
+  { id: 'adept', name: 'Adept', base: 5, cost: 0, blurb: 'Those who solve problems before they reach melee' },
 ]
+
+// --- Character creation: 20 points, everything costs something -------------
+export const CREATION_POINTS = 20
+export const CREATION_START_DIE = 'd4'
+// Cost to step one Attribute Die up from the die on the left.
+export const DIE_STEP_COST = { d4: 3, d6: 5, d8: 9 }
+export const FREE_TRAITS_AT_CREATION = 2
+export const CREATION_LIMITS = { reserve: 5, trait: 2, specialty: 3, school: 2, feature: 1, wealth: 4 }
+
+/** Points sunk into raising one Attribute from the d4 baseline to `die`. */
+export function dieCost(die) {
+  let cost = 0
+  for (let i = 0; i < dieIndex(die); i++) cost += DIE_STEP_COST[DICE[i]] ?? 0
+  return cost
+}
+
+/** Full creation spend for a character, itemised so the UI can show where it went. */
+export function creationSpend(c, catalogue) {
+  const cost = (id) => catalogue.find((x) => x.id === id)?.cost ?? 0
+  const dice = ATTRS.reduce((n, a) => n + dieCost(c.base[a]), 0)
+  const tier = HEALTH_TIERS.find((t) => t.id === c.tier)?.cost ?? 0
+  const counted = (key, id) => (c.creation?.[key] || 0) * cost(id)
+  const items = {
+    dice,
+    health: tier,
+    reserve: counted('reserve', 'cp-reserve'),
+    traits: counted('trait', 'cp-trait-extra'),
+    specialties: (c.specialties?.length || 0) * cost('cp-specialty'),
+    access: (c.access || []).reduce((n, id) => n + cost(id), 0),
+    schools: (c.creationSchools?.length || 0) * cost('cp-school'),
+    wealth: counted('wealth', 'cp-wealth'),
+    feature: c.feature ? cost(c.feature) : 0,
+  }
+  items.total = Object.values(items).reduce((a, b) => a + b, 0)
+  return items
+}
 
 export const talentSlots = (level) => TALENT_LEVELS.filter((l) => l <= level).length
 export const increaseSlots = (level) => INCREASE_LEVELS.filter((l) => l <= level).length
 export const reserveBudget = (level) => 4 * (level - 1) // +4 per level, player-allocated (tunable)
+export const RESERVE_PER_PURCHASE = 2 // each 1 CP buys 2 Reserve points at creation
 
 export function traitSlots(level, chosenTraits) {
   // Taking a weakness Trait grants one extra Trait choice (tunable).

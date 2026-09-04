@@ -88,4 +88,4 @@ Step-Die Ceiling Overflow: If a die is already at d12 and would be Upgraded furt
 
 When a roll is Upgraded, shift the Attribute Die one step up the scale before rolling. When a roll is Downgraded, shift it one step down. Multiple Upgrades and Downgrades on the same roll offset each other before resolving. A die cannot be Upgraded beyond d12 or Downgraded below d4 through this mechanism; overflow rules apply as described above.
 
-These temporary Upgrades act on the roll, not the die itself. A permanent Attribute Die of d10 pushed to d12 by a roll Upgrade is still a d10 Attribute — see [Progression](02_progression.md) for the permanent d10 cap and the road to a true d12.
+These temporary Upgrades act on the roll, not the die itself. A permanent Attribute Die of d10 pushed to d12 by a roll Upgrade is still a d10 Attribute — see [Progression](03_progression.md) for the permanent d10 cap and the road to a true d12.

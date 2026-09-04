@@ -8,6 +8,9 @@ Characters advance through ten levels. Progression is milestone-based: the GM de
 
 The GM should consider leveling the party together. Individual advancement creates mechanical imbalance and can undermine group cohesion. Unless a campaign specifically calls for it, all players level up at the same time.
 
+Level 1 is not on this table. A starting character is built with Creation Points rather than
+levelled into: see [Character Creation](02_character_creation.md).
+
 ## What Each Level Grants
 
 Every level after 1st grants exactly one of two things, on a strict alternating rhythm:
@@ -24,7 +27,7 @@ Every level after 1st grants exactly one of two things, on a strict alternating 
 | 9 | Ability Die Increase |
 | 10 | Talent · Vitality Surge · additional Trait `(tunable)` |
 
-Every level after 1st also increases your maximum Hit Points — see [Health & Recovery](12_health_and_recovery.md).
+Every level after 1st also increases your maximum Hit Points — see [Health & Recovery](13_health_and_recovery.md).
 
 ## Ability Die Increases
 
@@ -43,4 +46,4 @@ Temporary roll Upgrades (from cover, assists, Talents, and similar effects) can 
 
 ## Talents and Traits
 
-Talents (gained at Levels 2, 4, 6, 8, and 10) and Traits (chosen at creation, with more at Levels 5 and 10 `(tunable)`) are the whole of character identity in v4. Their rules live in [Talents & Traits](03_talents_and_traits.md).
+Talents (gained at Levels 2, 4, 6, 8, and 10) and Traits (chosen at creation, with more at Levels 5 and 10 `(tunable)`) are the whole of character identity in v4. Their rules live in [Talents & Traits](04_talents_and_traits.md).

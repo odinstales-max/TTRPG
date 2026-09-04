@@ -9,7 +9,7 @@ On your turn, you have **3 Action Points (AP)**. Every action costs **1 AP — n
 Every action belongs to one of five categories:
 
 ### Attacks (1 AP each)
-- **Basic Attack:** roll 1 Attribute Die against the target's Defense Rating. No resource cost. See [Combat & Impact](05_combat.md).
+- **Basic Attack:** roll 1 Attribute Die against the target's Defense Rating. No resource cost. See [Combat & Impact](06_combat.md).
 - **Featured Attack:** an attack granted by a Talent. Costs 1 AP plus the Reserve and/or Momentum cost stated in its entry.
 
 ### Defends (1 AP each)
@@ -22,20 +22,20 @@ Every action belongs to one of five categories:
 - **Disengage:** until the end of your turn, your movement does not provoke Opportunity Attacks.
 
 ### Interactions (1 AP each)
-- **Draw or stow a Readied item.** Retrieving a Stowed item is also one Interaction — the flat cost holds everywhere — see [Equipment](11_equipment.md).
+- **Draw or stow a Readied item.** Retrieving a Stowed item is also one Interaction — the flat cost holds everywhere — see [Equipment](12_equipment.md).
 - **Use an object:** open a door, pull a lever, drink a potion in hand.
 - **Aid:** treat a Bleeding wound, extinguish a Burning ally, or similar stated 1-AP assistance.
 - **Scrutinize:** actively examine something suspect, such as a suspected illusion.
 
 ### Spellcasting (1 AP each)
 - **Cast a spell:** 1 AP plus the spell's Reserve cost by Tier. Spells tagged as Reactions or Free effects keep those tags and do not cost AP.
-- **Drive a Channel:** maintain a Channeled spell. See [Spellcasting](09_spellcasting.md).
+- **Drive a Channel:** maintain a Channeled spell. See [Spellcasting](10_spellcasting.md).
 
 Some features grant **+1 AP** for a turn. Unless the feature deliberately says otherwise, that extra AP is restricted to non-Attack use.
 
 ## Reactions
 
-Reactions are a separate resource outside the AP pool: one action held in reserve to respond to a specific trigger outside your turn. You have one Reaction per round, regained at the start of each of your turns. Opportunity Attacks, Free Hand techniques, and Shield Block all spend your Reaction — see [Combat & Impact](05_combat.md) and [Equipment](11_equipment.md).
+Reactions are a separate resource outside the AP pool: one action held in reserve to respond to a specific trigger outside your turn. You have one Reaction per round, regained at the start of each of your turns. Opportunity Attacks, Free Hand techniques, and Shield Block all spend your Reaction — see [Combat & Impact](06_combat.md) and [Equipment](12_equipment.md).
 
 ## Free-Action Riders
 

@@ -12,8 +12,8 @@ of its own, so you can edit the game without touching code — and without AI.
 
 | Phase | Deliverable | Where |
 |---|---|---|
-| 1 | Core Rules v4 | `data/rules/` — 14 chapters |
-| 2 | Talents & Traits | `data/talents.json` (217), `data/traits.json` (22) |
+| 1 | Core Rules v4 | `data/rules/` — 15 chapters, including character creation |
+| 2 | Talents & Traits | `data/talents.json` (217), `data/traits.json` (22), `data/creation.json` (28 purchases) |
 | 3 | Spell master list | `data/spells.json` (170, including a new Conjuration school) |
 | 4 | Paper playtest kit | `playtest/` — character sheet, quick reference, 3 pre-built paths |
 | 5 | Web app | `app/` — builder, compendium, rules reference, admin editor |
@@ -83,9 +83,9 @@ git push -u origin master
 
 These are noted in Design Lock §5 and remain the real gaps:
 
-- Rulebook chapters other than Chapter 2 — character creation, equipment tables, GM rules,
-  bestiary. Creation especially: the starting-dice array (currently two d6 / two d4) and
-  Health Tier selection are provisional and belong in that chapter.
+- Rulebook chapters still missing: equipment tables, GM rules, bestiary. Character creation
+  now exists (`data/rules/02_character_creation.md`) as a 20-point buy, but its prices are
+  playtest targets — the numbers most worth hitting with real play.
 - Review of the seven Open Item decisions — three were yours; four were decided
   provisionally under delegation and are marked as such.
 - Review of the drafted Conjuration spell list (21 spells).

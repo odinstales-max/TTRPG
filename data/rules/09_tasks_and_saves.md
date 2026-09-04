@@ -39,6 +39,13 @@ Task rolls do not produce a flat success or failure. The margin matters. The GM 
 
 - **Failure by 3 or more (hard failure):** The character fails and the situation changes in a meaningful way. An alarm is triggered, a contact grows hostile, a rope frays. The GM introduces a complication. The rolling character gains 2 Momentum Tokens.
 
+### Task Specialties
+
+A character who bought a Specialty at creation names a field they were trained in. When a Task
+falls squarely inside it, they Upgrade their Attribute Die for that roll. The GM has final say
+on what a Specialty covers; a Specialty applies only to Tasks, never to an Impact Roll or a
+Save. See [Character Creation](02_character_creation.md).
+
 ### Spending Momentum on Tasks
 
 Momentum is not locked to combat. Before any Task roll, you may spend your own Momentum Tokens — on your roll, or on a roll made by an ally within your immediate engagement — each token adding +1 to the result. A character about to attempt a vital negotiation can benefit from accumulated tension just as much as a warrior can on the battlefield. Remember that all pools reset when combat begins; momentum carried out of a tense scene lasts only until the next fight starts.

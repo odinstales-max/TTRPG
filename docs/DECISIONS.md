@@ -160,3 +160,39 @@ Anything here can be revisited by the owner; nothing here reopens a locked decis
 36. **Trailing newlines normalized** in `data/*.json`. The Phase 2/3 merge scripts wrote
     files without one; the admin editor's writer adds it, so the first save produced a
     one-byte diff. All three files now end with a newline.
+
+## 2026-09-03 — Character creation rework (owner-directed)
+
+The owner identified a real balance flaw: four Health Tiers offered as a free choice means
+every character takes Bulwark, because nothing is given up for it. The fix is a point-buy
+creation system, which also fills part of the Design Lock §5 gap (a creation chapter).
+
+37. **20 Creation Points** `(tunable)`, chosen for "one strong identity": the old default array
+    (two d6) costs 6, leaving 14 for a single standout — high health, a d8, a School, or good
+    gear — but never two of them. Written up in `data/rules/02_character_creation.md`, priced in
+    `data/creation.json` so costs are data, not code.
+38. **Everything starts at d4.** Attribute dice are bought: d4→d6 costs 3, d6→d8 costs 5,
+    d8→d10 costs 9. Escalating cost means a specialist pays for their specialty. A d10 at
+    creation is legal at 17 points and deliberately self-punishing — it also strands that
+    Attribute's four Ability Die Increases.
+39. **Health Tier is priced** at 0/3/6/10 for Adept/Skirmisher/Frontline/Bulwark. Bulwark costs
+    half the budget, which is the point: durability now competes with capability. Resolves
+    Open Item 7 properly and supersedes decision 19.
+40. **Task Specialties** are new (2 CP each, max 3): name a trained field, Upgrade your die on
+    Tasks it covers. This is the answer to the owner's "skills" — it reuses the Step-Die engine
+    rather than adding a parallel resolution mechanic, and never applies to Impact Rolls or
+    Saves. Documented in `09_tasks_and_saves.md` as well as the creation chapter.
+41. **Creation Features, not Talents** (4 CP, max 1). The owner asked for "a talent" at
+    creation, which conflicts with locked §2.1 (Talents at levels 2/4/6/8/10 only). Rather than
+    amend the lock, creation buys from a separate, deliberately weaker set of eight features
+    that never appear in the Talent web and cannot be taken later. Level 1 still grants no
+    Talent; decision 28 stands.
+42. **Access is purchased**, replacing the vague "granted at creation" of decision 5: martial
+    weapons 2, heavy weapons 1 (Vigor d8), shields 1, armor 1/2/3, Vestments 2, Armaments 2,
+    Spell School 4 (Focus d6, max 2). The School-access Talent remains available from level 2,
+    so magic can be deferred rather than bought early.
+43. **Supersedes decision 27** (the two-d6/two-d4 starting array). That array is now simply
+    what 6 of your 20 points buys, not a rule.
+44. **Rules chapters renumbered** to put creation second, where a rulebook needs it: former
+    02–13 became 03–14 and every cross-link was updated. The app's sidebar and index follow
+    automatically because both are generated from the files.

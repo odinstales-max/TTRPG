@@ -136,15 +136,26 @@ def character_sheet():
     c.drawString(rx + 8, y - 79, "At 0 HP: Vigor Save vs 5 — 3 successes stable, 3 failures dead, Explosion = up at 1 HP.")
     yr = y - 92
 
-    box(c, rx, yr - 118, rw, 118, title="Talents  (one at levels 2, 4, 6, 8, 10)")
-    write_lines(c, rx + 8, yr - 24, rw - 16, 7)
-    yr -= 126
-    box(c, rx, yr - 62, rw, 62, title="Traits  (2 at creation; +1 at levels 5 & 10)")
-    write_lines(c, rx + 8, yr - 24, rw - 16, 3)
-    yr -= 70
-    box(c, rx, yr - 108, rw, 108, title="Spells  (name / school / tier / cost)")
+    box(c, rx, yr - 78, rw, 78, title="Creation  (20 Creation Points)")
+    label(c, rx + 8, yr - 22, "HEALTH TIER / CP")
+    rule(c, rx + 96, yr - 24, rx + 196, 0.8)
+    label(c, rx + 208, yr - 22, "GOLD")
+    rule(c, rx + 232, yr - 24, rx + rw - 8, 0.8)
+    label(c, rx + 8, yr - 40, "CREATION FEATURE")
+    rule(c, rx + 96, yr - 42, rx + rw - 8, 0.8)
+    label(c, rx + 8, yr - 58, "TASK SPECIALTIES  (Upgrade the die on Tasks they cover)")
+    write_lines(c, rx + 8, yr - 70, rw - 16, 1, spacing=12)
+    yr -= 86
+
+    box(c, rx, yr - 104, rw, 104, title="Talents  (one at levels 2, 4, 6, 8, 10)")
     write_lines(c, rx + 8, yr - 24, rw - 16, 6)
-    yr -= 116
+    yr -= 112
+    box(c, rx, yr - 56, rw, 56, title="Traits  (2 at creation; +1 at levels 5 & 10)")
+    write_lines(c, rx + 8, yr - 24, rw - 16, 2)
+    yr -= 64
+    box(c, rx, yr - 92, rw, 92, title="Spells  (name / school / tier / cost)")
+    write_lines(c, rx + 8, yr - 24, rw - 16, 5)
+    yr -= 100
 
     # ---- bottom band: equipment & notes
     by = min(ay - 4 - 88, yr) - 8
@@ -196,6 +207,21 @@ def quick_reference():
                             rightMargin=0.5 * inch, title="Quick Reference")
     s = []
     s.append(Paragraph("[GAME NAME] — QUICK REFERENCE (Core Rules v4)", ss["Title"]))
+
+    s.append(Paragraph("Character Creation — 20 Points", ss["H"]))
+    s.append(Paragraph("Everything starts at d4, Adept health, two free Traits, 25 gold. "
+                       "Every point spent in one place is a point missing somewhere else.", ss["B"]))
+    s.append(tbl([
+        ["Purchase", "Cost", "Purchase", "Cost"],
+        ["Attribute d4→d6", "3", "Task Specialty (max 3)", "2"],
+        ["Attribute d6→d8", "5", "Additional Trait (max 2)", "3"],
+        ["Attribute d8→d10", "9", "Spell School, needs Focus d6 (max 2)", "4"],
+        ["Health: Skirmisher 7 / Frontline 9 / Bulwark 11", "3 / 6 / 10", "Creation Feature (max 1)", "4"],
+        ["+2 Daily Reserve (max 5)", "1", "+50 gold (max 4)", "1"],
+        ["Armor: light / medium / heavy", "1 / 2 / 3", "Martial weapons · Heavy · Shields", "2 · 1 · 1"],
+        ["Arcane Vestments · Armaments", "2 · 2", "Level 1 grants no Talent", "—"],
+    ], [176, 74, 190, 72], ss))
+    s.append(Spacer(1, 4))
 
     s.append(Paragraph("Your Turn: 3 Action Points", ss["H"]))
     s.append(Paragraph("Every action costs <b>1 AP — no exceptions</b>. Reserve and Momentum "
@@ -291,6 +317,7 @@ PATHS = [
         "concept": "Frontline fury. You want enemies swinging at you, because every attack that "
                    "comes your way is fuel, and every drop of your own blood is a promise.",
         "tier": "Frontline (9 + Vigor max HP)",
+        "creation": "Vigor d6 (3) · Resolve d6 (3) · Frontline (6) · Martial weapons (2) · Medium armor (2) · Shields (1) · Specialty: Intimidation (2) · +50g (1) = 20 CP",
         "dice": "Vigor d6 · Resolve d6 · Agility d4 · Focus d4",
         "traits": "Heavy-Handed, Steel-Nerved",
         "gear": "Heavy cleaver (Vicious) or war-axe & shield · medium armor (or war-paint for "
@@ -313,6 +340,7 @@ PATHS = [
         "concept": "Magic as engineering. You spend Focus like a budget, weave modifications into "
                    "every casting, and treat each Explosion as compounding interest.",
         "tier": "Adept (5 + Vigor max HP)",
+        "creation": "Focus d8 (8) · Agility d6 (3) · Adept (0) · School of Evocation (4) · Arcane Armaments (2) · Arcane Vestments (2) · +50g (1) = 20 CP",
         "dice": "Focus d6 · Agility d6 · Vigor d4 · Resolve d4",
         "traits": "Quick-Witted, Perceptive",
         "gear": "Arcane Vestments · a Conduit staff or wand · formulary & scholar's pack",
@@ -334,6 +362,7 @@ PATHS = [
         "concept": "Patience made lethal. Mark the kill, control the angles, and let the quarry "
                    "spend its whole life walking into the one moment you prepared.",
         "tier": "Skirmisher (7 + Vigor max HP)",
+        "creation": "Agility d6 (3) · Focus d6 (3) · Skirmisher (3) · Martial weapons (2) · Light armor (1) · Specialties: Tracking, Survival (4) · Battle Sense (4) = 20 CP",
         "dice": "Agility d6 · Focus d6 · Vigor d4 · Resolve d4",
         "traits": "Agile, Streetwise",
         "gear": "Hunter's bow & arrows or paired hunting blades (Finesse) · cured hides · "
@@ -374,6 +403,8 @@ def prebuilt_paths():
             ["Traits", p["traits"], "Die Increases", p["increases"]],
             ["Gear", p["gear"], "", ""],
         ], [65, 191, 75, 181], ss, header=False))
+        s.append(Spacer(1, 3))
+        s.append(tbl([["Creation spend (20 CP)", p["creation"]]], [110, 402], ss, header=False))
         s.append(Spacer(1, 4))
         s.append(tbl([["Lv", "Talent", "Why"]] +
                      [[lv, "<b>%s</b>" % t, why] for lv, t, why in p["talents"]],

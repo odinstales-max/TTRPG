@@ -10,4 +10,4 @@ Every character possesses a pool of consumable points for each of the four Attri
 
 - **Capacity Growth:** at each level after 1st, your total Reserve capacity increases by **4 points, allocated however you choose** across the four pools `(tunable — Open Item 4)`. All 4 into Focus, one into each, or any split between — the allocation is permanent once made. There is no separate ceiling tied to the Attribute Die: base capacity plus your per-level allocations are the sole determinants of each pool's maximum.
 
-Spell Reserve costs are keyed to spell Tier and paid from Focus — see [Spellcasting](09_spellcasting.md).
+Spell Reserve costs are keyed to spell Tier and paid from Focus — see [Spellcasting](10_spellcasting.md).
