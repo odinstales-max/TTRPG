@@ -51,10 +51,15 @@ works. Requires Node 20+ and Python 3 for the scripts.
 
 ## Deploying
 
+Live site (once Pages is enabled): **https://odinstales-max.github.io/TTRPG/**
+
 The build is a static folder with `base: './'`, so it works from any subpath.
 
 - **GitHub Pages** — `.github/workflows/deploy.yml` builds and publishes on every push to
-  `main`. Enable it once at *Settings → Pages → Source: GitHub Actions*.
+  `master`. Enable it once at *Settings → Pages → Source: GitHub Actions*, then re-run the
+  workflow from the Actions tab (a run that happened before Pages was enabled will have
+  failed at the deploy step). **Pages on a private repo needs a paid GitHub plan** — on the
+  free tier, either make the repo public or use Netlify below.
 - **Netlify** — `netlify.toml` is already configured; point Netlify at the repo.
 
 The workflow runs the dedupe check before building, so malformed data fails the deploy
