@@ -16,9 +16,13 @@ export const talents = pick('talents')
 export const traits = pick('traits')
 export const spells = pick('spells')
 export const creation = pick('creation')
+export const skills = pick('skills')
+export const lifepath = pick('lifepath')
 
 export const creationBy = (category) => creation.filter((c) => c.category === category)
 export const creationById = Object.fromEntries(creation.map((c) => [c.id, c]))
+export const skillsById = Object.fromEntries(skills.map((s) => [s.id, s]))
+export const lifepathBy = (stage) => lifepath.filter((l) => l.stage === stage)
 
 export const ruleDocs = Object.entries(ruleModules)
   .map(([path, body]) => {

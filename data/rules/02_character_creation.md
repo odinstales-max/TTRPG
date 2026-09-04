@@ -1,119 +1,126 @@
 # Character Creation
 
-Nobody in [GAME NAME] starts as a blank slate, and nobody starts as everything at once. You build a level 1 character by spending **20 Creation Points**, and every point you put into one thing is a point that will not be somewhere else. That is the whole design: a character is defined as much by what they could not afford as by what they took.
+You do not assemble a character out of parts. You decide who they were before the story reached them, and the mechanics follow from that.
 
-Creation happens in seven steps. Read them in order the first time; after that, spend in whatever order you like and check the total at the end.
+Creation runs in six steps. The first three are your history — where you are from, what you did, and what put you on the road — and they hand you most of your character. The last three are the person you are now: your dice, your gear, and a short list of choices that keep two people who walked the same road from being the same character.
 
-## The Baseline
+## Step 1 — Origin
 
-Before you spend anything, every character has:
+Where you were raised. Your Origin grants **two Skills**, an **armor or weapon access**, and a **starting kit**.
 
-- **All four Attribute Dice at d4.** Weak across the board.
-- **The Adept Health Tier**, 5 + your Vigor Die maximum.
-- **Daily Reserves** equal to the maximum face of each Attribute Die, per pool.
-- **Two Traits**, free — see step 5.
-- **One weapon and one armor category you have access to**, plus an adventuring pack and 25 gold.
-- **Simple weapon access.** Everything else is bought.
-
-That baseline is a survivable person and nothing more. The 20 points are what make them worth playing.
-
-## Step 1 — Attribute Dice
-
-Every Attribute starts at d4. Raising one costs more the higher it goes, so a specialist pays for their specialty.
-
-| Step | Cost | Running total from d4 |
+| Origin | Skills | Access |
 | --- | --- | --- |
-| d4 → d6 | 3 CP | 3 |
-| d6 → d8 | 5 CP | 8 |
-| d8 → d10 | 9 CP | 17 |
+| **Ruinborn** — born in the bones of a dead city | Scavenging, Acrobatics | Light armor |
+| **Waystation** — raised where the roads cross | Persuasion, Survival | Light armor |
+| **Deepholt** — three generations underground | Ruin-Lore, Lockwork | Medium armor |
+| **Nomad Convoy** — home was a column of wagons | Beast-Handling, Survival | Light armor, Martial weapons |
+| **The Reach** — a frontier holdfast, too far out for help | Athletics, Survival | Medium armor, Martial weapons |
+| **Cloister** — an order that copied what it could save | Arcana, Ruin-Lore | Arcane Vestments |
 
-A d10 at creation is legal and almost never wise: it consumes 17 of your 20 points, and your four Ability Die Increases at levels 3, 5, 7, and 9 will have nowhere left to go on that Attribute. The natural cap is still d10; the road to d12 still runs only through the level 10 capstone Talent or a rare item.
+## Step 2 — Trade
 
-> Two Attributes at d6 costs 6 CP and is the ordinary shape of a starting character. It leaves 14 points for everything that makes them specific.
+What you did for a living before this. Your Trade grants **two more Skills**, further **access**, and **one Creation Feature**.
 
-## Step 2 — Health Tier
+| Trade | Skills | Access | Feature |
+| --- | --- | --- | --- |
+| **Scavenger** | Scavenging, Stealth | — | Scavenger's Eye |
+| **Warden** | Command, Athletics | Martial weapons, Shields | Veteran's Nerve |
+| **Mender** | Field Medicine, Toxicology | Light armor | Hard to Kill |
+| **Tinker** | Smithing, Lockwork | Medium armor | Quick Hands |
+| **Broker** | Persuasion, Deception | Light armor | Well-Traveled |
+| **Acolyte** | Arcana, Field Medicine | Vestments, Armaments | Cantrip Touched |
+| **Hunter** | Survival, Stealth | Martial weapons | Battle Sense |
+| **Outrider** | Beast-Handling, Acrobatics | Light armor, Martial weapons | Battle Sense |
 
-Your Health Tier sets your starting Hit Points. Durability is a purchase like any other, priced so that being the toughest person in the party costs you the chance to be the most capable at anything else.
+If your Trade grants a Skill your Origin already gave you, take any other Skill in its place — nothing is wasted.
 
-| Tier | Starting HP | Cost |
+**Creation Features are not Talents.** They never appear in the Talent web, they cannot be taken later, and they are deliberately smaller. Talents remain exactly where the design puts them: levels 2, 4, 6, 8, and 10. You may swap your Trade's Feature for any other on the Creation Feature list.
+
+## Step 3 — The Turn
+
+The thing that ended the life you had. Your Turn grants **one more Skill** and points you at **two Traits** that fit it — you may take either, both, or neither, since Traits are yours to choose.
+
+| The Turn | Skill | Suits |
 | --- | --- | --- |
-| Adept | 5 + Vigor max | 0 CP |
-| Skirmisher | 7 + Vigor max | 3 CP |
-| Frontline | 9 + Vigor max | 6 CP |
-| Bulwark | 11 + Vigor max | 10 CP |
+| **The Collapse** — you walked out; no one else did | Athletics | Steel-Nerved, Iron-Stomached |
+| **Cast Out** — named for something and told not to return | Deception | Stone-Faced, Streetwise |
+| **The Debt** — someone spent what they could not spare on you | Persuasion | Well-Connected, Merchant's Eye |
+| **The Vision** — something told you a true thing you could not have known | Arcana | Perceptive, Quick-Witted |
+| **The Bargain** — you traded a piece of yourself and it held | Toxicology | Frail Constitution, Iron-Stomached |
+| **Left for Dead** — people you trusted made a decision about you | Field Medicine | Steel-Nerved, Near-Sighted |
 
-Per-level HP gains, Vitality Surges at 5 and 10, and everything else in [Health & Recovery](13_health_and_recovery.md) are unchanged and identical for every tier. You are buying your floor, not your rate of growth.
+## Step 4 — Attributes
 
-## Step 3 — Daily Reserves
+Every Attribute starts at **d4**. You may improve them **twice**, and the two improvements are the whole of it:
 
-Your Reserves start at the maximum face of each Attribute Die: a character with Vigor d6 and Focus d4 begins with 6 Vigor Points and 4 Focus Points. That is thin for anyone who intends to spend.
+- **two Attributes to d6**, or
+- **one Attribute to d8**
 
-- **+2 Reserve points: 1 CP.** Allocate each purchase across the four pools however you like. You may buy this up to five times at creation `(tunable)`.
+That single choice is the oldest one in this kind of game: broadly capable, or genuinely good at one thing. Nothing else at creation raises an Attribute Die, and the natural cap is still d10 — reached only through the Ability Die Increases at levels 3, 5, 7, and 9.
 
-Reserve growth after level 1 is unchanged: +4 points per level, allocated by you.
+Your Attribute Dice are not just your rolls. Three things follow directly from them, which is why the choice matters more than any purchase:
 
-## Step 4 — Task Specialties
+- **Defense Ratings** — half the die's maximum face, for each Attribute.
+- **Daily Reserves** — each pool equals that Attribute Die's maximum face. A d6 Attribute carries 6 points. Raise the die later and the pool grows with it.
+- **Hit Points** — from Vigor, below.
 
-A Specialty is a field you were trained in, named by you at creation: Lockwork, Tracking, Field Medicine, Heraldry, Sailing, Forgework, Interrogation. When a Task falls squarely inside a Specialty you hold, **Upgrade your Attribute Die for that roll.**
+## Step 5 — Health
 
-- **One Specialty: 2 CP.** Up to three at creation `(tunable)`.
+Your Hit Points come from **Vigor** and nothing else. There is no durability to purchase and no tier to pick: if you want to be hard to kill, raise your Vigor Die, and accept that you did not raise something else.
 
-Three rules keep Specialties honest. The GM has final say on whether a Specialty covers the Task at hand. A Specialty never applies to an Impact Roll or a Save — only to Tasks. And a Specialty is a claim about training, not a claim about the world: naming *Lockwork* does not mean locks exist wherever you want them to.
+> **STARTING HIT POINTS**
+> Starting HP = **4 + twice your Vigor Die maximum** `(tunable)`
+> Vigor d4 → 12 · Vigor d6 → 16 · Vigor d8 → 20 · Vigor d10 → 24
 
-## Step 5 — Traits
+Per-level HP, Vitality Surges at 5 and 10, and everything else works as [Health & Recovery](13_health_and_recovery.md) describes, identically for everyone.
 
-Creation grants **two Traits free**. Traits are gated by Attribute Die, never by level, so buy your dice before you shop for Traits.
+## Step 6 — Coin and Personal Choices
 
-- **One additional Trait: 3 CP.** Up to two more at creation `(tunable)`.
+Every character begins with **100 gold** `(tunable)`, on top of the kit their Origin and Trade handed them.
 
-Taking a weakness Trait still grants its own extra Trait choice at no cost, exactly as [Talents & Traits](04_talents_and_traits.md) describes. That is how a character ends up with more identity than points should allow: by accepting something that genuinely hurts.
+You also have **6 Creation Points** `(tunable)` for the details that make you specific. Nothing essential is bought here — your dice, health, Reserves, Skills, Traits, and Feature all arrived free. This is the margin.
 
-## Step 6 — Access and Coin
-
-Access is permission to use a category of gear without penalty. Using anything outside your access still works, at the standard cost: your Impact Pool is Downgraded and the weapon's Explosion Rider does not apply, or for armor, all four Attribute Dice are Downgraded while worn.
-
-| Purchase | Cost | Requires |
+| Purchase | Cost | Notes |
 | --- | --- | --- |
-| Martial weapons | 2 CP | — |
-| Heavy weapons | 1 CP | Vigor d8 |
-| Shields | 1 CP | — |
-| Light armor | 1 CP | — |
-| Medium armor | 2 CP | — |
-| Heavy armor | 3 CP | Vigor d8 |
-| Arcane Vestments | 2 CP | — |
-| Arcane Armaments | 2 CP | — |
-| Spell School access | 4 CP | Focus d6 |
-| +50 gold | 1 CP | — |
+| Skill training | 2 | Up to 3 more Skills |
+| Additional Trait | 3 | Up to 2 more; attribute gates apply |
+| Second Creation Feature | 4 | Up to 1 more |
+| Access: Martial weapons | 2 | |
+| Access: Heavy weapons | 1 | Requires Vigor d8 |
+| Access: Shields | 1 | |
+| Access: Light / Medium / Heavy armor | 1 / 2 / 3 | Heavy requires Vigor d8 |
+| Access: Arcane Vestments | 2 | |
+| Access: Arcane Armaments | 2 | |
+| Spell School access | 4 | Requires Focus d6 |
+| +50 gold | 1 | Up to 2 |
 
-**Spell School access** grants one School: its Tier 0 spells immediately, and its higher Tiers as your level unlocks them. You may buy up to two Schools at creation `(tunable)`. The equivalent Talent is still available from level 2 for anyone who would rather spend elsewhere now and pick up magic later.
+## Traits
 
-## Step 7 — Creation Features
+Creation grants **two Traits free**. Traits are gated by Attribute Die, never by level, so settle your dice before choosing them. Taking a weakness Trait grants an additional Trait choice at no cost, exactly as [Talents & Traits](04_talents_and_traits.md) describes — the only way to carry more identity than the rules otherwise allow is to accept something that genuinely costs you.
 
-A Creation Feature is the one thing your character was already good at when the story found them. These are **not Talents** — they never appear in the Talent web, they cannot be taken later, and they are deliberately smaller than a Talent. Talents remain exactly where the design puts them: levels 2, 4, 6, 8, and 10.
+## Skills
 
-- **One Creation Feature: 4 CP.** Take at most one `(tunable)`.
+Skills are a fixed list of sixteen, each keyed to an Attribute. When a Task falls squarely inside a Skill you are trained in, **Upgrade your Attribute Die for that roll**.
 
-| Feature | Effect |
+| Attribute | Skills |
 | --- | --- |
-| **Veteran's Nerve** | Once per combat, Upgrade one Save you make. |
-| **Quick Hands** | +2 Readied slots, and once per turn drawing a Readied item is a Free effect instead of an Interaction. |
-| **Battle Sense** | Upgrade your Agility Die for Initiative, and you cannot be surprised while conscious. |
-| **Stubborn** | Once per combat, when a condition would be applied to you, delay it until the end of your next turn. |
-| **Scavenger** | Start with 100 extra gold and a Healer's Kit; given an hour anywhere inhabited or ruined, turn up mundane supplies without a Task roll. |
-| **Cantrip Touched** | Learn one Tier 0 spell from any School without that School's access. Requires Focus d6. It never scales past Tier 0. |
-| **Well-Traveled** | Gain one additional Task Specialty, and make yourself understood anywhere trade reaches. |
-| **Hard to Kill** | Upgrade your Vigor Saves at 0 Hit Points, and your first success stabilizes you instead of your third. |
+| Vigor | Athletics, Smithing |
+| Agility | Stealth, Lockwork, Sleight of Hand, Acrobatics |
+| Focus | Scavenging, Ruin-Lore, Field Medicine, Toxicology, Survival, Arcana |
+| Resolve | Persuasion, Deception, Command, Beast-Handling |
 
-## Worked Examples
+Training is binary: you are trained or you are not. A Skill never applies to an Impact Roll or a Save — only to Tasks — and the GM has final say on whether it covers the attempt at hand.
 
-Each of these spends all 20 points. None of them can afford to be anything else.
+## Level 1
 
-**The line-holder** — Vigor d6 (3), Resolve d6 (3), Frontline (6), Martial weapons (2), Medium armor (2), Shields (1), one Specialty: Siegework (2), +50 gold (1). *20 CP.* Vigor d6, Resolve d6, Agility d4, Focus d4; 15 HP. Tough, well-equipped, and entirely ordinary at everything that is not fighting.
+Level 1 grants no Talent. Everything on this page is the character who walked in; the rhythm of [Progression](03_progression.md) starts at level 2, and your first Talent is the first thing you earn rather than inherit.
 
-**The scholar** — Focus d8 (8), Agility d6 (3), School of Evocation (4), Arcane Armaments (2), Arcane Vestments (2), +50 gold (1). Adept tier, free. *20 CP.* Focus d8 and a School at level 1, with 9 Hit Points. The most dangerous person in the room and the easiest to kill, and no points left over for a Specialty.
+## Worked Example
 
-**The survivor** — Vigor d6 (3), Agility d6 (3), Skirmisher (3), Light armor (1), two Specialties (4), Hard to Kill (4), +50 gold (1), +2 Reserve (1). *20 CP.* Nothing exceptional anywhere, competent in three directions, and very hard to finish off.
+**Sera, Deepholt Tinker, Left for Dead.**
 
-## After Creation
+Deepholt gives Ruin-Lore, Lockwork, and Medium armor. Tinker adds Smithing, Lockwork — already held, so she takes Toxicology instead — Medium armor again, and Quick Hands. Left for Dead adds Field Medicine and suggests Steel-Nerved.
 
-Level 1 grants no Talent. The rhythm of [Progression](03_progression.md) begins at level 2, and your first Talent is the first thing you earn rather than buy. Everything on this page is the character you walked in with.
+She puts both Attribute improvements into one place: **Focus d8**, everything else d4. That gives Focus Defense 4, an 8-point Focus Reserve, and 12 Hit Points from her d4 Vigor — she is clever, careful, and very easy to kill.
+
+Traits: Steel-Nerved and Perceptive. Her 6 points go to Arcane Armaments (2), one more Skill in Stealth (2), and +50 gold (2 points buys 100). She carries 200 gold, five Skills, and a shelter-suit patch kit for a door that no longer exists.

@@ -13,7 +13,7 @@ of its own, so you can edit the game without touching code — and without AI.
 | Phase | Deliverable | Where |
 |---|---|---|
 | 1 | Core Rules v4 | `data/rules/` — 15 chapters, including character creation |
-| 2 | Talents & Traits | `data/talents.json` (217), `data/traits.json` (22), `data/creation.json` (28 purchases) |
+| 2 | Talents, Traits & creation | `data/talents.json` (217), `data/traits.json` (22), `data/skills.json` (16), `data/lifepath.json` (20), `data/creation.json` |
 | 3 | Spell master list | `data/spells.json` (170, including a new Conjuration school) |
 | 4 | Paper playtest kit | `playtest/` — character sheet, quick reference, 3 pre-built paths |
 | 5 | Web app | `app/` — builder, compendium, rules reference, admin editor |
@@ -117,8 +117,9 @@ npx -y firebase-tools@latest deploy --only firestore:rules   # after editing rul
 These are noted in Design Lock §5 and remain the real gaps:
 
 - Rulebook chapters still missing: equipment tables, GM rules, bestiary. Character creation
-  now exists (`data/rules/02_character_creation.md`) as a 20-point buy, but its prices are
-  playtest targets — the numbers most worth hitting with real play.
+  exists as a lifepath (`data/rules/02_character_creation.md`); its numbers — 2 Attribute
+  improvements, HP = 4 + twice Vigor max, 6 points, the armor-casting penalties — are
+  playtest targets, and the ones most worth attacking with real play.
 - Review of the seven Open Item decisions — three were yours; four were decided
   provisionally under delegation and are marked as such.
 - Review of the drafted Conjuration spell list (21 spells).

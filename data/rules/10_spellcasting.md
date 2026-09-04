@@ -17,6 +17,8 @@ All magic in [GAME NAME] is organized into eight Schools. Magic is not forbidden
 
 Casting a spell costs **1 AP** (Spellcasting category) plus the spell's Reserve cost. Spells tagged as Reactions use your Reaction instead; spells tagged as Free effects cost neither.
 
+What you are wearing matters. Arcane Vestments and Light armor leave casting untouched; Medium armor Downgrades your Focus Die on spell Impact Rolls and Concentration Saves; Heavy armor does the same and closes off Tier 2 and above entirely. See [Armor and Spellcasting](12_equipment.md).
+
 ## Spell Tiers
 
 All spells are organized into four tiers of power. Tier determines both the number of Impact Dice a spell rolls and the range of its Reserve cost. As a caster's Attribute Die improves through leveling, the size of those dice grows, meaning Tier and Attribute Die scale independently, rewarding characters who invest deeply in both.

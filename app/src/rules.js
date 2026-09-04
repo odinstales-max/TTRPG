@@ -21,53 +21,54 @@ export const BASE_TRAITS = 2
 export const NATURAL_DIE_CAP = 'd10'
 export const BASE_MOMENTUM_CAP = 3
 
-export const HEALTH_TIERS = [
-  { id: 'bulwark', name: 'Bulwark', base: 11, cost: 10, blurb: 'Immovable defenders who exist to be hit' },
-  { id: 'frontline', name: 'Frontline', base: 9, cost: 6, blurb: 'Holding the line and absorbing punishment' },
-  { id: 'skirmisher', name: 'Skirmisher', base: 7, cost: 3, blurb: 'Mobile fighters who pick their moments' },
-  { id: 'adept', name: 'Adept', base: 5, cost: 0, blurb: 'Those who solve problems before they reach melee' },
-]
-
-// --- Character creation: 20 points, everything costs something -------------
-export const CREATION_POINTS = 20
+// --- Character creation ----------------------------------------------------
+// Attributes start at d4 and get exactly two improvements: two to d6, or one to
+// d8. Health, Defenses, and Reserves all follow from the dice, so nothing
+// essential is bought. The point pool is only for personalisation.
+export const CREATION_POINTS = 6
 export const CREATION_START_DIE = 'd4'
-// Cost to step one Attribute Die up from the die on the left.
-export const DIE_STEP_COST = { d4: 3, d6: 5, d8: 9 }
+export const ATTRIBUTE_IMPROVEMENTS = 2
+export const STARTING_GOLD = 100
 export const FREE_TRAITS_AT_CREATION = 2
-export const CREATION_LIMITS = { reserve: 5, trait: 2, specialty: 3, school: 2, feature: 1, wealth: 4 }
+export const CREATION_LIMITS = { skill: 3, trait: 2, feature_slot: 1, school: 1, wealth: 2 }
 
-/** Points sunk into raising one Attribute from the d4 baseline to `die`. */
-export function dieCost(die) {
-  let cost = 0
-  for (let i = 0; i < dieIndex(die); i++) cost += DIE_STEP_COST[DICE[i]] ?? 0
-  return cost
-}
+/** Steps spent lifting one Attribute off the d4 baseline. */
+export const dieSteps = (die) => dieIndex(die) - dieIndex(CREATION_START_DIE)
 
-/** Full creation spend for a character, itemised so the UI can show where it went. */
+/** Starting HP comes from Vigor alone (tunable). */
+export const startingHp = (vigorDie) => 4 + 2 * dieMax(vigorDie)
+
+/** A Reserve pool equals its Attribute Die maximum, plus per-level allocations. */
+export const reservePool = (die, allocated = 0) => dieMax(die) + allocated
+
+/** What the point pool has been spent on, itemised for the UI. */
 export function creationSpend(c, catalogue) {
   const cost = (id) => catalogue.find((x) => x.id === id)?.cost ?? 0
-  const dice = ATTRS.reduce((n, a) => n + dieCost(c.base[a]), 0)
-  const tier = HEALTH_TIERS.find((t) => t.id === c.tier)?.cost ?? 0
   const counted = (key, id) => (c.creation?.[key] || 0) * cost(id)
   const items = {
-    dice,
-    health: tier,
-    reserve: counted('reserve', 'cp-reserve'),
+    skills: counted('skill', 'cp-skill'),
     traits: counted('trait', 'cp-trait-extra'),
-    specialties: (c.specialties?.length || 0) * cost('cp-specialty'),
+    feature: (c.creation?.feature_slot || 0) * cost('cp-feature-extra'),
     access: (c.access || []).reduce((n, id) => n + cost(id), 0),
     schools: (c.creationSchools?.length || 0) * cost('cp-school'),
     wealth: counted('wealth', 'cp-wealth'),
-    feature: c.feature ? cost(c.feature) : 0,
   }
   items.total = Object.values(items).reduce((a, b) => a + b, 0)
   return items
 }
 
+/** Armor stops being neutral once you cast (see data/rules/12_equipment.md). */
+export const ARMOR_CASTING = {
+  none: { label: 'No armor', note: 'No effect on casting.' },
+  vestments: { label: 'Arcane Vestments', note: 'No effect on casting.' },
+  light: { label: 'Light armor', note: 'No effect on casting.' },
+  medium: { label: 'Medium armor', downgrade: true, note: 'Spell Impact Rolls and Concentration Saves Downgraded.' },
+  heavy: { label: 'Heavy armor', downgrade: true, maxTier: 1, note: 'Spells Downgraded, and Tier 2+ cannot be cast at all.' },
+}
+
 export const talentSlots = (level) => TALENT_LEVELS.filter((l) => l <= level).length
 export const increaseSlots = (level) => INCREASE_LEVELS.filter((l) => l <= level).length
 export const reserveBudget = (level) => 4 * (level - 1) // +4 per level, player-allocated (tunable)
-export const RESERVE_PER_PURCHASE = 2 // each 1 CP buys 2 Reserve points at creation
 
 export function traitSlots(level, chosenTraits) {
   // Taking a weakness Trait grants one extra Trait choice (tunable).
@@ -121,10 +122,9 @@ export function defenses(dice, talentIds = []) {
  * the Vigor maximum. Rolls vary, so this is the average — the sheet has a manual
  * override for what you actually rolled.
  */
-export function expectedHp({ tier, dice, level }) {
-  const t = HEALTH_TIERS.find((x) => x.id === tier) || HEALTH_TIERS[1]
+export function expectedHp({ dice, level }) {
   const vmax = dieMax(dice.vigor)
-  let hp = t.base + vmax
+  let hp = startingHp(dice.vigor)
   for (let l = 2; l <= level; l++) {
     const half = vmax / 2
     const avgRoll = (vmax + 1) / 2

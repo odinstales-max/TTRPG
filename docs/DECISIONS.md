@@ -227,3 +227,44 @@ sharing. That changes the earlier "this needs no backend" answer, but not the co
     `FIREBASE_SERVICE_ACCOUNT` secret, which requires an interactive GitHub OAuth flow the
     owner must run (`firebase init hosting:github`); until then deploys are
     `npm run deploy --prefix app`.
+
+## 2026-09-03 — Creation reworked as a lifepath (owner-directed)
+
+The 20-point buy read as a spreadsheet rather than a character. The owner asked for something
+closer to a traditional RPG — history first, numbers following from it — and supplied the
+core spec. Decisions 37-44 are superseded wholesale.
+
+51. **Three stages of history**: Origin (where you were raised), Trade (what you did), and
+    The Turn (what put you on the road), in `data/lifepath.json` — 6 origins, 8 trades, 6
+    turns, all written from Era of Silence material rather than medieval flavour. Between
+    them they grant five Skills, access, and a Creation Feature, so most of a character
+    arrives as history rather than purchase.
+52. **Overlap became a free pick, not a loss.** A Trade repeating a Skill your Origin gave
+    you would otherwise silently waste a grant; instead each duplicate converts into a free
+    Skill choice. The builder computes and displays this.
+53. **Attributes: everything starts at d4 with exactly two improvements** — two Attributes to
+    d6, or one to d8 (owner's spec). No cost, no pool. This is the specialist-versus-generalist
+    choice in its oldest form, and it supersedes both the old two-d6/two-d4 array (decision 27)
+    and the escalating 3/5/9 pricing (decision 38).
+54. **Health is Vigor.** Health Tiers are gone: starting HP = 4 + twice the Vigor Die maximum
+    `(tunable)`, giving 12/16/20/24 at d4/d6/d8/d10. Durability cannot be shopped for, which
+    closes the original complaint permanently rather than pricing around it. Closes Open Item 7.
+55. **Reserves track the die, not the purchase.** Each pool equals its Attribute Die's
+    **current** maximum plus per-level allocations, so a die increase at level 3/5/7/9 now
+    deepens the pool too. A raised die improves offense, Defense, and Reserve together.
+56. **Skills are a fixed list of sixteen** (`data/skills.json`), each keyed to an Attribute
+    and drawn from the setting — Scavenging, Ruin-Lore, Toxicology, Beast-Handling and so on.
+    Training is binary and applies to Tasks only. This replaces free-text Task Specialties
+    (decision 40), which could not be granted by an Origin or referenced by anything.
+57. **Armor now interferes with spellcasting** — the mechanic the owner asked for, expressed
+    in dice rather than percentages. Vestments and Light armor: nothing. Medium: Downgrade the
+    Focus Die on spell Impact Rolls and Concentration Saves. Heavy: as Medium, and Tier 2+
+    cannot be cast at all. Documented in Equipment, cross-referenced from Spellcasting, and
+    enforced in the builder's spell list.
+58. **Starting gold is flat at 100** `(tunable)`, on top of the kit Origin and Trade grant.
+59. **The point pool shrank to 6** and now buys only personalisation: Skills (2), Traits (3),
+    a second Feature (4), access (1-3), a School (4), coin (1). Nothing essential is bought —
+    dice, health, Reserves, Skills, Traits, and a Feature all arrive free.
+60. **Talents still start at level 2.** The owner asked about starting Talents; Creation
+    Features remain the answer, now granted by your Trade and freely swappable. Locked §2.1
+    is untouched and decision 28 stands. Amending it remains a one-line change if wanted.

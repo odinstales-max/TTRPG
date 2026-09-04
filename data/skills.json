@@ -1,0 +1,37 @@
+[
+  { "id": "skill-athletics", "name": "Athletics", "attr": "vigor",
+    "text": "Climbing, swimming, jumping, forcing a door, hauling a body clear of a collapse. The applied use of your own strength against the world." },
+  { "id": "skill-smithing", "name": "Smithing", "attr": "vigor",
+    "text": "Working metal: repairing damaged gear, reforging salvage into something serviceable, judging whether a blade is sound or about to fail." },
+
+  { "id": "skill-stealth", "name": "Stealth", "attr": "agility",
+    "text": "Moving unheard and unseen, choosing sightlines, staying still when stillness is what saves you." },
+  { "id": "skill-lockwork", "name": "Lockwork", "attr": "agility",
+    "text": "Locks, latches, traps, and the small mechanisms of the old world. Opening what was meant to stay shut, and disarming what was meant to punish you for it." },
+  { "id": "skill-sleight", "name": "Sleight of Hand", "attr": "agility",
+    "text": "Lifting, palming, planting, and any work where the hand must be quicker than the eye watching it." },
+  { "id": "skill-acrobatics", "name": "Acrobatics", "attr": "agility",
+    "text": "Balance, tumbling, catching yourself, and crossing ground that will not hold still — rooftops, rubble, rope, and rot." },
+
+  { "id": "skill-scavenging", "name": "Scavenging", "attr": "focus",
+    "text": "Reading a ruin for what is still worth taking, knowing which rooms were stripped decades ago and which were never opened, and judging what will function once cleaned." },
+  { "id": "skill-ruin-lore", "name": "Ruin-Lore", "attr": "focus",
+    "text": "Knowing what a place was before it fell: old signage and script, the shape of pre-Silence buildings, which structures carried water, power, or weapons." },
+  { "id": "skill-field-medicine", "name": "Field Medicine", "attr": "focus",
+    "text": "Stopping bleeding, setting bone, cleaning a wound that will otherwise turn, and knowing when someone cannot be saved." },
+  { "id": "skill-toxicology", "name": "Toxicology", "attr": "focus",
+    "text": "Poisons, venoms, reagents, and antidotes — identifying them by sight or smell, brewing them, and treating what they do." },
+  { "id": "skill-survival", "name": "Survival", "attr": "focus",
+    "text": "Foraging, water, shelter, weather, and tracking. Keeping a group alive across open country and following what passed through it." },
+  { "id": "skill-arcana", "name": "Arcana", "attr": "focus",
+    "text": "Recognizing magic for what it is: which School an effect belongs to, roughly how strong it is, and whether a warded object is safe to touch." },
+
+  { "id": "skill-persuasion", "name": "Persuasion", "attr": "resolve",
+    "text": "Argument, appeal, and negotiation — moving someone who is not obliged to move, and knowing what they actually want." },
+  { "id": "skill-deception", "name": "Deception", "attr": "resolve",
+    "text": "Lying well, holding a false identity, and reading whether the person across from you is doing the same." },
+  { "id": "skill-command", "name": "Command", "attr": "resolve",
+    "text": "Rallying the frightened, giving orders that are obeyed under pressure, and putting enough weight behind a threat that it lands." },
+  { "id": "skill-beast-handling", "name": "Beast-Handling", "attr": "resolve",
+    "text": "Calming, driving, and working alongside animals, from a nervous pack mule to something the Silence changed." }
+]

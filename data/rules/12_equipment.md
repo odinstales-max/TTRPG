@@ -57,6 +57,28 @@ Armor in [GAME NAME] falls into four categories. Three are physical, Light, Medi
 
 Arcane Vestments are robes, cloaks, woven garments, and ritual wear imbued with magical warding. They do not protect against swords or arrows, they protect against spells, psychic attacks, and the corruption of the world, granting bonuses to both Focus Defense and Resolve Defense. Armor categories cannot be combined. A character wears one category at a time.
 
+## Armor and Spellcasting
+
+Armor is worked metal and stiffened plate, and magic is fine work. The two resist each other,
+and a caster who wants protection has to decide how much of their craft they are willing to
+give up for it.
+
+| Worn | Effect on spellcasting |
+| --- | --- |
+| Arcane Vestments | None. They are built for the work. |
+| Light armor | None. |
+| Medium armor | Downgrade your Focus Die on spell Impact Rolls and on Concentration Saves. |
+| Heavy armor | As Medium, and you cannot cast spells of **Tier 2 or higher** at all. |
+
+This applies whether or not you have access to the armor. Wearing armor you lack access to
+Downgrades all four Attribute Dice on top of it, so an unproficient caster in plate is
+Downgraded twice over on their own spells.
+
+The penalty follows the armor, not the character: take it off and your casting is whole
+again. Nothing here restricts Reactions, Free effects, or spells already in progress — a
+Channel begun out of armor is not broken by putting armor on, though the Concentration Saves
+that keep it alive are Downgraded from that point.
+
 ## Inventory and Carrying Capacity
 
 Every character has two categories of inventory: Readied and Stowed. Readied items are immediately accessible. Stowed items are packed away and require more effort to retrieve.

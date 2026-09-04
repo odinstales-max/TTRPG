@@ -39,12 +39,23 @@ Task rolls do not produce a flat success or failure. The margin matters. The GM 
 
 - **Failure by 3 or more (hard failure):** The character fails and the situation changes in a meaningful way. An alarm is triggered, a contact grows hostile, a rope frays. The GM introduces a complication. The rolling character gains 2 Momentum Tokens.
 
-### Task Specialties
+### Skills
 
-A character who bought a Specialty at creation names a field they were trained in. When a Task
-falls squarely inside it, they Upgrade their Attribute Die for that roll. The GM has final say
-on what a Specialty covers; a Specialty applies only to Tasks, never to an Impact Roll or a
-Save. See [Character Creation](02_character_creation.md).
+Skills are a fixed list of sixteen, each keyed to an Attribute, and training in them is
+binary: you are trained or you are not. When a Task falls squarely inside a Skill you have,
+**Upgrade your Attribute Die for that roll.**
+
+| Attribute | Skills |
+| --- | --- |
+| Vigor | Athletics, Smithing |
+| Agility | Stealth, Lockwork, Sleight of Hand, Acrobatics |
+| Focus | Scavenging, Ruin-Lore, Field Medicine, Toxicology, Survival, Arcana |
+| Resolve | Persuasion, Deception, Command, Beast-Handling |
+
+Two limits keep Skills honest. A Skill applies only to Tasks — never to an Impact Roll and
+never to a Save. And the GM has final say on whether a Skill covers the attempt at hand: the
+list describes training, not a claim on the world. Skills come from your Origin, Trade, and
+Turn at creation; see [Character Creation](02_character_creation.md).
 
 ### Spending Momentum on Tasks
 

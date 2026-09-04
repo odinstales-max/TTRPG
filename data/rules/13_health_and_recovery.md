@@ -1,20 +1,16 @@
 # Health & Recovery
 
-## Health Tiers
+## Starting Hit Points
 
-Your Health Tier sets your starting Hit Points and is bought at character creation, where a
-tougher floor costs Creation Points you cannot then spend on dice, access, or Specialties.
-The full cost table lives in [Character Creation](02_character_creation.md).
+Your Hit Points come from your Vigor Die. There is no Health Tier to choose and no
+durability to buy: toughness is what raising Vigor gets you, alongside a better melee die,
+a better Vigor Defense, and a deeper Vigor Reserve.
 
-| **Health Tier** | **Starting HP** | **Creation cost** | **Built For** |
-| --- | --- | --- | --- |
-| Bulwark | 11 + Vigor Die maximum | 10 CP | Immovable defenders who exist to be hit |
-| Frontline | 9 + Vigor Die maximum | 6 CP | Holding the line and absorbing punishment |
-| Skirmisher | 7 + Vigor Die maximum | 3 CP | Mobile fighters who pick their moments |
-| Adept | 5 + Vigor Die maximum | 0 CP | Those who solve problems before they reach melee |
+> **STARTING HIT POINTS**
+> Starting HP = **4 + twice your Vigor Die maximum** `(tunable)`
+> d4 → 12 · d6 → 16 · d8 → 20 · d10 → 24 · d12 → 28
 
-Everything after level 1 is identical for every tier: you buy your floor, not your rate of
-growth.
+Everything after level 1 is identical for every character, regardless of Vigor.
 
 ## Gaining Hit Points
 
