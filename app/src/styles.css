@@ -172,3 +172,19 @@ th { background: var(--pale); font-weight: 600; }
   .main { max-width: none; padding: 0; }
   .card, .panel { break-inside: avoid; }
 }
+
+/* ---------------------------------------------------------------- account */
+.account {
+  margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--line);
+  display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+}
+.account .count { margin-left: 0; }
+.account-email { display: flex; flex-direction: column; gap: 4px; width: 100%; }
+.account-email input { width: 100%; font-size: 12px; padding: 4px 7px; }
+.library-row {
+  display: flex; align-items: center; gap: 8px; padding: 5px 0;
+  border-bottom: 1px dashed var(--line); font-size: 13.5px;
+}
+.library-row:last-child { border-bottom: 0; }
+.library-row .grow { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.library-row.current { color: var(--accent); font-weight: 600; }

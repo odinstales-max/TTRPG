@@ -196,3 +196,34 @@ creation system, which also fills part of the Design Lock §5 gap (a creation ch
 44. **Rules chapters renumbered** to put creation second, where a rulebook needs it: former
     02–13 became 03–14 and every cross-link was updated. The app's sidebar and index follow
     automatically because both are generated from the files.
+
+## 2026-09-03 — Accounts and saved characters (owner-directed)
+
+The owner's goal is a D&D Beyond-style site: accounts, stored characters, eventually
+sharing. That changes the earlier "this needs no backend" answer, but not the content model.
+
+45. **Two layers, deliberately separate.** Game content (Talents, Traits, spells, rules
+    chapters, creation costs) stays in git and compiles into the bundle — same for every
+    user, versioned, diffable, revertable. Only per-user data goes to Firestore. Putting
+    rules content in a database would trade git history for nothing.
+46. **Reused `eraofsilence-744cb`** rather than a new project: the Google account is at its
+    project quota, and that project already carries the game's name from v3.2 ("Era of
+    Silence"). Its Firestore was STANDARD edition with default open rules that had already
+    expired on 2026-01-07, so nothing was live to disturb.
+47. **Data model**: `users/{uid}/characters/{id}` with `name`, `level`, `sheet` (the whole
+    builder state as a map), `createdAt`, `updatedAt`. Name and level are duplicated out of
+    the sheet so the character list renders without parsing every document.
+48. **Rules are default-deny** with owner-only access and full validation on create *and*
+    update, per the Firebase rules guidance. Updates use `updateDoc` so `createdAt` is never
+    in the write and its immutability check passes without the client echoing it back.
+    Verified live: anonymous read/write, cross-user read/write, out-of-range level, and an
+    unexpected `isAdmin` field are all rejected; owner read/write succeeds.
+49. **Signed out still works.** Auth is additive: the draft character stays in localStorage
+    either way, so nothing is lost by signing out mid-build. The site is usable by someone
+    who never makes an account.
+50. **Hosting moved to Firebase** (https://eraofsilence-744cb.web.app), which also sidesteps
+    GitHub Pages' paid-plan requirement for private repos. The Pages workflow is kept as a
+    second target for when the repo is public. CI auto-deploy to Firebase needs a
+    `FIREBASE_SERVICE_ACCOUNT` secret, which requires an interactive GitHub OAuth flow the
+    owner must run (`firebase init hosting:github`); until then deploys are
+    `npm run deploy --prefix app`.

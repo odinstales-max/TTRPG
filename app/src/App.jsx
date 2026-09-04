@@ -6,6 +6,7 @@ import Traits from './views/Traits.jsx'
 import Spells from './views/Spells.jsx'
 import Builder from './views/Builder.jsx'
 import Admin from './views/Admin.jsx'
+import { AccountBar } from './account.jsx'
 
 const useHash = () => {
   const [hash, setHash] = useState(() => window.location.hash.slice(1) || '/builder')
@@ -57,6 +58,7 @@ export default function App() {
           <div className="group">Tools</div>
           <NavLink to="/admin">Admin Editor</NavLink>
         </nav>
+        <AccountBar />
       </aside>
       <main className="main">{view}</main>
     </div>

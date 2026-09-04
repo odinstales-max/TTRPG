@@ -1,0 +1,89 @@
+rules_version = '2';
+
+// ===============================================================
+// Assumed Data Model
+// ===============================================================
+//
+// Game content (Talents, Traits, spells, rules text) is NOT stored here.
+// It lives in git and is compiled into the app at build time. Firestore holds
+// only per-user data, so every path below is owned by exactly one account.
+//
+// Collection: users/{uid}/characters
+// Document ID: auto-generated
+// Fields:
+//   - name       string    (required, 0-80 chars)     display name
+//   - level      number    (required, integer 1-10)   character level
+//   - sheet      map       (required, <=64 keys)      the full builder state
+//   - createdAt  timestamp (required, immutable)      set on create
+//   - updatedAt  timestamp (required)                 set on every write
+//
+// Nothing else in the database is readable or writable by clients.
+//
+// ===============================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------------------------------------------------------------
+    // Helper functions
+    // ---------------------------------------------------------------
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    function areImmutableFieldsUnchanged(fields) {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny(fields);
+    }
+
+    // A character document, validated identically on create and update.
+    function isValidCharacter(data) {
+      return hasOnlyAllowedFields(['name', 'level', 'sheet', 'createdAt', 'updatedAt'])
+        && hasRequiredFields(['name', 'level', 'sheet', 'createdAt', 'updatedAt'])
+        && data.name is string
+        && data.name.size() <= 80
+        && data.level is int
+        && data.level >= 1
+        && data.level <= 10
+        && data.sheet is map
+        && data.sheet.keys().size() <= 64
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    // ---------------------------------------------------------------
+    // Per-user data
+    // ---------------------------------------------------------------
+
+    match /users/{userId}/characters/{characterId} {
+      allow read, delete: if isOwner(userId);
+
+      allow create: if isOwner(userId)
+        && isValidCharacter(request.resource.data);
+
+      allow update: if isOwner(userId)
+        && isValidCharacter(request.resource.data)
+        && areImmutableFieldsUnchanged(['createdAt']);
+    }
+
+    // ---------------------------------------------------------------
+    // Default deny: anything not matched above is closed.
+    // ---------------------------------------------------------------
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

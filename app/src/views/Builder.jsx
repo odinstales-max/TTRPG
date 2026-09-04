@@ -1,8 +1,13 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import { talents, traits, spells, talentsById, traitsById, creation, creationBy, SCHOOLS } from '../data.js'
 import { TalentCard } from './Talents.jsx'
 import { TraitCard } from './Traits.jsx'
 import { SpellCard } from './Spells.jsx'
+import { useAccount } from '../account.jsx'
+import {
+  loadDraft, saveDraft, listCharacters, createCharacter,
+  updateCharacter, deleteCharacter,
+} from '../characters.js'
 import {
   ATTRS, ATTR_LABEL, DICE, dieIndex, dieMax, stepUp, defenseOf,
   HEALTH_TIERS, TALENT_LEVELS, INCREASE_LEVELS, TRAIT_LEVELS,
@@ -11,8 +16,6 @@ import {
   NATURAL_DIE_CAP, AP_PER_TURN, CREATION_POINTS, CREATION_START_DIE,
   DIE_STEP_COST, CREATION_LIMITS, RESERVE_PER_PURCHASE, dieCost, creationSpend,
 } from '../rules.js'
-
-const KEY = 'gamename-v4-character'
 
 const BLANK = {
   name: '',
@@ -34,16 +37,11 @@ const BLANK = {
 }
 
 function load() {
-  try {
-    const raw = localStorage.getItem(KEY)
-    if (!raw) return { ...BLANK }
-    const saved = JSON.parse(raw)
-    // Characters built before point-buy started at d6/d4; migrate them onto the
-    // new baseline rather than silently mispricing them.
-    return { ...BLANK, ...saved, creation: { ...BLANK.creation, ...(saved.creation || {}) } }
-  } catch {
-    return { ...BLANK }
-  }
+  // Characters built before point-buy started at d6/d4; merging onto BLANK
+  // migrates them to the new baseline rather than silently mispricing them.
+  const saved = loadDraft(null)
+  if (!saved) return { ...BLANK }
+  return { ...BLANK, ...saved, creation: { ...BLANK.creation, ...(saved.creation || {}) } }
 }
 
 function effectiveDice(c) {
@@ -82,9 +80,65 @@ export default function Builder() {
 
   const set = (patch) => setC((prev) => {
     const next = typeof patch === 'function' ? patch(prev) : { ...prev, ...patch }
-    try { localStorage.setItem(KEY, JSON.stringify(next)) } catch { /* private mode */ }
+    saveDraft(next)
     return next
   })
+
+  const { user, ready } = useAccount()
+  const [library, setLibrary] = useState([])
+  const [savedId, setSavedId] = useState(null)
+  const [syncing, setSyncing] = useState(false)
+  const [syncNote, setSyncNote] = useState('')
+
+  const refreshLibrary = async (uid) => {
+    try {
+      setLibrary(await listCharacters(uid))
+    } catch (err) {
+      setSyncNote(`Could not load your characters: ${err.message}`)
+    }
+  }
+
+  useEffect(() => {
+    if (!user) { setLibrary([]); setSavedId(null); return }
+    refreshLibrary(user.uid)
+  }, [user])
+
+  const saveToCloud = async () => {
+    if (!user) return
+    setSyncing(true); setSyncNote('')
+    try {
+      if (savedId) {
+        await updateCharacter(user.uid, savedId, c)
+        setSyncNote(`Saved "${c.name || 'Unnamed'}".`)
+      } else {
+        const id = await createCharacter(user.uid, c)
+        setSavedId(id)
+        setSyncNote(`Saved "${c.name || 'Unnamed'}" to your account.`)
+      }
+      await refreshLibrary(user.uid)
+    } catch (err) {
+      setSyncNote(`Save failed: ${err.message}`)
+    } finally { setSyncing(false) }
+  }
+
+  const openCharacter = (row) => {
+    set({ ...BLANK, ...row.sheet, creation: { ...BLANK.creation, ...(row.sheet?.creation || {}) } })
+    setSavedId(row.id)
+    setSyncNote(`Opened "${row.name}".`)
+  }
+
+  const removeCharacter = async (row) => {
+    if (!user || !confirm(`Delete "${row.name}" from your account?`)) return
+    setSyncing(true)
+    try {
+      await deleteCharacter(user.uid, row.id)
+      if (savedId === row.id) setSavedId(null)
+      await refreshLibrary(user.uid)
+      setSyncNote(`Deleted "${row.name}".`)
+    } catch (err) {
+      setSyncNote(`Delete failed: ${err.message}`)
+    } finally { setSyncing(false) }
+  }
 
   const dice = useMemo(() => effectiveDice(c), [c])
   const chosenTraits = c.traits.map((id) => traitsById[id]).filter(Boolean)
@@ -583,6 +637,43 @@ export default function Builder() {
             {violations.length === 0
               ? <p className="ok-text">Legal build — every gate satisfied.</p>
               : violations.map((v, i) => <p className="warn-text" key={i}>• {v}</p>)}
+          </section>
+
+          <section className="panel">
+            <h2>My Characters</h2>
+            {!ready && <p className="empty">Checking your account…</p>}
+            {ready && !user && (
+              <p className="empty">
+                Sign in from the sidebar to save characters to your account and reach them
+                from any device. Everything here works signed out; your current build is
+                kept in this browser.
+              </p>
+            )}
+            {ready && user && (
+              <>
+                <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 8 }}>
+                  <button className="primary" disabled={syncing} onClick={saveToCloud}>
+                    {savedId ? 'Save changes' : 'Save to account'}
+                  </button>
+                  {savedId && (
+                    <button disabled={syncing} onClick={() => { setSavedId(null); setSyncNote('Next save creates a new character.') }}>
+                      Save as new
+                    </button>
+                  )}
+                </div>
+                {library.length === 0
+                  ? <p className="empty">No saved characters yet.</p>
+                  : library.map((row) => (
+                    <div className={`library-row ${row.id === savedId ? 'current' : ''}`} key={row.id}>
+                      <span className="grow" title={row.name}>{row.name || 'Unnamed'}</span>
+                      <span className="count" style={{ marginLeft: 0 }}>L{row.level}</span>
+                      <button className="sm" disabled={syncing} onClick={() => openCharacter(row)}>Open</button>
+                      <button className="sm ghost" disabled={syncing} onClick={() => removeCharacter(row)}>×</button>
+                    </div>
+                  ))}
+                {syncNote && <p className="meta" style={{ marginBottom: 0 }}>{syncNote}</p>}
+              </>
+            )}
           </section>
 
           <section className="panel">

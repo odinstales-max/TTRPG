@@ -51,9 +51,13 @@ works. Requires Node 20+ and Python 3 for the scripts.
 
 ## Deploying
 
-Live site (once Pages is enabled): **https://odinstales-max.github.io/TTRPG/**
+**Live: https://eraofsilence-744cb.web.app**
 
 The build is a static folder with `base: './'`, so it works from any subpath.
+
+- **Firebase Hosting (primary)** — `npm run deploy --prefix app` builds and publishes.
+  Accounts and saved characters live in the same Firebase project, so hosting, auth, and
+  data are one console.
 
 - **GitHub Pages** — `.github/workflows/deploy.yml` builds and publishes on every push to
   `master`. Enable it once at *Settings → Pages → Source: GitHub Actions*, then re-run the
@@ -72,6 +76,30 @@ The repo has no remote yet. To publish it:
 ```bash
 git remote add origin https://github.com/<you>/<repo>.git
 git push -u origin master
+```
+
+## Accounts and saved characters
+
+The compendium works signed out — rules, Talents, spells, and the builder all run with no
+account, and your working character is kept in this browser. Signing in adds sync:
+
+- **Auth**: Google sign-in or email/password, via Firebase Auth.
+- **Storage**: characters are written to `users/{uid}/characters` in Firestore, so they
+  follow you between devices. Save, open, and delete from the *My Characters* panel.
+- **Rules content is never in the database.** Talents, Traits, spells, and rules text stay
+  in git and compile into the app, so a balance change is a commit you can diff and revert.
+  Firestore holds only per-user data.
+
+Security is enforced by [firestore.rules](firestore.rules): default-deny everywhere, each
+account reachable only by its owner, and character documents validated on every write.
+Verified against the live database — anonymous reads and writes, cross-user access, and
+documents carrying unexpected fields are all rejected.
+
+The Firebase web config in `app/src/firebase.js` is public on purpose: an API key
+identifies the project, it does not grant access. The rules are the security boundary.
+
+```bash
+npx -y firebase-tools@latest deploy --only firestore:rules   # after editing rules
 ```
 
 ## Documentation
