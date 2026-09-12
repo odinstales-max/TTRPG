@@ -1,36 +1,20 @@
-# Starting a new Claude Code session on this repo
+# Paste this as your first message in Claude Code, opened on this same project folder
 
-The original bootstrap prompt (phases 1–6) is complete — see the git log and
-`docs/DECISIONS.md`. Use one of these instead.
+Read CLAUDE.md, docs/DESIGN_LOCK_v5.md, and docs/OPEN_ITEMS.md in full. Design Lock v4 is
+superseded — do not use it for rules, history only.
 
-## For any new work
+Then:
+1. Confirm you understand the level cap is now 20, the d10 hard cap is removed, and Momentum/
+   Combat Role/Traits/Vicious are new systems that didn't exist before this update. Say back to me
+   in one short paragraph what changed, so I know it landed correctly.
+2. Do NOT start converting Talents yet. Your first real task is `docs/REGION_MAP.md` — read it,
+   then propose a completed region map (merges/splits included, per the martial/caster imbalance
+   noted in Design Lock v5 §12) and show it to me before writing any files to data/talents/.
+3. Once I approve the region map, use subagents to convert regions in parallel per the guidance in
+   CLAUDE.md — one subagent per region or small batch, each returning one data/talents/<id>.json.
+4. After all regions are converted, run the gap pass and balance check (Design Lock v5 §13 steps
+   3–4) yourself in the main session, log findings in docs/OPEN_ITEMS.md, and only then run
+   scripts/check_dupes.py and report back.
 
-Claude Code reads `CLAUDE.md` automatically, which points at the Design Lock. You usually
-need only describe the task. Two things worth saying explicitly:
-
-- Whether a locked decision is genuinely being reopened, or whether Claude should pick the
-  interpretation closest to the lock and flag the conflict.
-- Whether you want to approve judgment calls as they come up, or have them decided and
-  logged in `docs/DECISIONS.md` for later review.
-
-## Suggested next task
-
-> Read CLAUDE.md and docs/DESIGN_LOCK_v4.md fully, then check docs/OPEN_ITEMS.md and
-> docs/DECISIONS.md so you know what has already been decided and why.
->
-> Design Lock §5 lists the chapters still missing. Draft the **character creation
-> chapter** into `data/rules/` as v4: starting attribute array, Health Tier selection,
-> Trait selection, starting equipment and access (weapons, armor, Armaments), and the
-> level-1 baseline. Reconcile it with the provisional calls already made — decisions
-> 19, 27, and 28 — and promote or revise them explicitly rather than silently.
->
-> Run `python scripts/check_dupes.py`, commit, then summarize what changed and what it
-> settled.
-
-## After changing any content
-
-```bash
-python scripts/check_dupes.py            # ids and names unique across data/
-python scripts/build_playtest_kit.py     # regenerate the PDFs if numbers moved
-npm run build --prefix app               # confirm the app still builds
-```
+Commit after the region map is approved, and again after each batch of regions is converted and
+spot-checked — small commits, not one giant one at the end.
