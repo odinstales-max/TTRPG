@@ -105,5 +105,6 @@ This is logged in OPEN_ITEMS and needs confirmation before any caster region is 
 it is the single assumption with the widest blast radius in this map.
 
 Class resource engines (Living Conduit, The Aether Conduit, The Inspiration Engine, and similar)
-become the region's **Minor** node — they are the entry identity and they are what makes the
-region's Momentum generation feel distinct. They are not free passives.
+become the region's **Generator**, which CONVERSION_STANDARD §2 requires to be a **Major**, not the
+Minor — a character may own only one Generator ever, and putting it on the Minor would confine them
+to a single region. The Minor is a cheaper entry identity instead.

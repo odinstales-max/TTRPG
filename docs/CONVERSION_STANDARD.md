@@ -29,7 +29,7 @@ Free effect, Momentum-only, up to three bonus dice, *and* a knockdown — four c
 | **Minor** | passive, or 1 AP | 0–1 | 0 | Entry identity. Cheap and always useful. |
 | **Major** | 1 AP, or Free rider | 1–2 | 0–1 | One clear verb. Never more than one bonus die from Momentum alone. |
 | **Signature** | 1 AP | 2–3 | 1–2 | Recombines two primitives (Lock §4.2). |
-| **Keystone** | 1 AP or passive | 0–3 | 1–2 | Once per combat. The mastery payoff. |
+| **Keystone** | 1 AP or passive | 0–3 | 0–2 | Once per combat. The mastery payoff. |
 
 Momentum costs do **not** scale with the pool as it grows to 9; a Major stays cheap on purpose.
 
