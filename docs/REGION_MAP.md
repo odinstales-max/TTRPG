@@ -1,7 +1,7 @@
-# Region Map — PROPOSED, awaiting owner approval
+# Region Map — APPROVED
 
-Status: **proposed 2026-09-12, not approved.** No files may be written to `data/talents/` until
-this is signed off (CLAUDE.md rule 5).
+Status: **approved by owner 2026-09-13.** Conversion may proceed. `fury` is the pilot region;
+the remaining martial regions follow in parallel only after it is spot-checked (CLAUDE.md rule 6).
 
 ## Raw material — measured, not estimated
 
@@ -45,19 +45,19 @@ classes rather than merging the thinnest.
 
 | Region ID | Source class(es) | Attribute | Theme | Target Majors | Status |
 |---|---|---|---|---|---|
-| `fury` | Berserker (Bloodfury, Outward Rage, core) | Vigor | Pain taken becomes damage dealt; rage that radiates outward | 6 | proposed |
-| `ironstorm` | Berserker (Iron Storm) + Charger (Demolisher) | Vigor | Two-handed and dual-heavy weapons; Explosion cascades | 5 | proposed |
-| `bulwark` | Vanguard (Warden, Titan, core) + Zealot (Black Iron) | Vigor | Shields, lockdown, standing between harm and an ally | 6 | proposed |
-| `linebreaker` | Vanguard (Breach) + Charger (Line Breaker) | Vigor | Displacement, Prone, breaking formations open | 5 | proposed |
-| `velocity` | Charger (Ironclad Runner, core) | Agility | Movement converted into impact; untouchable tempo | 6 | proposed |
-| `shadow` | Assassin (Razorwire, Deadeye, core) | Agility | First strike, precision, execution from concealment | 6 | proposed |
-| `the-hunt` | Stalker (Ghost Hunter, Pack-Bond, core) | Agility | Marking quarry, tracking, pack coordination | 6 | proposed |
-| `venom` | Assassin (Nightshade) + Stalker (Trapper) | Focus | Toxins, traps, attrition that wins before the fight | 5 | proposed |
-| `weaving` | Arcanist | Focus | Modifying a spell as it forms; arcane engineering | 6 | proposed |
-| `decay` | Harrower | Focus | Void, Decay stages, life drawn out of the living | 6 | proposed |
-| `elements` | Shaman | Focus | Elemental infusion, totems, spirits, storm | 6 | proposed |
-| `resonance` | Muse | Resolve | Inspiration, illusion, foresight, the mind as weapon | 6 | proposed |
-| `sanctuary` | Invoker + Zealot (Shepherd, Eternal Flame) | Resolve | Divine authority: wards, judgment, radiant reprisal | 6 | proposed |
+| `fury` | Berserker (Bloodfury, Outward Rage, core) | Vigor | Pain taken becomes damage dealt; rage that radiates outward | 6 | **pilot — in progress** |
+| `ironstorm` | Berserker (Iron Storm) + Charger (Demolisher) | Vigor | Two-handed and dual-heavy weapons; Explosion cascades | 5 | approved |
+| `bulwark` | Vanguard (Warden, Titan, core) + Zealot (Black Iron) | Vigor | Shields, lockdown, standing between harm and an ally | 6 | approved |
+| `linebreaker` | Vanguard (Breach) + Charger (Line Breaker) | Vigor | Displacement, Prone, breaking formations open | 5 | approved |
+| `velocity` | Charger (Ironclad Runner, core) | Agility | Movement converted into impact; untouchable tempo | 6 | approved |
+| `shadow` | Assassin (Razorwire, Deadeye, core) | Agility | First strike, precision, execution from concealment | 6 | approved |
+| `the-hunt` | Stalker (Ghost Hunter, Pack-Bond, core) | Agility | Marking quarry, tracking, pack coordination | 6 | approved |
+| `venom` | Assassin (Nightshade) + Stalker (Trapper) | Focus | Toxins, traps, attrition that wins before the fight | 5 | approved |
+| `weaving` | Arcanist | Focus | Modifying a spell as it forms; arcane engineering | 6 | approved |
+| `decay` | Harrower | Focus | Void, Decay stages, life drawn out of the living | 6 | approved |
+| `elements` | Shaman | Focus | Elemental infusion, totems, spirits, storm | 6 | approved |
+| `resonance` | Muse | Resolve | Inspiration, illusion, foresight, the mind as weapon | 6 | approved |
+| `sanctuary` | Invoker + Zealot (Shepherd, Eternal Flame) | Resolve | Divine authority: wards, judgment, radiant reprisal | 6 | approved |
 
 Totals: **13 regions**, 7 martial / 6 caster-hybrid, target **~75 Majors** and **~117 nodes** overall,
 drawn from 223 usable raw pieces — meaning every region is selecting its best material rather than
