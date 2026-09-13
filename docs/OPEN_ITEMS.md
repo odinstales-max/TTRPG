@@ -73,3 +73,20 @@ evidence they are structural rather than one converter's misreading.
 | — | **Bleeding does not scale, and a whole region runs on it.** Flat 2 True Damage, cap 6, no stacking — so `venom`'s Keystone applies the same Bleed a level-2 toxin does. The attrition identity has no growth curve. Balance-pass item. |
 | — | **Two nodes give unconditional numeric edges at cheap tiers.** `shadow`'s Minor (Read the Wound) lets Agility attacks resolve against the *lower* of the target's Vigor or Agility Defense — permanent, free, level-2 reachable. And `shadow`'s Keystone forces every die in an Impact Roll to Explode, which multiplies with the Vicious weapon property. Both flagged by the converter as the region's highest-variance points. |
 | — | **Orphaned mechanic: Bait's "Off-Balance".** Charger's turn-order displacement is a genuinely new mechanic, which Lock §4.2 forbids at Minor/Major tier. Dropped from `velocity` with no home. Keep as a Signature/Keystone candidate or retire it. |
+
+## Owner rulings — martial ability format review, 2026-09-13
+Owner supplied five handwritten worked examples of the target Talent voice. Three decisions
+came out of reviewing them; details and the abbreviation table live in CONVERSION_STANDARD §8–10.
+
+| # | Ruling | Where it lives now |
+|---|---|---|
+| — | **Action Points keep "AP".** Reserve-pool shorthand is renamed instead: Vigor VP, Agility **AgP** (was going to collide with AP), Focus FP, Resolve RP. Abbreviations are for scratch/reference use only — finished text always spells the resource out in full, which is already how `render_talents.py` renders every node. | CONVERSION_STANDARD §8 |
+| — | **Save-based martial Talents are a real, authorized second resolution path**, not shorthand for "Impact Roll vs. Defense." A martial Talent may force a standard Attribute Save instead of rolling an Impact Roll, for effects that land on a beat rather than a strike that must connect. This is a deliberate exception to the core Combat chapter's Impact-Roll default, directed by the owner rather than inferred — logged per CLAUDE.md rule 1, not silently added. It still writes Saves open (no fixed Difficulty) and still costs inside its tier's budget. | CONVERSION_STANDARD §9 |
+| — | **The five submitted abilities (Fan of Blades, Whirlwind, Savage Strike, Brutal Strike, Heedless Assault) are style reference only.** Not inserted into `fury` or any region. Do not add them anywhere without further direction. | CONVERSION_STANDARD §10 |
+
+## Still open from this review
+| # | Item | Status |
+|---|------|--------|
+| — | **Save-based martial Talents still need the Difficulty-source ruling to be usable.** They're authorized structurally but every one written so far leaves the number out, same as every other Talent-imposed Save. This makes the existing "Difficulty of a Talent-imposed Save" open item more urgent — it now blocks a whole new category of martial Talent, not just edge cases. |
+| — | **Whirlwind's 2 Reserve cost exceeds the Major budget in CONVERSION_STANDARD §1 (0–1 Reserve).** One data point, not evidence the ceiling is wrong — but worth weighing when these examples get a real home, rather than trimming them to fit a number that hasn't been stress-tested either. |
+| — | **The playtest kit (character sheet, quick reference PDF) is v4-era and predates the region system, level-20 cap, and Momentum entirely.** Not touched this session per CLAUDE.md rule 4 (content conversion phase, not app/playtest phase). Flagging so the eventual v5 playtest pass knows to adopt the VP/AgP/FP/RP convention from the start rather than drift back to v4's habits. |

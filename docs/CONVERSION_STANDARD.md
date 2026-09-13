@@ -116,3 +116,55 @@ Major is the region's `generator`.
 - Costs inside the tier budget in §1.
 - No invented tags, no fixed Save Difficulties, no design-rationale sentences.
 - `python scripts/check_dupes.py` passes; `python scripts/render_talents.py <region>` reads well.
+
+---
+
+## 8. Resource abbreviations
+
+Full names in every finished Talent and rules sentence — abbreviations are for scratch notes,
+worked-example tables, and future quick-reference material only, never in delivered text.
+
+| Resource | Abbreviation | Notes |
+|---|---|---|
+| Action Points (the flat 3-per-turn economy) | **AP** | Load-bearing everywhere already — schema's `ap_cost`, the app, every rules chapter. Keeps the letters. |
+| Vigor (Daily Reserve) | **VP** | |
+| Agility (Daily Reserve) | **AgP** | Not `AP` — that collided with Action Points and is retired. |
+| Focus (Daily Reserve) | **FP** | |
+| Resolve (Daily Reserve) | **RP** | |
+| Momentum | **Mom.** | Rarely abbreviated; spell it out unless space is tight. |
+
+---
+
+## 9. Save-based martial Talents (owner-authorized, 2026-09-13)
+
+The default for a martial Talent is the core Combat chapter's Impact Roll against a Defense
+Rating — no to-hit, connect always assumed. Some martial Talents may instead force a standard
+Attribute **Save**, exactly as a spell does. This is a deliberate exception for effects that land
+on a beat the target must resist, not a strike that must connect — an area burst, not a blow.
+
+- Name the Save's Attribute in the text ("Agility Save"), matching the Talent's own theme.
+- State what happens on a failure, and separately on a success — never leave success undefined.
+- **Never name a Difficulty.** A Talent-imposed Save is written open, exactly like every other
+  Talent-imposed Save (§4). The rule for what Difficulty these use is still Open Item — see
+  OPEN_ITEMS.md — and will apply uniformly to spell Saves and martial Saves alike once settled.
+- Still priced inside its tier's AP/Momentum/Reserve budget (§1). A Save-based AoE is not exempt
+  from tier costing just because it changed resolution method.
+
+---
+
+## 10. Worked examples from the owner, 2026-09-13
+
+Reference only — these are **not** live Talents. No `id`, `region`, or `tier`; not in any data
+file; not validated by `check_talents.py`. They exist to fix the target voice: resource cost
+first, one mechanical clause per line, nothing explaining why the rule exists.
+
+**Fan of Blades** — 2 AgP. Agility Save, 15ft cone. Agility damage.
+**Whirlwind** — 2 VP. 5ft area, Vigor damage. If a creature is killed, spend 1 Momentum to make another attack.
+**Savage Strike** — 1 VP. Roll an additional Vigor die. If the result is a Glancing Blow, spend 1 Momentum to reroll any number of the Impact dice.
+**Brutal Strike** — 1 VP. When an Impact die Explodes, roll one additional Impact die into the total.
+**Heedless Assault** — 2 RP. Roll 1 Vigor die. Reduce your own Vigor Defense and one target within 5ft's Vigor Defense by the result.
+
+Not yet assigned to a region — do not add these to `fury` or any other region file without
+further direction. Whirlwind's cost (2 Reserve) also sits above the current Major budget in §1
+(0–1 Reserve); worth revisiting that ceiling once these get a home, rather than shrinking the
+examples to fit a number that may itself be wrong.
