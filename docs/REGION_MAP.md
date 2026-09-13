@@ -38,7 +38,7 @@ features → **Majors**, a subclass capstone → **Signature**, the Level-10 cla
 Casters gain versatility from the 148-spell pool that martials have no equivalent of. Rather than
 merging martial classes (unnecessary — see above), the correction is **more martial regions than
 caster regions**, so the martial side gains in build variety what the caster side gains in spells:
-**7 martial regions to 6 caster/hybrid regions**, achieved by splitting the two richest martial
+**8 martial-sourced regions to 5 caster regions**, achieved by splitting the two richest martial
 classes rather than merging the thinnest.
 
 ## Proposed regions (13)
@@ -59,7 +59,7 @@ classes rather than merging the thinnest.
 | `resonance` | Muse | Resolve | Inspiration, illusion, foresight, the mind as weapon | 6 | approved |
 | `sanctuary` | Invoker + Zealot (Shepherd, Eternal Flame) | Resolve | Divine authority: wards, judgment, radiant reprisal | 6 | approved |
 
-Totals: **13 regions**, 7 martial / 6 caster-hybrid, target **~75 Majors** and **~117 nodes** overall,
+Totals: **13 regions**, 8 martial-sourced / 5 caster, target **~75 Majors** and **~117 nodes** overall,
 drawn from 223 usable raw pieces — meaning every region is selecting its best material rather than
 padding to reach a floor.
 
